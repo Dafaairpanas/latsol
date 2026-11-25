@@ -1,0 +1,160 @@
+# SSW Pengolahan Makanan — Latihan Recall CBT Set 3 (20 Soal)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal latihan SSW Pengolahan Makanan Set 3 (opsi A–D & A–C, furigana rapi, terjemahan Your Language & catatan materi)
+
+## 飲食料品製造業 練習問題 Set 3（20問）
+
+**1. [体調不良時の対応]** 風邪(かぜ)を引(ひ)くときは、どうするのが正(ただ)しいですか。
+Terjemahan: Ketika masuk angin/demam (flu), tindakan apa yang benar?
+A. 責任者(せきにんしゃ)に報告(ほうこく)する
+B. 病院(びょういん)へ行(い)く
+C. 薬(くすり)を飲(の)む
+D. 休(やす)みをとる
+**Jawaban: A** — Saat kondisi tubuh kurang sehat atau sakit, aturan utama pekerja di pabrik makanan adalah **segera melapor kepada penanggung jawab (`責任者に報告する`)**.
+
+**2. [入室前の禁止事項]** 作業場(さぎょうじょう)に入(はい)る前(まえ)に禁止(きんし)されていることがいくつかあります。間違(まちが)っているものはどれですか。
+Terjemahan: Ada beberapa hal yang dilarang sebelum masuk ke ruang kerja. Manakah pernyataan yang SALAH (bukan hal yang dilarang)?
+A. 体調(たいちょう)が悪(わる)いときに責任者(せきにんしゃ)に報告(ほうこく)しないまま、出勤(しゅっきん)する
+B. 帽子(ぼうし)、マスクなどは着用(ちゃくよう)する
+C. 手(て)などにケガをしていたまま、出勤(しゅっきん)する
+D. 時計(とけい)、宝石類(ほうせきるい)などをつけたまま作業場(さぎょうじょう)に入(はい)る
+**Jawaban: B** — Mengenakan topi dan masker (`帽子・マスクを着用する`) justru **wajib dilakukan**, bukan hal yang dilarang (A, C, dan D semuanya tindakan terlarang).
+
+**3. [食肉・魚介類の保管]** 食肉(しょくにく)、魚介類(ぎょかいるい)などは低温(ていおん)で保管(ほかん)しなければなりません。どうするのが正(ただ)しいですか。
+Terjemahan: Daging, hasil laut, dan sejenisnya harus disimpan pada suhu rendah. Manakah yang benar?
+A. 冷凍庫(れいとうこ)で保管(ほかん)する
+B. 10℃で保管(ほかん)する
+C. 正(ただ)しいものはない
+D. 冷蔵庫(れいぞうこ)で保管(ほかん)する
+**Jawaban: C** — Jawaban **C** dipilih karena standar suhu penyimpanan daging dan hasil laut pada materi soal recall ini adalah **4℃以下** yang tidak tercantum di pilihan (kulkas umum standarnya `10℃以下`, sedangkan freezer `-15℃以下`).
+
+**4. [正しい手洗い]** 手(て)を洗(あら)うときは、どうするのが正(ただ)しいですか。
+Terjemahan: Ketika mencuci tangan, cara manakah yang benar?
+A. 洗剤(せんざい)をつけず、手(て)を洗(あら)う
+B. 水(みず)で汚(よご)れを十分(じゅうぶん)に落(お)とす
+C. ハンカチで手(て)を拭(ふ)き取(と)る
+D. バケツの水(みず)で手(て)を洗(あら)う
+**Jawaban: B** — Membilas kotoran dengan air mengalir secara menyeluruh (`水で汚れを十分に落とす`) adalah langkah yang benar (bukan tanpa sabun, bukan lap sapu tangan kain/handkerchief, dan bukan air genangan ember).
+
+**5. [作業中の製品管理]** 作業中(さぎょうちゅう)の製品(せいひん)の扱(あつか)い上(じょう)の注意事項(ちゅういじこう)について、どうするのが正(ただ)しいですか。
+Terjemahan: Mengenai hal-hal yang harus diperhatikan saat menangani produk selama bekerja, manakah tindakan yang benar?
+A. 冷却(れいきゃく)したものを長(なが)く体温(たいおん)で放置(ほうち)する
+B. 製品(せいひん)に水(みず)がかからないようにする
+C. 加熱(かねつ)したものを長(なが)く室温(しつおん)で放置(ほうち)する
+D. 製品(せいひん)に異常(いじょう)が見(み)つかったら、決(き)められた場所(ばしょ)に置(お)いておく
+**Jawaban: B** — Menjaga agar produk tidak terkena cipratan air (`製品に水がかからないようにする`) adalah tindakan yang benar untuk mencegah kontaminasi dan pertumbuhan mikroba. (Bila ada kelainan produk harus melapor ke penanggung jawab, bukan dibiarkan saja).
+
+**6. [食品安全の理由]** 食品安全(しょくひんあんぜん)はなぜ大切(たいせつ)かと理由(りゆう)がいくつかあります。間違(まちが)っているものはどれですか。
+Terjemahan: Ada beberapa alasan mengapa keamanan pangan penting. Manakah alasan yang SALAH?
+A. 食品工場(しょくひんこうじょう)は、消費者(しょうひしゃ)の健康(けんこう)を守(まも)るために安全(あんぜん)が確保(かくほ)されたものを作(つく)らなければなりません
+B. 食品工場(しょくひんこうじょう)は、消費者(しょうひしゃ)が安心(あんしん)して、おいしく食(た)べられるものを作(つく)らなければなりません
+C. 食品工場(しょくひんこうじょう)は、消費者(しょうひしゃ)が満足(まんぞく)して、贅沢(ぜいたく)なものを作(つく)らなければなりません
+D. 消費者(しょうひしゃ)は、安全(あんぜん)で安心(あんしん)できる食品(しょくひん)を求(もと)めています
+**Jawaban: C** — Tujuan keamanan pangan adalah melindungi kesehatan konsumen dan menyajikan makanan aman & nyaman dimakan, bukan soal membuat makanan mewah (`贅沢なもの`).
+
+**7. [X線検出器]** X線(せん)検出器(けんしゅつき)というのはなんですか。
+Terjemahan: Apakah yang dimaksud dengan detektor sinar-X (X-ray detector)?
+A. 加熱(かねつ)に生(い)き残(のこ)った微生物(びせいぶつ)の増殖(ぞうしょく)を防止(ぼうし)するもの
+B. 金属(きんぞく)以外(いがい)の危険異物(きけんいぶつ)を検出(けんしゅつ)するもの
+C. 金属(きんぞく)の危険異物(きけんいぶつ)を検出(けんしゅつ)するもの
+D. 危害(きがい)を起(お)こす異物(いぶつ)である金属(きんぞく)を検出(けんしゅつ)するもの
+**Jawaban: B** — Dalam soal recall ini, detektor X-ray diposisikan untuk mendeteksi benda asing berbahaya **selain logam** (seperti batu, kaca, tulang keras) yang tidak terdeteksi oleh detektor logam biasa.
+
+**8. [持ち込み禁止物]** 作業場(さぎょうじょう)に持(も)ち込(こ)みはしないようにするものはどれですか。
+Terjemahan: Benda manakah yang tidak boleh dibawa masuk ke ruang kerja?
+A. マスク
+B. くつ
+C. ヘアーネット
+D. イヤリング
+**Jawaban: D** — Anting (`イヤリング`) dan perhiasan lainnya dilarang dibawa masuk karena berisiko jatuh menjadi benda asing ke dalam makanan.
+
+**9. [HACCPの略語]** HACCPとは何(なん)の略語(りゃくご)ですか。
+Terjemahan: HACCP adalah singkatan dari apa?
+A. Health And Care Certification Protocol
+B. Health Analysis and Condition Control Principle
+C. Hazard Analysis Critical Control Point
+D. High-frequency Active Climate Control Program
+**Jawaban: C** — HACCP merupakan singkatan dari **Hazard Analysis Critical Control Point** (`危害要因分析重要管理点`).
+
+**10. [特定原材料]** 特定原材料(とくていげんざいりょう)として表示義務(ひょうじぎむ)がある食品(しょくひん)について、正(ただ)しいものはどれですか。
+Terjemahan: Mengenai bahan pangan yang wajib dicantumkan sebagai alergen (特定原材料), kombinasi manakah yang benar?
+A. こむぎ、たまご、えび
+B. たまご、ぎゅうにく、にゅう
+C. えび、オレンジ、さけ
+D. バナナ、ぎゅうにく、りんご
+**Jawaban: A** — Gandum (`こむぎ`), telur (`たまご`), dan udang (`えび`) semuanya termasuk **特定原材料 (wajib tampil)**. (`ぎゅうにく`, `オレンジ`, `さけ`, `バナナ`, `りんご` masuk kelompok rekomendasi / `準ずるもの`).
+
+**11. [保護具の着用]** 保護具(ほごぐ)を着用(ちゃくよう)するときは、どうするのが正(ただ)しいですか。
+Terjemahan: Ketika mengenakan alat pelindung keselamatan (保護具), manakah yang benar?
+A. ヘルメットのあごひもを締(し)めない
+B. 通勤靴(つうきんぐつ)を履(は)く
+C. 耳栓(みみせん)をつける
+D. 帽子(ぼうし)をかぶる
+**Jawaban: C** — Mengenakan penutup telinga (`耳栓をつける`) di area bising adalah penggunaan alat pelindung diri (`保護具`) yang benar. (Tali dagu helm wajib dikencangkan; sepatu komuter tidak boleh; topi kerja `帽子` termasuk seragam sanitasi, bukan `保護具` keselamatan).
+
+**12. [製造工程の管理]** 製造工程(せいぞうこうてい)の管理(かんり)と注意事項(ちゅういじこう)について間違(まちが)っているものはどれですか。
+Terjemahan: Mengenai pengelolaan dan hal yang perlu diperhatikan pada proses produksi, pilih satu yang SALAH.
+A. X線(せん)異物検出器(いぶつけんしゅつき)は金属(きんぞく)の危険異物(きけんいぶつ)を検出(けんしゅつ)することができる
+B. 100℃以上(いじょう)でも死滅(しめつ)しない強(つよ)い微生物(びせいぶつ)がある
+C. 食品(しょくひん)を凍結(とうけつ)すると、低温(ていおん)・短時間(たんじかん)で凍結(とうけつ)することが必要(ひつよう)
+D. 期限表示管理(きげんひょうじかんり)においてミスが多(おお)いのは日付管理(ひづけかんり)
+**Jawaban: A** — **A** menjadi jawaban yang disalahkan karena materi ujian ini membedakan fungsi *X-ray* khusus untuk benda asing **selain logam** (konsisten dengan nomor 7), meski di praktik lapangan alat *X-ray* sebenarnya bisa mendeteksi logam juga.
+
+**13. [異物混入の原因]** 異物混入(いぶつこんにゅう)の問題(もんだい)について、最(もっと)も多(おお)くの原因(げんいん)はどれですか。
+Terjemahan: Mengenai masalah kontaminasi benda asing (異物混入), manakah penyebab yang paling sering terjadi?
+A. 虫(むし)、髪(かみ)の毛(け)
+B. 髪(かみ)の毛(け)、ガラス
+C. ガラス、金属(きんぞく)
+D. 金属(きんぞく)、虫(むし)
+**Jawaban: A** — Kasus kontaminasi benda asing yang paling sering memicu keluhan konsumen adalah **serangga (`虫`) dan rambut (`髪の毛`)**.
+
+**14. [芽胞菌の殺菌基準]** ボツリヌス菌(きん)などの芽胞菌(がほうきん)を殺(ころ)すため、加熱(かねつ)の中心部温度(ちゅうしんぶおんど)と時間(じかん)は何度(なんど)と何分(なんぷん)ですか。
+Terjemahan: Untuk membunuh bakteri pembentuk spora seperti Clostridium botulinum, berapa suhu inti pemanasan dan durasinya?
+A. 75℃ 1分以上(いっぷんいじょう)
+B. 90℃ 90秒以上(びょういじょう)
+C. 100℃ 4分以上(よんぷんいじょう)
+D. 120℃ 4分以上(よんぷんいじょう)
+**Jawaban: D** — Bakteri pembentuk spora (`芽胞菌`) tahan panas biasa sehingga membutuhkan suhu inti **120℃ selama 4 menit atau lebih (`120℃ 4分以上`)**.
+
+**15. [冷蔵庫の保管温度]** 冷蔵庫(れいぞうこ)の一般的(いっぱんてき)な保管温度(ほかんおんど)の基準通(きじゅんどお)りでは何度(なんど)ですか。
+Terjemahan: Sesuai standar suhu penyimpanan umum lemari pendingin (冷蔵庫), berapakah suhunya?
+A. 10℃〜15℃
+B. 15℃〜20℃
+C. 10℃ 以下(いか)
+D. -15℃ 以下(いか)
+**Jawaban: C** — Standar suhu kulkas (`冷蔵庫`) menurut UU Sanitasi Pangan adalah **10℃ atau di bawahnya (`10℃以下`)**, sedangkan `-15℃以下` adalah standar freezer.
+
+**16. [HACCPの3つの危害要因]** この次(つぎ)のうち、3つのHACCPで対象(たいしょう)とする健康危害要因(けんこうきがいよういん)について、間違(まちが)っているものはどれですか。
+Terjemahan: Berikut ini adalah bahaya kesehatan yang menjadi target dalam HACCP. Manakah yang SALAH?
+A. 生物的危害要因(せいぶつてききがいよういん)
+B. 化学的危害要因(かがくてききがいよういん)
+C. 物理的危害要因(ぶつりてききがいよういん)
+D. 悪空気危害要因(あくくうききがいよういん)
+**Jawaban: D** — Tiga kategori bahaya (hazard) dalam HACCP adalah **Biologis (`生物的`), Kimia (`化学的`), dan Fisik (`物理的`)**. `悪空気危害要因` adalah pilihan palsu.
+
+**17. [食品安全の目的]** 食品工場(しょくひんこうじょう)は消費者(しょうひしゃ)に食品安全(しょくひんあんぜん)を作(つく)らなければなりません。なぜ大切(たいせつ)ですか。正(ただ)しいものをひとつ選(えら)びなさい。
+Terjemahan: Pabrik makanan harus memproduksi makanan yang aman bagi konsumen. Mengapa hal itu penting? Pilih satu yang benar.
+A. 消費者(しょうひしゃ)がおいしく食(た)べられる
+B. 消費者(しょうひしゃ)の健康(けんこう)を守(まも)るために
+C. 腹痛(ふくつう)になるため
+**Jawaban: B** — Alasan utama keamanan pangan adalah **untuk melindungi kesehatan konsumen (`消費者の健康を守るために`)**.
+
+**18. [物理的危害要因の例]** 金属(きんぞく)、石(いし)、ガラス、硬質(こうしつ)プラスチックなどの危険異物(きけんいぶつ)の混入(こんにゅう)によって起(お)こる危害(きがい)の要因(よういん)として、正(ただ)しいものをひとつ選(えら)びなさい。
+Terjemahan: Faktor bahaya yang disebabkan oleh masuknya benda asing berbahaya seperti logam, batu, kaca, dan plastik keras termasuk kategori apa? Pilih satu yang benar.
+A. 化学的危害要因(かがくてききがいよういん)
+B. 生物的危害要因(せいぶつてききがいよういん)
+C. 物理的危害要因(ぶつりてききがいよういん)
+**Jawaban: C** — Logam, batu, kaca, dan plastik keras yang berisiko melukai tubuh termasuk **bahaya fisik (`物理的危害要因`)**.
+
+**19. [作業手順の遵守]** 作業(さぎょう)するときの注意事項(ちゅういじこう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai hal yang harus diperhatikan saat bekerja, pilih satu pernyataan yang SALAH.
+A. 決(き)められた作業手順(さぎょうてじゅん)を守(まも)る
+B. 作業手順以外(さぎょうてじゅんいがい)の方法(ほうほう)で作業(さぎょう)する
+C. 機械(きかい)の動(うご)き方(かた)がわからないとき、責任者(せきにんしゃ)に必(かなら)ず聞(き)いて、確認(かくにん)する
+**Jawaban: B** — Bekerja dengan cara di luar prosedur kerja standar (`作業手順以外の方法で作業する`) adalah tindakan yang **salah** dan berbahaya.
+
+**20. [一般的な食中毒菌の殺菌]** 一般的(いっぱんてき)な食中毒菌(しょくちゅうどくきん)を殺(ころ)すために、加熱温度(かねつおんど)と時間(じかん)について、正(ただ)しいものをひとつ選(えら)びなさい。
+Terjemahan: Untuk membunuh bakteri penyebab keracunan makanan umum, manakah suhu pemanasan dan waktu yang benar?
+A. 90℃、1分以上(いっぷんいじょう)
+B. 75℃、1分以上(いっぷんいじょう)
+C. 60℃、1分以上(いっぷんいじょう)
+**Jawaban: B** — Standar pemanasan bakteri keracunan makanan umum adalah **75℃ selama 1 menit atau lebih (`75℃、1分以上`)**.

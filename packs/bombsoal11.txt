@@ -1,0 +1,293 @@
+# SSW Pengolahan Makanan — Latihan 8 (40 Soal)
+> Kategori: SSW | Durasi: 40 | Lulus: 65 | Subjudul: 40 soal Latihan 8 SSW Pengolahan Makanan (Review Komprehensif + NaClO 100–200ppm, Lembar Inspeksi, & Tempat Sampah)
+
+## 飲食料品製造業 練習問題 Latihan 8（第1部：1〜20問）
+
+**1. [安全な食品の理由]** なぜ安全(あんぜん)な食品(しょくひん)を作(つく)らなければなりませんか。間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengapa kita harus membuat makanan yang aman? Pilih satu pernyataan yang SALAH.
+A. 消費者(しょうひしゃ)が安心(あんしん)するように
+B. 食(た)べやすいように
+C. 消費者(しょうひしゃ)に健康障害(けんこうしょうがい)がおこらないように
+**Jawaban: B** — Tujuan membuat pangan aman adalah agar konsumen merasa tenang (`安心`) dan tidak mengalami gangguan kesehatan (`健康障害`), bukan agar mudah dimakan.
+
+**2. [微生物増殖の3要素]** 微生物(びせいぶつ)が増殖(ぞうしょく)する3つの要素(ようそ)があります。間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Ada 3 elemen yang membuat mikroorganisme berkembang biak. Pilih satu yang SALAH.
+A. 水分(すいぶん)
+B. 水(みず)
+C. 栄養(えいよう)
+**Jawaban: B** — Tiga elemen pertumbuhan mikroorganisme adalah **suhu (`温度`), kadar air/kelembapan (`水分`), dan nutrisi (`栄養`)** — bukan `水`.
+
+**3. [芽胞菌の冷却対策]** 主(おも)な予防対策(よぼうたいさく)として、芽胞(がほう)について、すぐに20℃以下(いか)に冷却(れいきゃく)して保存(ほぞん)する菌(きん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Bakteri pembentuk spora manakah yang pencegahannya adalah segera mendinginkan makanan di bawah 20℃ setelah dimasak? Pilih satu yang benar.
+A. セレウス菌(きん)
+B. ウェルシュ菌(きん)
+C. ボツリヌス菌(きん)
+**Jawaban: B** — Spora `ウェルシュ菌` (misal di kari/semur panci besar) berkembang biak saat suhu turun perlahan, sehingga wajib **segera didinginkan hingga ≤ 20℃** setelah pemanasan.
+
+**4. [感染型食中毒の予防]** 感染型(かんせんがた)食中毒(しょくちゅうどく)の主(おも)な予防対策(よぼうたいさく)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa langkah pencegahan utama keracunan makanan tipe infeksius? Pilih satu yang benar.
+A. 80℃以上(いじょう)、30秒以上(びょういじょう)加熱(かねつ)します
+B. 75℃以上(いじょう)、60秒以上(びょういじょう)加熱(かねつ)します
+C. 75℃以上(いじょう)、1時間(いちじかん)加熱(かねつ)します
+**Jawaban: B** — Standar pemanasan bakteri keracunan makanan umum adalah **75℃ atau lebih selama 60 detik (1 menit) atau lebih**.
+
+**5. [安全な食品の全体像]** 安全(あんぜん)な食品(しょくひん)を作(つく)るための全体像(ぜんたいぞう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai gambaran keseluruhan (`全体像`) untuk membuat makanan yang aman, pilih satu yang SALAH.
+A. 製造中(せいぞうちゅう)の服装(ふくそう)の衛生的(えいせいてき)な取(と)り扱(あつか)い
+B. 安全(あんぜん)な原材料(げんざいりょう)の受(う)け入(い)れ
+C. 製造中(せいぞうちゅう)の食品(しょくひん)の衛生的(えいせいてき)な取(と)り扱(あつか)い
+**Jawaban: A** — Dalam pilar `全体像`, poinnya mencakup penerimaan bahan aman, lingkungan bersih, dan penanganan higienis makanan/peralatan selama produksi — bukan istilah "penanganan pakaian selama proses produksi".
+
+**6. [黄色ブドウ球菌の症状]** 黄色(おうしょく)ブドウ球菌(きゅうきん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa gejala utama dari keracunan Staphylococcus aureus (黄色ブドウ球菌)? Pilih satu yang benar.
+A. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
+B. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
+C. 吐(は)き気(け)、おう吐(と)、下痢(げり)
+**Jawaban: B** — Gejala khas `黄色ブドウ球菌` adalah **mual (`吐き気`), muntah (`おう吐`), dan sakit perut (`腹痛`)**. (`呼吸困難` adalah ciri Botulinum).
+
+**7. [食中毒予防の3原則]** 食中毒予防(しょくちゅうどくよぼう)の3原則(げんそく)で、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Dari tiga prinsip pencegahan keracunan makanan akibat bakteri, pilih satu yang SALAH.
+A. つけない
+B. 増(ふ)やさない
+C. ころさない
+**Jawaban: C** — Tiga prinsip pencegahan keracunan bakteri adalah `つけない`, `増やさない`, dan `やっつける` — bukan `ころさない`.
+
+**8. [微生物の増殖温度帯]** 微生物(びせいぶつ)は何(なん)℃の間(あいだ)で増殖(ぞうしょく)しますか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Pada rentang suhu berapa mikroorganisme dapat berkembang biak? Pilih satu yang benar.
+A. 30℃ - 40℃の間(あいだ)で
+B. 10℃ - 60℃の間(あいだ)で
+C. 10℃ - 40℃の間(あいだ)で
+**Jawaban: B** — Rentang suhu pertumbuhan mikroorganisme pada soal ini adalah **10℃–60℃** (`30℃–40℃` adalah suhu pertumbuhan paling cepat).
+
+**9. [腸管出血性大腸菌]** 腸管出血性大腸菌(ちょうかんしゅっけつせいだいちょうきん)の原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Makanan manakah yang rentan menyebabkan infeksi E. coli enterohemoragik (O157, dll.)? Pilih satu yang benar.
+A. 食肉(しょくにく)、鶏肉(とりにく)、井戸水(いどみず)
+B. 食肉(しょくにく)、牛肉(ぎゅうにく)、井戸水(いどみず)
+C. 食肉(しょくにく)、牛肉(ぎゅうにく)、鶏卵(けいらん)
+**Jawaban: B** — Penyebab khas `腸管出血性大腸菌` (O157) adalah **daging/daging sapi (`食肉・牛肉`), sayuran, dan air sumur (`井戸水`)**.
+
+**10. [感染型食中毒の予防]** 感染型(かんせんがた)食中毒(しょくちゅうどく)の主(おも)な予防対策(よぼうたいさく)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai langkah pencegahan utama keracunan makanan tipe infeksius, pilih satu yang SALAH.
+A. 75℃以上(いじょう)、1分以上(いっぷんいじょう)加熱(かねつ)します
+B. 海水(かいすい)の魚介類(ぎょかいるい)を加熱(かねつ)します
+C. 調理器具(ちょうりきぐ)などを洗浄(せんじょう)します
+**Jawaban: B** — Dalam aturan pencegahan *Vibrio parahaemolyticus* di teks, hasil laut mentah (`海水の魚介類`) ditekankan untuk **dicuci bersih dengan air tawar (`真水でよく洗います`)**, bukan sekadar memanaskan seluruh hasil laut.
+
+**11. [異常時の報告]** もし、温度(おんど)や時間(じかん)に異常(いじょう)があったら、どうしたらいいですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Jika terdapat keanehan pada suhu atau waktu, apa yang harus dilakukan? Pilih satu yang benar.
+A. すぐに同僚(どうりょう)に報告(ほうこく)します
+B. すぐに警察(けいさつ)に報告(ほうこく)します
+C. すぐに責任者(せきにんしゃ)に報告(ほうこく)します
+**Jawaban: C** — Penyimpangan suhu atau waktu wajib **segera dilaporkan kepada penanggung jawab (`責任者`)**.
+
+**12. [ボツリヌス菌]** ボツリヌス菌(きん)で原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Clostridium botulinum (ボツリヌス菌)? Pilih satu yang benar.
+A. 缶詰(かんづめ)、びんづめ、真空(しんくう)パック食品(しょくひん)
+B. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)
+C. 手(て)や指(ゆび)に傷(きず)のある人(ひと)が調理(ちょうり)した食品(しょくひん)
+**Jawaban: A** — `ボツリヌス菌` tumbuh di kondisi kedap udara seperti **makanan kaleng, botolan, dan kemasan vakum (`真空パック`)**.
+
+**13. [ウェルシュ菌の症状]** ウェルシュ菌(きん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa saja gejala utama keracunan Clostridium perfringens (ウェルシュ菌)? Pilih satu yang benar.
+A. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
+B. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
+C. 腹痛(ふくつう)、下痢(げり)
+**Jawaban: C** — Gejala utama `ウェルシュ菌` adalah **nyeri perut (`腹痛`) dan diare (`下痢`)**.
+
+**14. [芽胞菌の冷却対策（復習）]** 主(おも)な予防対策(よぼうたいさく)として、芽胞(がほう)について、すぐに20℃以下(いか)に冷却(れいきゃく)して保存(ほぞん)する菌(きん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Bakteri pembentuk spora manakah yang pencegahannya segera mendinginkan makanan di bawah 20℃ setelah dimasak? Pilih satu yang benar.
+A. セレウス菌(きん)
+B. ウェルシュ菌(きん)
+C. ボツリヌス菌(きん)
+**Jawaban: B** — Pencegahan utama spora `ウェルシュ菌` pada makanan matang berkuah dalam jumlah besar adalah pendinginan cepat hingga di bawah 20℃.
+
+**15. [3密の予防]** 新型(しんがた)コロナウイルス感染症(かんせんしょう)予防(よぼう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Berkaitan dengan pencegahan COVID-19 ("3 Mitsu"), pilih satu yang SALAH.
+A. 密集(みっしゅう)
+B. 密殺(みっさつ)
+C. 密閉(みっぺい)
+**Jawaban: B** — 3 hal yang dihindari (`3密`) adalah `密閉`, `密集`, dan `密接`; `密殺` bukan bagiannya.
+
+**16. [冷蔵庫・冷凍庫の管理]** 冷凍庫(れいとうこ)、冷蔵庫(れいぞうこ)の管理(かんり)について、正(ただ)しいものはどれですか。
+Terjemahan: Mengenai pengelolaan freezer dan kulkas, manakah yang benar?
+A. 冷凍庫(れいとうこ) -10℃以下(いか) ／ 冷蔵庫(れいぞうこ) 15℃以下(いか)
+B. 冷凍庫(れいとうこ) -15℃以下(いか) ／ 冷蔵庫(れいぞうこ) 10℃以下(いか)
+C. 冷凍庫(れいとうこ) 15℃以下(いか) ／ 冷蔵庫(れいぞうこ) -10℃以下(いか)
+**Jawaban: B** — Standar suhu UU Sanitasi Pangan: **Freezer ≤ -15℃** dan **Kulkas ≤ 10℃**.
+
+**17. [保管温度規定]** 食肉(しょくにく)と魚介類(ぎょかいるい)の保管温度(ほかんおんど)の規定(きてい)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah ketentuan suhu penyimpanan untuk daging dan makanan laut pada soal ini? Pilih satu yang benar.
+A. -4℃以下(いか)です
+B. 4℃以上(いじょう)です
+C. 4℃以下(いか)です
+**Jawaban: C** — Pada soal recall ini kuncinya adalah **4℃以下** (suhu di mana bakteri hampir tidak berkembang biak). *(Catatan OTAFF v5.1 P.29: 生鮮魚介類 ≤ 5℃, 食肉 ≤ 10℃).*
+
+**18. [特定原材料]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)はどれですか。正(ただ)しいものを一(ひと)つ選(えら)んでください。
+Terjemahan: Manakah bahan pangan yang wajib dicantumkan sebagai alergen (`特定原材料`)? Pilih satu yang benar.
+A. エビ、カニ、こむぎ、そば、たまご、にゅう、らっかせい
+B. とりにく、カニ、こむぎ、そば、たまご、にゅう、らっかせい
+C. とりにく、あわび、こむぎ、そば、たまご、にゅう、らっかせい
+**Jawaban: A** — 7 alergen wajib klasik: **えび・かに・小麦・そば・卵・乳・落花生**. *(Update OTAFF v5.1/2026: menjadi 9 item dengan tambahan くるみ & カシューナッツ).*
+
+**19. [原材料の区分と保管]** 原材料(げんざいりょう)の区分(くぶん)と保管(ほかん)について、間違(まちが)っているものを一(ひと)つ選(えら)んでください。
+Terjemahan: Mengenai pengelompokan dan penyimpanan bahan baku, pilih satu yang SALAH (bukan aturan pengelompokan/penyimpanan).
+A. 含(ふく)まない原材料(げんざいりょう)と区分(くぶん)して保管(ほかん)します
+B. 原材料(げんざいりょう)はしっかり洗浄(せんじょう)します
+C. 他(ほか)の原材料(げんざいりょう)などの上(うえ)に重(かさ)ねてはいけません
+**Jawaban: B** — Pencucian bahan (`洗浄`) termasuk tahap persiapan/pencucian (`下処理`), bukan aturan pemisahan dan penumpukan penyimpanan (`区分と保管`).
+
+**20. [HACCPの原則数]** HACCPにはいくつの原則(げんそく)がありますか。正(ただ)しいものを選(えら)んでください。
+Terjemahan: Ada berapa prinsip dalam HACCP? Pilih jawaban yang benar.
+A. 3つの原則(げんそく)
+B. 4つの原則(げんそく)
+C. 7つの原則(げんそく)
+**Jawaban: C** — HACCP terdiri dari **7 prinsip (`7つの原則`)**.
+
+---
+
+## 飲食料品製造業 練習問題 Latihan 8（第2部：21〜40問）
+
+**21. [化学的危害要因]** 化学的危害要因(かがくてききがいよういん)について間違(まちが)っているものはどれですか？
+Terjemahan: Mengenai bahaya kimia (`化学的危害要因`), pilih satu yang SALAH (bukan termasuk bahaya kimia).
+A. 農薬(のうやく)、抗生物質(こうせいぶっしつ)、洗浄剤(せんじょうざい)
+B. 抗生物質(こうせいぶっしつ)、農薬(のうやく)、殺菌剤(さっきんざい)
+C. ミネラル、殺菌剤(さっきんざい)、洗浄剤(せんじょうざい)
+**Jawaban: C** — **Mineral (`ミネラル`)** bukan bahaya kimia, berbeda dengan pestisida, antibiotik, pembersih, dan disinfektan.
+
+**22. [工場内のCOVID-19予防]** 新型(しんがた)コロナウイルス感染症(かんせんしょう)（COVID-19）の食品工場(しょくひんこうじょう)での予防(よぼう)について、間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Mengenai pencegahan COVID-19 di pabrik makanan, pilih satu pernyataan yang SALAH.
+A. 食堂(しょくどう)、事務室(じむしつ)は、定期的(ていきてき)に空気(くうき)を入(い)れ換(か)えます
+B. ドアノブなど、たくさんの人(ひと)が触(さわ)る場所(ばしょ)を消毒(しょうどく)しません
+C. 更衣室(こういしつ)は定期的(ていきてき)に空気(くうき)を入(い)れ換(か)えます
+**Jawaban: B** — Gagang pintu dan bagian yang disentuh banyak orang wajib didisinfeksi secara rutin, bukan dibiarkan tidak didisinfeksi (`消毒しません`).
+
+**23. [受入検査の役割]** 原材料(げんざいりょう)の受入(うけい)れの結果(けっか)は、その後(ご)の製造工程(せいぞうこうてい)でどのように対応(たいおう)するかを判断(はんだん)するための重要(じゅうよう)なデータになります。なんですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Hasil penerimaan bahan baku menjadi data penting untuk menentukan penanganan pada proses produksi berikutnya. Kegiatan apakah ini? Pilih satu yang benar.
+A. 原材料(げんざいりょう)の管理(かんり)
+B. 受入検査(うけいれけんさ)
+C. 健康(けんこう)の管理(かんり)
+**Jawaban: B** — Kegiatan pemeriksaan bahan baku saat datang disebut **受入検査**.
+
+**24. [特定原材料（再確認）]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)はどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Manakah bahan makanan yang wajib dicantumkan pada label alergi (`特定原材料`)? Pilih satu yang benar.
+A. かに、えび、くるみ、ごま、さけ、さば、らっかせい
+B. えび、かに、こむぎ、そば、たまご、にゅう、らっかせい
+C. あわび、いか、いくら、まつたけ、もも、そば、りんご、らっかせい
+**Jawaban: B** — 7 alergen wajib klasik (`えび・かに・こむぎ・そば・たまご・にゅう・らっかせい`). *(Pada A ada ごま・さけ・さば; pada C ada あわび・いか・いくら・まつたけ・もも・りんご).*
+
+**25. [HACCPの略語]** HACCPとは何(なん)の略語(りゃくご)ですか。
+Terjemahan: HACCP adalah singkatan dari apa?
+A. High-frequency Active Climate Control Program
+B. Hazard Analysis Critical Control Point
+C. Health Analysis and Condition Control Principle
+**Jawaban: B** — **Hazard Analysis Critical Control Point**.
+
+**26. [HACCPの用語組合せ]** 次(つぎ)を見(み)てみてください！
+1. HAとは危害要因分析(きがいよういんぶんせき)のこと。
+2. CCPとは製造工程(せいぞうこうてい)の中(なか)で、ミスすることができない重要管理点(じゅうようかんりてん)のこと。
+3. HAとは原材料(げんざいりょう)の受入(うけい)れから最終製品(さいしゅうせいひん)の出荷(しゅっか)までの工程(こうてい)のこと。
+4. HACCPとは製品(せいひん)の安全(あんぜん)を確保(かくほ)する衛生管理手法(えいせいかんりしゅほう)のこと。
+HACCPについて正(ただ)しいものはどれですか？
+Terjemahan: Perhatikan pernyataan 1–4 tentang HACCP! Kombinasi manakah yang benar?
+A. 1, 2, 4
+B. 1, 3, 4
+C. 2, 3, 4
+**Jawaban: A** — Pernyataan 1, 2, dan 4 benar; pernyataan 3 salah.
+
+**27. [事業者の役割]** 事業者(じぎょうしゃ)についてはどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Manakah kewajiban pihak perusahaan/pengusaha (`事業者`)? Pilih satu yang benar.
+A. 働(はたら)く人達(ひとたち)の安全(あんぜん)と健康(けんこう)を守(まも)ります
+B. 原材料(げんざいりょう)の区分(くぶん)と保管(ほかん)
+C. 器具(きぐ)の使(つか)い分(わ)け
+**Jawaban: A** — Pengusaha (`事業者`) wajib melindungi keselamatan dan kesehatan para pekerja (`働く人達の安全と健康を守ります`).
+
+**28. [交差汚染の防止]** 交差汚染(こうさおせん)を防(ふせ)ぐ方法(ほうほう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai metode pencegahan kontaminasi silang (`交差汚染`), pilih satu yang SALAH (bukan poin utama pada materi soal ini).
+A. 器具(きぐ)の使(つか)い分(わ)け
+B. 容器(ようき)の工夫(くふう)
+C. 原材料(げんざいりょう)の区分(くぶん)と保管(ほかん)
+**Jawaban: B** — `容器の工夫` termasuk dalam 3 poin manajemen bahan kimia (`薬剤の管理`), bukan daftar poin `交差汚染` pada soal ini.
+
+**29. [特定原材料の種類数]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)は何種類(なんしゅるい)ありますか？
+Terjemahan: Ada berapa jenis makanan yang wajib dicantumkan sebagai alergen (`特定原材料`)?
+A. 21種類(しゅるい)
+B. 7種類(しゅるい)
+C. 14種類(しゅるい)
+**Jawaban: B** — Pada soal edisi klasik ini kuncinya **7 jenis (`7種類`)**. *(Catatan update OTAFF v5.1/2026: menjadi 9 jenis dengan `くるみ` & `カシューナッツ`).*
+
+**30. [製造工程の管理]** 製造工程(せいぞうこうてい)の管理(かんり)と注意事項(ちゅういじこう)について間違(まちが)っているものはどれですか。
+Terjemahan: Mengenai pengelolaan dan perhatian pada proses produksi, pilih satu pernyataan yang SALAH.
+A. 100℃以上(いじょう)でも死滅(しめつ)しない強(つよ)い微生物(びせいぶつ)がある
+B. X線(せん)異物検出器(いぶつけんしゅつき)は金属(きんぞく)の危険異物(きけんいぶつ)を検出(けんしゅつ)することができる
+C. 食品(しょくひん)を凍結(とうけつ)すると、低温(ていおん)・短時間(たんじかん)で凍結(とうけつ)することが必要(ひつよう)
+**Jawaban: B** — Sesuai pembedaan alat pada bank soal recall ini, *X-ray* dibedakan khusus untuk benda asing **non-logam** (konsisten dengan soal no. 31), meski di praktik nyata X-ray dapat mendeteksi logam juga.
+
+**31. [X線異物検出器]** X線(せん)異物検出器(いぶつけんしゅつき)で検出(けんしゅつ)することができるものについて、間違(まちが)っているものをえらびなさい。
+Terjemahan: Mengenai target benda asing pada detektor X-ray dibanding detektor logam pada materi soal ini, pilih satu yang SALAH.
+A. ガラス
+B. 金属(きんぞく)
+C. 石(いし)
+**Jawaban: B** — Sesuai pembedaan fungsi alat pada soal recall ini, `ガラス` (kaca) dan `石` (batu) dideteksi X-ray, sedangkan `金属` (logam) dikelompokkan ke detektor logam.
+
+**32. [トイレの清潔]** トイレの清潔(せいけつ)は何(なん)のためですか？間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Untuk apa kebersihan toilet dijaga? Pilih satu pernyataan yang SALAH.
+A. 作業場(さぎょうじょう)の中(なか)に微生物(びせいぶつ)を持(も)ち込(こ)まないために
+B. トイレは汚(よご)れたままにしておく
+C. トイレのあとは必(かなら)ず決(き)められた方法(ほうほう)で手洗(てあら)い・消毒(しょうどく)する
+**Jawaban: B** — Membiarkan toilet kotor (`汚れたままにしておく`) adalah hal yang dilarang.
+
+**33. [ヒヤリ・ハット：転倒]** 弁当(べんとう)を持(も)ちながら移動(いどう)しようとしたとき、濡(ぬ)れた床(ゆか)で転倒(てんとう)しそうになった。転倒(てんとう)の原因(げんいん)について、正(ただ)しいものはどれですか？
+Terjemahan: Saat berjalan membawa bento dan hampir terpeleset di lantai basah, manakah penyebab yang benar?
+A. 滑(すべ)りにくい靴(くつ)を履(は)いた
+B. 濡(ぬ)れた床(ゆか)をきちんと拭(ふ)き取(と)らなかった
+C. 頭(あたま)がぐるぐる回(まわ)った
+**Jawaban: B** — Penyebab terpeleset adalah **lantai basah tidak dilap hingga kering (`濡れた床をきちんと拭き取らなかった`)**.
+
+**34. [服装の着方（画像問題）]** 正(ただ)しい服装(ふくそう)の着方(きかた)はどれですか（※元(もと)のPDFではイラスト番号(ばんごう)1〜3から選択(せんたく)）。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah cara mengenakan baju kerja yang benar? (Catatan: di PDF sumber merujuk pada gambar 1–3 dengan kunci gambar nomor 3 / opsi A).
+A. 3
+B. 2
+C. 1
+**Jawaban: A** — Sesuai kunci PDF Latihan 8, ilustrasi yang benar adalah nomor **3** (**A**).
+
+**35. [異物除去装置]** 粘着(ねんちゃく)ローラーとエアーシャワーについて正(ただ)しいものはどれですか。
+Terjemahan: Manakah pernyataan yang benar mengenai roller perekat (粘着ローラー) dan air shower (エアーシャワー)?
+A. 作業服(さぎょうふく)のしわを伸(の)ばすために使用(しよう)する
+B. 作業服(さぎょうふく)から髪(かみ)の毛(け)などを落(お)とすために使用(しよう)する
+C. 正(ただ)しいものはない
+**Jawaban: B** — Digunakan sebelum masuk area kerja untuk **merontokkan rambut dan debu dari baju kerja**.
+
+**36. [災害の種類（イラスト問題）]** この人(ひと)はどうしてですか（※元(もと)のPDFではイラスト付(つ)き問題(もんだい)）。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Kecelakaan apa yang dialami orang pada gambar? (Catatan: di PDF sumber terdapat ilustrasi kecelakaan terjepit/tergulung dengan kunci C).
+A. こすれ・擦(す)り傷(きず)
+B. 転倒(てんとう)
+C. はさまれ・巻(ま)き込(こ)まれ
+**Jawaban: C** — Kunci soal gambar ini adalah **C (`はさまれ・巻き込まれ` / terjepit & tergulung mesin)**.
+
+**37. [次亜塩素酸ナトリウムの濃度]** 使用(しよう)する次亜塩素酸(じあえんそさん)ナトリウム溶液(ようえき)の濃(こ)さは、一般的(いっぱんてき)にはどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Berapakah konsentrasi umum larutan natrium hipoklorit (`次亜塩素酸ナトリウム溶液`) yang digunakan untuk sanitasi? Pilih satu yang benar.
+A. 100 〜 200ppm です
+B. 50 〜 100ppm です
+C. 100 〜 150ppm です
+**Jawaban: A** — Konsentrasi standar larutan natrium hipoklorit yang umum dipakai di pabrik makanan (misal untuk sterilisasi sayuran/peralatan) adalah **100〜200ppm** (OTAFF P.14 & P.34: 100ppm 10 menit / 200ppm 5 menit atau disinfeksi alat Norovirus 200ppm).
+
+**38. [工具・部品箱の整理整頓]** 工具(こうぐ)や部品箱(ぶひんばこ)の整理整頓(せいりせいとん)についての解説(かいせつ)で、間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Mengenai penjelasan penataan (`整理整頓`) perkakas dan kotak komponen, pilih satu pernyataan yang SALAH.
+A. 写真(しゃしん)のようになる前(まえ)に交換(こうかん)します
+B. イラストがあるので、工具(こうぐ)が足(た)りない時(とき)にはすぐに見(み)つけることができます
+C. その写真(しゃしん)によって、どこに何(なに)があるのかがすぐわかります
+**Jawaban: A** — Foto/ilustrasi papan perkakas (`シャドーボード`) memudahkan menemukan letak alat dan mendeteksi bila ada alat yang kurang/hilang; opsi A salah.
+
+**39. [点検記録用紙の整理整頓]** 点検記録用紙(てんけんきろくようし)の整理整頓(せいりせいとん)のポイントはどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Manakah poin penting penataan (整理整頓) lembar catatan pemeriksaan (`点検記録用紙`)? Pilih satu yang benar.
+A. 工具(こうぐ)や部品箱(ぶひんばこ)はどのように保管(ほかん)していますか
+B. 点検記録用紙(てんけんきろくようし)への記入漏(きにゅうも)れや誤(あやま)りもすぐに見(み)つけることができます
+C. いろいろ虫(むし)がはいっていること
+**Jawaban: B** — Menata lembar catatan inspeksi secara rapi (`整理整頓`) memudahkan supervisor/pekerja **langsung menemukan bagian yang terlewat diisi (`記入漏れ`) atau kesalahan pencatatan (`誤り`)**.
+
+**40. [ゴミ箱の取り扱い・色分け]** ゴミ箱(ばこ)の取(と)り扱(あつか)い・色分(いろわ)け方(かた)はどうですか？間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Bagaimana cara penanganan dan pemilahan warna tempat sampah (`ゴミ箱`)? Pilih satu pernyataan yang SALAH.
+A. ゴミ箱(ばこ)の掃除(そうじ)はしっかり行(おこな)わない
+B. ゴミ箱(ばこ)はゴミの種類(しゅるい)ごとに色(いろ)で区別(くべつ)する
+C. ゴミ箱(ばこ)は床(ゆか)に直接(ちょくせつ)置(お)かないようにします
+**Jawaban: A** — Tempat sampah harus dibedakan warnanya sesuai jenis sampah (B), tidak diletakkan langsung di atas lantai tanpa alas/dudukan (C), dan **wajib dibersihkan dengan baik** (sehingga "tidak membersihkan tempat sampah dengan baik" pada A adalah **salah**).

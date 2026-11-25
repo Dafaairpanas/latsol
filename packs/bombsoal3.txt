@@ -1,0 +1,144 @@
+# SSW Pengolahan Makanan — Latihan Recall CBT (20 Soal)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal latihan SSW Pengolahan Makanan (furigana rapi, terjemahan Your Language akurat, dan pembahasan kunci)
+
+## 飲食料品製造業 練習問題（20問）
+
+**1. [ノロウイルス殺菌]** ノロウイルスを殺(ころ)すために、加熱温度(かねつおんど)と時間(じかん)は何(なん)℃ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Untuk membunuh virus Norovirus, berapa suhu pemanasan (°C) dan waktu yang diperlukan? Pilih satu yang benar.
+A. 85°C 〜 90秒以上(びょういじょう)
+B. 85°C - 90°C 〜 90秒以上(びょういじょう)
+C. 80°C - 85°C 〜 90秒以上(びょういじょう)
+**Jawaban: B** — Pemanasan untuk membunuh Norovirus adalah suhu inti **85°C–90°C selama 90 detik atau lebih (90秒以上)**.
+
+**2. [微生物の増殖温度]** ほとんどの微生物(びせいぶつ)は何(なん)℃で急速(きゅうそく)に増殖(ぞうしょく)しますか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Pada suhu berapa sebagian besar mikroorganisme berkembang biak dengan cepat? Pilih satu yang benar.
+A. 35℃以下(いか) - 40℃以下(いか)で
+B. 30℃ - 40℃の間(あいだ)で
+C. 30℃ - 40℃以下(いか)で
+**Jawaban: B** — Bakteri umumnya menyukai 20°C–50°C, dan berkembang biak paling cepat di kisaran **30°C–40°C**.
+
+**3. [製造ライン工程]** 金属検出器(きんぞくけんしゅつき)、X線異物検出器(いぶつけんしゅつき)、期限表示(きげんひょうじ)の管理(かんり)は何(なん)の工程(こうてい)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Pengelolaan detektor logam, detektor benda asing X-ray, dan pencantuman tanggal kedaluwarsa termasuk dalam proses apa? Pilih satu yang benar.
+A. 凍結工程(とうけつこうてい)
+B. 包装工程(ほうそうこうてい)
+C. 製造工程(せいぞうこうてい)
+**Jawaban: B** — Pengisian/pengemasan, pencetakan tanggal kedaluwarsa (`期限表示`), serta pemeriksaan akhir dengan metal detector dan X-ray termasuk dalam **包装工程 (proses pengemasan)**.
+
+**4. [腸炎ビブリオ]** 腸炎(ちょうえん)ビブリオの原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Vibrio parahaemolyticus (腸炎ビブリオ)? Pilih satu yang benar.
+A. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)、井戸水(いどみず)など
+B. 海水(かいすい)にいる魚介類(ぎょかいるい)、刺(さ)し身(み)、すしなど
+C. 鶏肉(とりにく)、鶏卵(けいらん)、刺(さ)し身(み)、すしなど
+**Jawaban: B** — `腸炎ビブリオ` hidup di air laut sehingga sering ditemukan pada **makanan laut (魚介類), sashimi, dan sushi**. (Opsi A mirip penyebab O157/Campylobacter).
+
+**5. [カンピロバクター]** カンピロバクターの主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa saja gejala utama dari infeksi Campylobacter? Pilih satu yang benar.
+A. 発熱(はつねつ)、腹痛(ふくつう)、下痢(げり)
+B. 発熱(はつねつ)、腹痛(ふくつう)、激(はげ)しい下痢(げり)
+C. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
+**Jawaban: A** — Gejala khas Campylobacter adalah **demam (発熱), sakit perut (腹痛), dan diare (下痢)**. (`激しい下痢` / diare parah dan berdarah biasanya merujuk ke O157 atau 腸炎ビブリオ; mual & muntah dominan pada Norovirus / 黄色ブドウ球菌).
+
+**6. [入室前の異物除去]** 作業場(さぎょうじょう)に入(はい)るまえに、何(なん)で毛髪(もうはつ)やほこりなどを落(お)としますか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Sebelum masuk ke ruang kerja, dengan alat apa kita merontokkan/membersihkan rambut dan debu? Pilih satu yang benar.
+A. 粘着(ねんちゃく)ローラーやエアータオル
+B. エアーシャワーや粘着(ねんちゃく)ローラー
+C. エアータオルやヘアーネット
+**Jawaban: B** — Sebelum masuk ruang produksi, debu dan rambut di baju kerja dibersihkan memakai **air shower (`エアーシャワー`) dan roller perekat (`粘着ローラー`)**. (`エアータオル` adalah pengering tangan setelah cuci tangan).
+
+**7. [作業前の確認]** 作業(さぎょう)のまえに何(なに)をしなければなりませんか。間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Apa yang harus dilakukan sebelum bekerja? Pilih satu pernyataan yang SALAH.
+A. 作業(さぎょう)の確認(かくにん)
+B. 器具(きぐ)・装置(そうち)・機械(きかい)などの使用前(しようまえ)の確認(かくにん)
+C. 器具(きぐ)・装置(そうち)・機械(きかい)などをそのままにする
+**Jawaban: C** — Membiarkan peralatan/mesin begitu saja tanpa diperiksa (`そのままにする`) adalah perilaku yang **salah**.
+
+**8. [指差呼称]** 指(ゆび)で指(さ)しながら、その名称(めいしょう)や状態(じょうたい)を声(こえ)に出(だ)して言(い)います。それは何(なん)の意味(いみ)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Menunjuk dengan jari sambil mengucapkan nama dan kondisinya dengan suara lantang — apa istilah/maksud dari tindakan tersebut? Pilih satu yang benar.
+A. 合図(あいず)を確実(かくじつ)にする
+B. 指差呼称(しさこしょう)
+C. 機械(きかい)を操作(そうさ)するとき
+**Jawaban: B** — Tindakan menunjuk dan mengucapkan kondisi objek dengan suara lantang disebut **指差呼称 (Shisa Koshou)**. *(Catatan: pada naskah sumber lama, terjemahan Indonesia nomor ini tertukar dengan soal nomor 7).*
+
+**9. [作業中の注意]** 作業中(さぎょうちゅう)の注意事項(ちゅういじこう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai hal-hal yang harus diperhatikan saat bekerja, pilih satu pernyataan yang SALAH.
+A. よそ見(み)をしてはいけません
+B. 指差呼称(しさこしょう)してはいけません
+C. ムダ話(ばなし)をしてはいけません
+**Jawaban: B** — `指差呼称` justru **wajib dilakukan** untuk mencegah kelalaian, sehingga pernyataan "tidak boleh melakukan Shisa Koshou" adalah **salah**.
+
+**10. [機械操作]** これは機械(きかい)を操作(そうさ)することについて、何(なに)をしなければなりませんか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Terkait pengoperasian mesin, apa yang harus dipatuhi? Pilih satu yang benar.
+A. 運転方法(うんてんほうほう)がわからないときは操作(そうさ)してもいいです
+B. 絶対(ぜったい)に手(て)を入(い)れてはいけません
+C. 機械(きかい)の下(した)にくぐってもいいです
+**Jawaban: B** — Dilarang keras memasukkan tangan ke dalam mesin yang bergerak (`絶対に手を入れてはいけません`). Jika tidak tahu cara mengoperasikan mesin, dilarang mengoperasikannya (opsi A kalimat Jepangnya mengatakan `操作してもいいです` = boleh mengoperasikan, maka A salah; terjemahan Indonesia naskah asli sempat keliru menerjemahkan A menjadi "jangan melakukan pengoperasian").
+
+**11. [温度放置の禁止]** 加熱(かねつ)したものや冷却(れいきゃく)したものは、どうしたらいいですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa yang harus dilakukan terhadap makanan yang sudah dipanaskan atau didinginkan? Pilih satu yang benar.
+A. 長(なが)く室温(しつおん)で放置(ほうち)します
+B. 長(なが)く高温(こうおん)で保管(ほかん)します
+C. 長(なが)く室温(しつおん)で放置(ほうち)してはいけません
+**Jawaban: C** — Makanan yang telah dipanaskan atau didinginkan **tidak boleh dibiarkan lama di suhu ruang** (`長く室温で放置してはいけません`). *(Catatan: terjemahan naskah lama sempat keliru menulis "Pilih satu yang salah", padahal soal Jepangnya menanyakan yang benar: `正しいものをひとつえらびなさい`).*
+
+**12. [製品異常時の対応]** 製品(せいひん)に異常(いじょう)を発見(はっけん)したときは、何(なに)をしたらいいですか。間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Ketika menemukan kelainan/cacat pada produk, apa yang harus dilakukan? Pilih satu pernyataan yang SALAH.
+A. すぐに仕事(しごと)を続(つづ)けます
+B. すぐに製造(せいぞう)ラインを止(と)めます
+C. すぐに責任者(せきにんしゃ)に報告(ほうこく)します
+**Jawaban: A** — Jika menemukan kelainan produk, jangan langsung melanjutkan pekerjaan (`すぐに仕事をつづけます` = **salah**). Harus segera menghentikan lini produksi dan melapor kepada penanggung jawab.
+
+**13. [5Sの定義]** 整理(せいり)、整頓(せいとん)、清掃(せいそう)などによって、職場(しょくば)をいつも汚(よご)れがない状態(じょうたい)に保(たも)ちます。それは何(なん)の意味(いみ)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Menjaga tempat kerja selalu dalam keadaan bersih tanpa kotoran melalui Seiri, Seiton, dan Seisou — apa maksud istilah tersebut? Pilih satu yang benar.
+A. 清掃(せいそう)
+B. 整理(せいり)
+C. 清潔(せいけつ)
+**Jawaban: C** — Mempertahankan kondisi bersih hasil dari 整理・整頓・清掃 disebut **清潔 (Seiketsu)**.
+
+**14. [密閉の意味]** 窓(まど)やドアを閉(し)めたままで、空気(くうき)を入(い)れ換(か)えないことは何(なん)の意味(いみ)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Membiarkan jendela dan pintu tertutup rapat tanpa mengganti udara disebut apa? Pilih satu yang benar.
+A. 密集(みっしゅう)
+B. 密閉(みっぺい)
+C. 密接(みっせつ)
+**Jawaban: B** — Ruangan tertutup rapat tanpa ventilasi disebut **密閉 (Mippei)** (bagian dari 3密: 密閉・密集・密接).
+
+**15. [衛生上の注意事項]** 衛生上(えいせいじょう)の注意事項(ちゅういじこう)について、正(ただ)しいものはどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Mengenai hal-hal yang harus diperhatikan demi kebersihan/sanitasi, manakah yang benar? Pilih satu yang benar.
+A. 間違(まちが)っている方法(ほうほう)で手(て)を洗(あら)います
+B. 汚染区(おせんく)と非汚染区(ひおせんく)をはっきりと区別(くべつ)します
+C. 頭髪(とうはつ)や鼻(はな)などに触(ふ)れた手(て)で作業(さぎょう)をしなければなりません
+**Jawaban: B** — Zona terkontaminasi (`汚染区`) dan zona bersih/tidak terkontaminasi (`非汚染区`) harus dipisahkan dengan jelas. *(Catatan: terjemahan naskah lama sempat keliru menulis "Pilih satu yang salah", padahal jawaban yang benar adalah B).*
+
+**16. [庫内温度基準]** 冷凍庫(れいとうこ)、冷蔵庫(れいぞうこ)の管理(かんり)について、正(ただ)しいものはどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Mengenai pengelolaan freezer dan kulkas, manakah standar suhu yang benar? Pilih satu yang benar.
+A. 冷凍庫(れいとうこ) -10℃以下(いか) ／ 冷蔵庫(れいぞうこ) 15℃以下(いか)
+B. 冷凍庫(れいとうこ) -15℃以下(いか) ／ 冷蔵庫(れいぞうこ) 10℃以下(いか)
+C. 冷凍庫(れいとうこ) 15℃以下(いか) ／ 冷蔵庫(れいぞうこ) -10℃以下(いか)
+**Jawaban: B** — Standar 食品衛生法: **Freezer (`冷凍庫`) ≤ -15°C** dan **Kulkas (`冷蔵庫`) ≤ 10°C**.
+
+**17. [保管温度規定]** 食肉(しょくにく)と魚介類(ぎょかいるい)の保管温度(ほかんおんど)の規定(きてい)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah ketentuan suhu penyimpanan untuk daging dan makanan laut pada soal ini? Pilih satu yang benar.
+A. -4°C以下(いか)です
+B. 4°C以上(いじょう)です
+C. 4°C以下(いか)です
+**Jawaban: C** — Pada soal recall ini kuncinya adalah **4°C以下 (di bawah 4°C)** karena pada ≤ 4°C bakteri hampir tidak berkembang biak. *(Catatan referensi OTAFF v5.1 P.29: tabel bahan baku mencantumkan 生鮮魚介類 ≤ 5°C dan 食肉 ≤ 10°C).*
+
+**18. [特定原材料]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)はどれですか。正(ただ)しいものを一(ひと)つ選(えら)んでください。
+Terjemahan: Manakah bahan pangan yang termasuk 特定原材料 (wajib dicantumkan pada label alergi)? Pilih satu yang benar.
+A. エビ、カニ、こむぎ、そば、たまご、にゅう、らっかせい
+B. とりにく、カニ、こむぎ、そば、たまご、にゅう、らっかせい
+C. とりにく、あわび、こむぎ、そば、たまご、にゅう、らっかせい
+**Jawaban: A** — 7 item wajib klasik: **えび・かに・小麦・そば・卵・乳・落花生** (sedangkan `とりにく` dan `あわび` adalah item rekomendasi). *(Catatan: di naskah lama terjemahan soal 18 tertukar dengan soal 17; serta pada OTAFF Edisi 5.1/2026 item wajib menjadi 9 dengan tambahan くるみ & カシューナッツ).*
+
+**19. [原材料の区分と保管]** 原材料(げんざいりょう)の区分(くぶん)と保管(ほかん)について、間違(まちが)っているものを一(ひと)つ選(えら)んでください。
+Terjemahan: Mengenai pengelompokan dan penyimpanan bahan baku, pilih satu yang SALAH/tidak tepat dalam konteks penyimpanan & pemisahan bahan.
+A. 含(ふく)まない原材料(げんざいりょう)と区分(くぶん)して保管(ほかん)します
+B. 原材料(げんざいりょう)はしっかり洗浄(せんじょう)します
+C. 他(ほか)の原材料(げんざいりょう)などの上(うえ)に重(かさ)ねてはいけません
+**Jawaban: B** — Memisahkan alergen dari bahan non-alergen (A) dan tidak menumpuk di atas bahan lain (C) adalah aturan **区分と保管 (pengelompokan & penyimpanan)**. Mencuci bahan (`洗浄`) adalah proses **下処理 (persiapan/pencucian)**, sehingga B bukan bagian dari aturan pengelompokan & penyimpanan.
+
+**20. [HACCPの原則数]** HACCPにはいくつの原則(げんそく)がありますか。正(ただ)しいものを選(えら)んでください。
+Terjemahan: Ada berapa prinsip dalam sistem HACCP? Pilih jawaban yang benar.
+A. 3つの原則(げんそく)
+B. 4つの原則(げんそく)
+C. 7つの原則(げんそく)
+**Jawaban: C** — HACCP memiliki **7 prinsip (`7つの原則`)**: ①危害要因分析 → ②CCP決定 → ③管理基準設定 → ④監視 → ⑤改善措置 → ⑥検証 → ⑦記録.
