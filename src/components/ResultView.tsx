@@ -6,6 +6,7 @@ import {
   CheckSquare,
   Clock,
   Flag,
+  History,
   RotateCcw,
   Search,
   Square,
@@ -30,6 +31,7 @@ interface ResultViewProps {
   onToggleFurigana: () => void;
   onRetryAll: () => void;
   onRetryWrong: (wrongQuestions: QuestionItem[]) => void;
+  onOpenHistory?: () => void;
   onBackToLobby: () => void;
 }
 
@@ -49,6 +51,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   onToggleFurigana,
   onRetryAll,
   onRetryWrong,
+  onOpenHistory,
   onBackToLobby,
 }) => {
   const [filter, setFilter] = useState<
@@ -286,6 +289,15 @@ export const ResultView: React.FC<ResultViewProps> = ({
             >
               <RotateCcw size={16} /> Ulangi Sesi Ini
             </button>
+            {onOpenHistory && (
+              <button
+                type="button"
+                className="studio-btn studio-btn--ghost"
+                onClick={onOpenHistory}
+              >
+                <History size={16} /> Riwayat &amp; Soal Salah
+              </button>
+            )}
             <button
               type="button"
               className="studio-btn studio-btn--ghost"

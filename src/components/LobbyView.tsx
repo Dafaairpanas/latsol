@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   BookOpen,
+  Check,
   CheckSquare,
   Clock,
   Copy,
@@ -8,9 +9,7 @@ import {
   Edit3,
   FileText,
   Flag,
-  Flame,
   History,
-  Layers,
   Play,
   Plus,
   RotateCcw,
@@ -20,7 +19,6 @@ import {
   Trash2,
   Trophy,
   X,
-  Zap,
 } from 'lucide-react';
 import {
   AttemptRecord,
@@ -28,6 +26,7 @@ import {
   ExamPack,
   ExamSessionConfig,
   ExamSettings,
+  QuestionAttemptStat,
   QuestionItem,
   QuestionStudyState,
   SavedExamDraft,
@@ -40,6 +39,7 @@ interface LobbyViewProps {
   packs: ExamPack[];
   settings: ExamSettings;
   history: AttemptRecord[];
+  questionStats: Record<string, QuestionAttemptStat>;
   studyStates: Record<string, QuestionStudyState>;
   drafts: Record<string, SavedExamDraft>;
   onUpdateSettings: (next: ExamSettings) => void;
@@ -47,6 +47,7 @@ interface LobbyViewProps {
   onResumeDraft: (pack: ExamPack, draft: SavedExamDraft) => void;
   onDiscardDraft: (packId: string) => void;
   onTogglePackCompleted: (packId: string) => void;
+  onOpenHistory: () => void;
   onOpenStudioCreate: () => void;
   onOpenStudioImport: () => void;
   onEditCustomPack: (pack: ExamPack) => void;
@@ -55,14 +56,22 @@ interface LobbyViewProps {
   onClearHistory: () => void;
 }
 
-type TierKey = 'custom' | 'primary' | 'sprint' | 'language';
+type TierKey = 'custom' | 'otaff_sim' | 'recall_sim' | 'marathon' | 'language';
 
 interface PackTierGroup {
   key: TierKey;
-  badge: string;
+  indexLabel: string;
+  tag: string;
   title: string;
   description: string;
+  layout: 'featured' | 'compact' | 'ledger';
   packs: ExamPack[];
+}
+
+interface ParsedPackTitle {
+  series: string | null;
+  title: string;
+  fullTitle: string;
 }
 
 function downloadFile(filename: string, content: string, mime: string) {
@@ -93,10 +102,29 @@ function formatSavedTime(iso: string): string {
   }
 }
 
+/** Normalize pack titles cleanly for Dashboard typography without em-dashes. */
+function formatPackHeading(rawName: string): ParsedPackTitle {
+  const cleanFull = rawName.replace(/\s*\u2014\s*/g, ': ').trim();
+  const dashSplit = rawName.split(/\s+\u2014\s+/);
+  if (dashSplit.length >= 2) {
+    return {
+      series: dashSplit[0].trim(),
+      title: dashSplit.slice(1).join(': ').trim(),
+      fullTitle: cleanFull,
+    };
+  }
+  return {
+    series: null,
+    title: cleanFull,
+    fullTitle: cleanFull,
+  };
+}
+
 export const LobbyView: React.FC<LobbyViewProps> = ({
   packs,
   settings,
   history,
+  questionStats,
   studyStates,
   drafts,
   onUpdateSettings,
@@ -104,6 +132,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
   onResumeDraft,
   onDiscardDraft,
   onTogglePackCompleted,
+  onOpenHistory,
   onOpenStudioCreate,
   onOpenStudioImport,
   onEditCustomPack,
@@ -127,6 +156,17 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
     'all' | 'todo' | 'done' | 'flagged' | 'inprogress'
   >('all');
 
+  useEffect(() => {
+    if (!configuringPack) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setConfiguringPack(null);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [configuringPack]);
+
   const totalQuestionsAllPacks = useMemo(
     () => packs.reduce((acc, p) => acc + getPackQuestionCount(p), 0),
     [packs]
@@ -137,11 +177,36 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
     [packs, studyStates]
   );
 
+  const completionPct = useMemo(
+    () => (packs.length > 0 ? Math.round((completedPacksCount / packs.length) * 100) : 0),
+    [packs.length, completedPacksCount]
+  );
+
   const totalFlaggedCount = useMemo(
     () =>
       packs.reduce((sum, p) => sum + (studyStates[p.id]?.flaggedIds.length ?? 0), 0),
     [packs, studyStates]
   );
+
+  const trackedMistakeCount = useMemo(
+    () => Object.values(questionStats).filter((s) => s.wrongCount > 0).length,
+    [questionStats]
+  );
+
+  const latestSavedDraftEntry = useMemo(() => {
+    const entries = Object.values(drafts);
+    if (entries.length === 0) return null;
+    const sorted = [...entries].sort(
+      (a, b) => new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime()
+    );
+    for (const draft of sorted) {
+      const targetPack = packs.find((p) => p.id === draft.packId);
+      if (targetPack) {
+        return { pack: targetPack, draft };
+      }
+    }
+    return null;
+  }, [drafts, packs]);
 
   const filteredPacks = useMemo(() => {
     return packs.filter((p) => {
@@ -158,8 +223,9 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
 
   const tierGroups = useMemo<PackTierGroup[]>(() => {
     const customList: ExamPack[] = [];
-    const primaryList: ExamPack[] = [];
-    const sprintList: ExamPack[] = [];
+    const otaffSimList: ExamPack[] = [];
+    const recallSimList: ExamPack[] = [];
+    const marathonList: ExamPack[] = [];
     const languageList: ExamPack[] = [];
 
     filteredPacks.forEach((p) => {
@@ -168,61 +234,74 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
         customList.push(p);
       } else if (p.category === 'JFT' || count < 15) {
         languageList.push(p);
+      } else if (p.id.startsWith('builtin-sim-otaff-')) {
+        otaffSimList.push(p);
       } else if (count >= 60) {
-        primaryList.push(p);
+        marathonList.push(p);
       } else {
-        sprintList.push(p);
+        recallSimList.push(p);
       }
     });
 
-    // Sort primary tier: 145 -> 85 -> 60
-    primaryList.sort((a, b) => getPackQuestionCount(b) - getPackQuestionCount(a));
-
-    // Sort sprint tier: 40-soal simulation first, then 20-soal sets cleanly in natural order
-    sprintList.sort((a, b) => {
-      const diff = getPackQuestionCount(b) - getPackQuestionCount(a);
-      if (diff !== 0) return diff;
-      return a.name.localeCompare(b.name, undefined, { numeric: true });
-    });
+    otaffSimList.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+    recallSimList.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+    marathonList.sort((a, b) => getPackQuestionCount(b) - getPackQuestionCount(a));
 
     const groups: PackTierGroup[] = [];
     if (customList.length > 0) {
       groups.push({
         key: 'custom',
-        badge: 'KOLEKSI SAYA',
-        title: 'Paket Soal Custom & Impor Mandiri',
-        description:
-          'Paket yang kamu buat lewat Editor Visual atau impor dari file Bomb Soal.',
+        indexLabel: '00',
+        tag: 'KOLEKSI MANDIRI',
+        title: 'Paket Soal Custom & Impor',
+        description: 'Paket buatan sendiri dari Editor Visual atau hasil impor berkas.',
+        layout: 'compact',
         packs: customList,
       });
     }
-    if (primaryList.length > 0) {
+    if (otaffSimList.length > 0) {
       groups.push({
-        key: 'primary',
-        badge: 'TIER UTAMA • 60–145 SOAL',
-        title: 'Bank Soal Utama OTAFF Edisi 5.1 (Materi Lengkap)',
+        key: 'otaff_sim',
+        indexLabel: '01',
+        tag: 'PRIORITAS UTAMA',
+        title: 'Simulasi Materi Resmi OTAFF Edisi 5.1',
         description:
-          'Menyapu 100% poin teks resmi OTAFF v5.1 (P.1–P.69) + hitungan & rambu keselamatan.',
-        packs: primaryList,
+          '145 soal resmi OTAFF v5.1 dibagi menjadi 4 deck tematik berdurasi setara ujian.',
+        layout: 'featured',
+        packs: otaffSimList,
       });
     }
-    if (sprintList.length > 0) {
+    if (recallSimList.length > 0) {
       groups.push({
-        key: 'sprint',
-        badge: 'TRYOUT & DRILL • 20–40 SOAL',
-        title: 'Tryout Setara Ujian Asli & Latihan Cepat',
+        key: 'recall_sim',
+        indexLabel: '02',
+        tag: 'TRYOUT RECALL CBT',
+        title: 'Tryout Recall v5.1 (40 Soal per Deck)',
         description:
-          'Set 40 soal setara jumlah soal ujian asli & paket sprint 20 soal untuk pengulangan cepat.',
-        packs: sprintList,
+          'Latihan soal recall yang telah diselaraskan ke kunci OTAFF v5.1 untuk tempo cepat.',
+        layout: 'compact',
+        packs: recallSimList,
+      });
+    }
+    if (marathonList.length > 0) {
+      groups.push({
+        key: 'marathon',
+        indexLabel: '03',
+        tag: 'ARSIP MARATHON',
+        title: 'Bank Soal Gabungan Utuh (60 hingga 145 Soal)',
+        description: 'Versi gabungan penuh Bomb Soal 1 dan 2 untuk latihan ketahanan.',
+        layout: 'ledger',
+        packs: marathonList,
       });
     }
     if (languageList.length > 0) {
       groups.push({
         key: 'language',
-        badge: 'BAHASA & JFT-BASIC',
-        title: 'Latihan Bahasa Jepang / JFT-Basic & Pemanasan',
-        description:
-          'Paket 4 pilihan (A–D) dengan terjemahan Your Language untuk latihan bahasa.',
+        indexLabel: '04',
+        tag: 'JFT-BASIC & BAHASA',
+        title: 'Latihan Bahasa Jepang / JFT-Basic',
+        description: 'Paket soal pilihan ganda 4 opsi untuk dasar kosakata dan bacaan.',
+        layout: 'ledger',
         packs: languageList,
       });
     }
@@ -299,7 +378,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
       durationSec: 0,
       passingPct: pack.passingPct,
       customQuestionsOnly: flaggedQs,
-      sessionLabel: `Soal Ditandai ⚑ (${flaggedQs.length} soal)`,
+      sessionLabel: `Soal Ditandai (${flaggedQs.length} soal)`,
     });
   };
 
@@ -324,30 +403,140 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
     });
   };
 
-  const renderTierIcon = (key: TierKey) => {
-    if (key === 'primary') return <Flame size={18} />;
-    if (key === 'sprint') return <Zap size={18} />;
-    if (key === 'custom') return <Edit3 size={18} />;
-    return <Layers size={18} />;
-  };
+  const renderPackSecondaryActions = (pack: ExamPack, flaggedCount: number, masteredCount: number, unmasteredCount: number, hasWrong: boolean, latestRun: AttemptRecord | undefined) => (
+    <div className="dash-card__tools">
+      {flaggedCount > 0 && (
+        <button
+          type="button"
+          className="dash-mini-btn is-accent"
+          onClick={() => handleLaunchFlaggedDrill(pack)}
+        >
+          <Flag size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Ditandai ({flaggedCount})</span>
+        </button>
+      )}
+      {masteredCount > 0 && unmasteredCount > 0 && (
+        <button
+          type="button"
+          className="dash-mini-btn is-done"
+          onClick={() => handleLaunchUnmasteredDrill(pack)}
+        >
+          <span>Belum Paham ({unmasteredCount})</span>
+        </button>
+      )}
+      {hasWrong && latestRun && (
+        <button
+          type="button"
+          className="dash-mini-btn is-accent"
+          onClick={() => handleLaunchWrongDrill(pack)}
+        >
+          <RotateCcw size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Ulangi Salah ({latestRun.wrongQuestionIds.length})</span>
+        </button>
+      )}
+      {pack.studyNotes && (
+        <button
+          type="button"
+          className="dash-mini-btn"
+          onClick={() => setNotesPack(pack)}
+        >
+          <FileText size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Peta Cepat</span>
+        </button>
+      )}
+      {pack.source === 'custom' ? (
+        <button
+          type="button"
+          className="dash-mini-btn"
+          onClick={() => onEditCustomPack(pack)}
+        >
+          <Edit3 size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Edit</span>
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="dash-mini-btn"
+          onClick={() => onDuplicatePackToCustom(pack)}
+          title="Salin ke koleksi saya agar bisa diedit"
+        >
+          <Copy size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Duplikat</span>
+        </button>
+      )}
+      <button
+        type="button"
+        className="dash-mini-btn"
+        onClick={() =>
+          downloadFile(
+            `${pack.id}.txt`,
+            exportPackToBombTxt(pack),
+            'text/plain;charset=utf-8'
+          )
+        }
+        title="Unduh sebagai berkas Bomb Soal (.txt)"
+      >
+        <Download size={13} strokeWidth={1.8} aria-hidden="true" />
+        <span>.txt</span>
+      </button>
+      <button
+        type="button"
+        className="dash-mini-btn"
+        onClick={() =>
+          downloadFile(
+            `${pack.id}.json`,
+            JSON.stringify(pack, null, 2),
+            'application/json'
+          )
+        }
+        title="Unduh sebagai berkas .json"
+      >
+        <Download size={13} strokeWidth={1.8} aria-hidden="true" />
+        <span>.json</span>
+      </button>
+      {pack.source === 'custom' && (
+        <button
+          type="button"
+          className="dash-mini-btn is-danger"
+          onClick={() => {
+            if (window.confirm(`Hapus paket "${pack.name}" dari koleksi?`)) {
+              onDeleteCustomPack(pack.id);
+            }
+          }}
+        >
+          <Trash2 size={13} strokeWidth={1.8} aria-hidden="true" />
+          <span>Hapus</span>
+        </button>
+      )}
+    </div>
+  );
 
   return (
-    <div className="page-shell">
-      {/* Top Navigation */}
-      <header className="lobby-header">
-        <div className="lobby-header__inner">
-          <div className="brand">
-            <div className="brand__badge">CBT</div>
-            <div>
-              <h1>SSW &amp; JFT Practice Studio</h1>
-              <p>Simulator Prometric CBT + Pembuat Bank Soal Mandiri</p>
+    <div className="dash-shell">
+      <a href="#dash-decks" className="dash-skip-link">
+        Langsung ke daftar paket soal
+      </a>
+
+      {/* Top Navigation Header */}
+      <header className="dash-header">
+        <div className="dash-header__inner">
+          <div className="dash-brand">
+            <div className="dash-brand__mark" aria-hidden="true">
+              SSW
+            </div>
+            <div className="dash-brand__text">
+              <strong className="dash-brand__name">SSW &amp; JFT Practice Studio</strong>
+              <span className="dash-brand__sub">
+                Simulator Prometric CBT dan Manajemen Bank Soal
+              </span>
             </div>
           </div>
 
-          <div className="lobby-header__actions">
-            <label className="candidate-chip">
-              <span>Peserta:</span>
+          <div className="dash-header__controls">
+            <div className="dash-candidate-box">
+              <label htmlFor="dash-candidate-input">Peserta</label>
               <input
+                id="dash-candidate-input"
                 type="text"
                 value={settings.candidateName}
                 onChange={(e) =>
@@ -355,68 +544,172 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 }
                 placeholder="Nama Peserta"
               />
-            </label>
-            <button
-              type="button"
-              className="studio-btn studio-btn--ghost"
-              onClick={onOpenStudioImport}
-            >
-              <FileText size={16} /> Impor Bomb Soal (.txt)
-            </button>
-            <button
-              type="button"
-              className="studio-btn studio-btn--primary"
-              onClick={onOpenStudioCreate}
-            >
-              <Plus size={16} /> Buat Paket Soal Baru
-            </button>
+            </div>
+
+            <nav className="dash-header__nav" aria-label="Navigasi Utama Studio">
+              <button
+                type="button"
+                className="dash-nav-btn"
+                onClick={onOpenHistory}
+              >
+                <History size={15} strokeWidth={1.8} aria-hidden="true" />
+                <span>Riwayat &amp; Analisa</span>
+                {trackedMistakeCount > 0 && (
+                  <span
+                    className="dash-nav-count"
+                    aria-label={`${trackedMistakeCount} soal perlu diulang`}
+                  >
+                    {trackedMistakeCount}
+                  </span>
+                )}
+              </button>
+              <button
+                type="button"
+                className="dash-nav-btn"
+                onClick={onOpenStudioImport}
+              >
+                <FileText size={15} strokeWidth={1.8} aria-hidden="true" />
+                <span>Impor (.txt)</span>
+              </button>
+              <button
+                type="button"
+                className="dash-nav-btn is-primary"
+                onClick={onOpenStudioCreate}
+              >
+                <Plus size={15} strokeWidth={2} aria-hidden="true" />
+                <span>Buat Paket</span>
+              </button>
+            </nav>
           </div>
         </div>
       </header>
 
-      <main className="lobby-main">
-        {/* Overview Hero Strip */}
-        <section className="hero-strip">
-          <div className="hero-strip__stat">
-            <CheckSquare size={20} />
-            <div>
-              <strong>
-                Checklist: {completedPacksCount} / {packs.length} Paket
-              </strong>
-              <span>{totalQuestionsAllPacks} total soal tersimpan permanen</span>
+      <main className="dash-main">
+        {/* Asymmetric Study Workbench Band */}
+        <section className="dash-workbench" aria-labelledby="dash-title">
+          <div className="dash-focus-pane">
+            <div className="dash-focus-pane__head">
+              <h1 id="dash-title" className="dash-title">
+                Pilih Deck Simulasi dan Pantau Kesiapan Ujian
+              </h1>
+              <p className="dash-subtitle">
+                Setiap deck OTAFF Edisi 5.1 berisi 34 sampai 40 soal agar simulasi tetap ringkas.
+                Penanda soal dan checklist tersimpan di peramban ini.
+              </p>
+            </div>
+
+            <div className="dash-focus-actions">
+              {latestSavedDraftEntry ? (
+                <div className="dash-resume-callout">
+                  <div className="dash-resume-callout__meta">
+                    <span className="dash-callout-tag">Sesi Aktif Tersimpan</span>
+                    <strong>{formatPackHeading(latestSavedDraftEntry.pack.name).fullTitle}</strong>
+                    <span>
+                      {Object.keys(latestSavedDraftEntry.draft.answers).length} /{' '}
+                      {latestSavedDraftEntry.draft.sectionsLayout.reduce(
+                        (s, sec) => s + sec.questions.length,
+                        0
+                      )}{' '}
+                      soal terjawab · Disimpan{' '}
+                      {formatSavedTime(latestSavedDraftEntry.draft.savedAt)}
+                    </span>
+                  </div>
+                  <div className="dash-resume-callout__btns">
+                    <button
+                      type="button"
+                      className="dash-btn dash-btn--primary"
+                      onClick={() =>
+                        onResumeDraft(latestSavedDraftEntry.pack, latestSavedDraftEntry.draft)
+                      }
+                    >
+                      <Play size={15} strokeWidth={2} aria-hidden="true" />
+                      <span>Lanjutkan Sesi</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="dash-btn dash-btn--outline"
+                      onClick={() => onDiscardDraft(latestSavedDraftEntry.pack.id)}
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="dash-callout-idle">
+                  {history.length === 0 ? (
+                    <p>
+                      Belum ada riwayat simulasi. Mulai dari Deck 1 OTAFF v5.1 untuk mengukur
+                      baseline nilai awal (target lulus 65%).
+                    </p>
+                  ) : (
+                    <p>
+                      Tercatat <strong>{history.length} sesi</strong> latihan dengan{' '}
+                      <strong>{trackedMistakeCount} soal</strong> yang masih perlu diulang.
+                    </p>
+                  )}
+                  <button
+                    type="button"
+                    className="dash-btn dash-btn--outline"
+                    onClick={onOpenHistory}
+                  >
+                    <History size={15} strokeWidth={1.8} aria-hidden="true" />
+                    <span>Buka Riwayat &amp; Analisa Salah</span>
+                  </button>
+                </div>
+              )}
+
+              <div className="dash-furigana-row">
+                <label className="dash-toggle-label" htmlFor="dash-furigana-toggle">
+                  <input
+                    id="dash-furigana-toggle"
+                    type="checkbox"
+                    checked={settings.showFurigana}
+                    onChange={(e) =>
+                      onUpdateSettings({ ...settings, showFurigana: e.target.checked })
+                    }
+                  />
+                  <span>Tampilkan Furigana (cara baca kanji) di soal dan pembahasan</span>
+                </label>
+              </div>
             </div>
           </div>
-          <div className="hero-strip__stat">
-            <Flag size={20} />
-            <div>
-              <strong>{totalFlaggedCount} Soal Ditandai ⚑</strong>
-              <span>Aman walau reload atau dibuka besok</span>
+
+          <aside className="dash-readiness-pane" aria-label="Ringkasan Kesiapan Deck">
+            <div className="dash-readiness__head">
+              <h2>Progres Koleksi</h2>
+              <span className="dash-mono-stat">
+                {completedPacksCount}/{packs.length} deck ({completionPct}%)
+              </span>
             </div>
-          </div>
-          <div className="hero-strip__stat">
-            <History size={20} />
-            <div>
-              <strong>{history.length} Riwayat Sesi</strong>
-              <span>Skor &amp; progres tersimpan otomatis</span>
+
+            <div className="dash-meter" aria-hidden="true">
+              <div className="dash-meter__fill" style={{ width: `${completionPct}%` }} />
             </div>
-          </div>
-          <div className="hero-strip__furigana">
-            <label>
-              <input
-                type="checkbox"
-                checked={settings.showFurigana}
-                onChange={(e) =>
-                  onUpdateSettings({ ...settings, showFurigana: e.target.checked })
-                }
-              />
-              <span>Tampilkan Furigana (あ)</span>
-            </label>
-          </div>
+
+            <dl className="dash-stat-table">
+              <div className="dash-stat-row">
+                <dt>Total Bank Soal</dt>
+                <dd className="dash-mono-stat">{totalQuestionsAllPacks} soal</dd>
+              </div>
+              <div className="dash-stat-row">
+                <dt>Soal Ditandai</dt>
+                <dd className="dash-mono-stat is-accent">{totalFlaggedCount} ditandai</dd>
+              </div>
+              <div className="dash-stat-row">
+                <dt>Soal Sering Salah</dt>
+                <dd className="dash-mono-stat is-accent">{trackedMistakeCount} butir</dd>
+              </div>
+              <div className="dash-stat-row">
+                <dt>Total Riwayat Sesi</dt>
+                <dd className="dash-mono-stat">{history.length} sesi</dd>
+              </div>
+            </dl>
+          </aside>
         </section>
 
-        {/* Category & Checklist Status Filter Bar */}
-        <div className="lobby-toolbar">
-          <div className="filter-group">
+        {/* Category & Status Filter Bar */}
+        <section id="dash-decks" className="dash-toolbar" aria-label="Filter Paket Soal">
+          <div className="dash-filter-group" role="group" aria-label="Filter Kategori">
             {(
               [
                 ['ALL', 'Semua Paket'],
@@ -428,7 +721,8 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
               <button
                 key={cat}
                 type="button"
-                className={`filter-pill ${categoryFilter === cat ? 'is-active' : ''}`}
+                aria-pressed={categoryFilter === cat}
+                className={`dash-tab ${categoryFilter === cat ? 'is-active' : ''}`}
                 onClick={() => setCategoryFilter(cat)}
               >
                 {label}
@@ -436,37 +730,42 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
             ))}
           </div>
 
-          <div className="filter-group">
+          <div className="dash-filter-group" role="group" aria-label="Filter Status Pengerjaan">
             {(
               [
                 ['all', 'Semua Status'],
                 ['todo', 'Belum Selesai'],
-                ['done', 'Selesai ☑'],
-                ['flagged', 'Ada Ditandai ⚑'],
-                ['inprogress', 'Lanjut Sesi ▶'],
+                ['done', 'Selesai'],
+                ['flagged', 'Ada Ditandai'],
+                ['inprogress', 'Lanjut Sesi'],
               ] as const
             ).map(([st, label]) => (
               <button
                 key={st}
                 type="button"
-                className={`filter-pill filter-pill--subtle ${
-                  statusFilter === st ? 'is-active' : ''
-                }`}
+                aria-pressed={statusFilter === st}
+                className={`dash-tab is-subtle ${statusFilter === st ? 'is-active' : ''}`}
                 onClick={() => setStatusFilter(st)}
               >
                 {label}
               </button>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Tiered Pack Sections */}
-        {tierGroups.length === 0 ? (
-          <section className="panel-card empty-box">
-            <p>Tidak ada paket soal yang cocok dengan filter status/kategori ini.</p>
+        {packs.length === 0 ? (
+          <section className="dash-empty">
+            <h2>Belum ada paket soal tersedia</h2>
+            <p>Buat paket baru atau impor berkas Bomb Soal (.txt) dari tombol di kanan atas.</p>
+          </section>
+        ) : tierGroups.length === 0 ? (
+          <section className="dash-empty">
+            <h2>Tidak ada paket soal yang cocok dengan filter ini</h2>
+            <p>Ubah kategori atau status filter untuk menampilkan kembali daftar deck.</p>
             <button
               type="button"
-              className="studio-btn studio-btn--ghost"
+              className="dash-btn dash-btn--outline"
               onClick={() => {
                 setCategoryFilter('ALL');
                 setStatusFilter('all');
@@ -486,350 +785,363 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
             );
 
             return (
-              <section key={tier.key} className={`tier-section tier-${tier.key}`}>
-                <div className="tier-divider">
-                  <div className="tier-divider__left">
-                    <span className="tier-icon">{renderTierIcon(tier.key)}</span>
+              <section key={tier.key} className={`dash-tier dash-tier--${tier.layout}`}>
+                <header className="dash-tier__head">
+                  <div className="dash-tier__title-wrap">
+                    <span className="dash-tier__index">{tier.indexLabel}</span>
                     <div>
-                      <div className="tier-divider__badges">
-                        <span className="tier-badge">{tier.badge}</span>
-                        <span className="tier-meta-pill">
-                          {tier.packs.length} Paket • {tierQuestions} Soal
-                        </span>
-                        <span
-                          className={`tier-progress-pill ${
-                            tierDone === tier.packs.length ? 'is-complete' : ''
-                          }`}
-                        >
-                          ☑ {tierDone}/{tier.packs.length} Selesai
+                      <div className="dash-tier__kicker-row">
+                        <span className="dash-tier__tag">{tier.tag}</span>
+                        <span className="dash-tier__summary">
+                          {tier.packs.length} deck · {tierQuestions} soal
                         </span>
                       </div>
-                      <h2 className="tier-divider__title">{tier.title}</h2>
-                      <p className="tier-divider__desc">{tier.description}</p>
+                      <h2 className="dash-tier__title">{tier.title}</h2>
+                      <p className="dash-tier__desc">{tier.description}</p>
                     </div>
                   </div>
-                </div>
+                  <div
+                    className={`dash-tier__progress ${
+                      tierDone === tier.packs.length ? 'is-complete' : ''
+                    }`}
+                  >
+                    <Check size={14} strokeWidth={2.4} aria-hidden="true" />
+                    <span>
+                      {tierDone}/{tier.packs.length} selesai
+                    </span>
+                  </div>
+                </header>
 
-                <div className="packs-grid">
-                  {tier.packs.map((pack) => {
-                    const qCount = getPackQuestionCount(pack);
-                    const bestScore = getBestPackScore(pack.id);
-                    const latestRun = getLatestPackAttempt(pack.id);
-                    const hasWrong = latestRun && latestRun.wrongQuestionIds.length > 0;
-                    const st = studyStates[pack.id] || EMPTY_STUDY_STATE;
-                    const draft = drafts[pack.id];
+                {tier.layout === 'ledger' ? (
+                  <div className="dash-ledger-list">
+                    {tier.packs.map((pack) => {
+                      const qCount = getPackQuestionCount(pack);
+                      const bestScore = getBestPackScore(pack.id);
+                      const latestRun = getLatestPackAttempt(pack.id);
+                      const hasWrong = Boolean(
+                        latestRun && latestRun.wrongQuestionIds.length > 0
+                      );
+                      const st = studyStates[pack.id] || EMPTY_STUDY_STATE;
+                      const draft = drafts[pack.id];
+                      const validQIds = new Set(
+                        pack.sections.flatMap((s) => s.questions.map((q) => q.id))
+                      );
+                      const flaggedCount = st.flaggedIds.filter((id) =>
+                        validQIds.has(id)
+                      ).length;
+                      const masteredCount = st.masteredIds.filter((id) =>
+                        validQIds.has(id)
+                      ).length;
+                      const unmasteredCount = Math.max(0, qCount - masteredCount);
+                      const draftAnswered = draft ? Object.keys(draft.answers).length : 0;
+                      const draftTotal = draft
+                        ? draft.sectionsLayout.reduce(
+                            (sum, s) => sum + s.questions.length,
+                            0
+                          )
+                        : 0;
+                      const parsedHeading = formatPackHeading(pack.name);
 
-                    const validQIds = new Set(
-                      pack.sections.flatMap((s) => s.questions.map((q) => q.id))
-                    );
-                    const flaggedCount = st.flaggedIds.filter((id) =>
-                      validQIds.has(id)
-                    ).length;
-                    const masteredCount = st.masteredIds.filter((id) =>
-                      validQIds.has(id)
-                    ).length;
-                    const unmasteredCount = Math.max(0, qCount - masteredCount);
-                    const masteredPct = qCount
-                      ? Math.round((masteredCount / qCount) * 100)
-                      : 0;
-                    const draftAnswered = draft ? Object.keys(draft.answers).length : 0;
-                    const draftTotal = draft
-                      ? draft.sectionsLayout.reduce(
-                          (sum, s) => sum + s.questions.length,
-                          0
-                        )
-                      : 0;
-
-                    return (
-                      <article
-                        key={pack.id}
-                        className={`pack-card ${st.completedPack ? 'is-completed' : ''} ${
-                          qCount >= 60 ? 'is-major-pack' : ''
-                        }`}
-                      >
-                        <div className="pack-card__head">
-                          <div className="pack-badges">
-                            <span
-                              className={`cat-badge cat-${pack.category.toLowerCase()}`}
-                            >
-                              {pack.category}
-                            </span>
-                            <span
-                              className={`size-badge ${
-                                qCount >= 60
-                                  ? 'is-large'
-                                  : qCount >= 35
-                                    ? 'is-medium'
-                                    : 'is-small'
-                              }`}
-                            >
-                              {qCount} Soal
-                            </span>
-                            <span className="source-badge">
-                              {pack.source === 'builtin'
-                                ? pack.sourceFile || 'Bawaan'
-                                : 'Koleksi Saya'}
-                            </span>
+                      return (
+                        <article
+                          key={pack.id}
+                          className={`dash-ledger-row ${st.completedPack ? 'is-completed' : ''}`}
+                        >
+                          <div className="dash-ledger-row__info">
+                            <div className="dash-meta-line">
+                              <span className="dash-cat-tag">{pack.category}</span>
+                              <span className="dash-mono-meta">{qCount} soal</span>
+                              <span>{pack.sections.length} bab</span>
+                              <span>{Math.round(pack.durationSec / 60)} menit</span>
+                              {bestScore !== null && (
+                                <span className="dash-best-tag">
+                                  <Trophy size={12} aria-hidden="true" /> {bestScore}%
+                                </span>
+                              )}
+                              {draft && (
+                                <span className="dash-draft-inline">
+                                  Tersimpan {draftAnswered}/{draftTotal}
+                                </span>
+                              )}
+                            </div>
+                            <h3 className="dash-ledger-row__title">{parsedHeading.fullTitle}</h3>
+                            {renderPackSecondaryActions(
+                              pack,
+                              flaggedCount,
+                              masteredCount,
+                              unmasteredCount,
+                              hasWrong,
+                              latestRun
+                            )}
                           </div>
 
-                          <button
-                            type="button"
-                            className={`pack-check-btn ${
-                              st.completedPack ? 'is-checked' : ''
-                            }`}
-                            onClick={() => onTogglePackCompleted(pack.id)}
-                            title="Tandai paket ini sudah selesai dipelajari (tersimpan permanen)"
-                          >
-                            {st.completedPack ? (
-                              <CheckSquare size={15} />
-                            ) : (
-                              <Square size={15} />
-                            )}
-                            <span>{st.completedPack ? 'Selesai' : 'Checklist'}</span>
-                          </button>
-                        </div>
+                          <div className="dash-ledger-row__actions">
+                            <button
+                              type="button"
+                              aria-pressed={st.completedPack}
+                              className={`dash-check-btn ${st.completedPack ? 'is-checked' : ''}`}
+                              onClick={() => onTogglePackCompleted(pack.id)}
+                            >
+                              {st.completedPack ? (
+                                <CheckSquare size={15} strokeWidth={2.2} aria-hidden="true" />
+                              ) : (
+                                <Square size={14} strokeWidth={1.8} aria-hidden="true" />
+                              )}
+                              <span>{st.completedPack ? 'Selesai' : 'Tandai Selesai'}</span>
+                            </button>
 
-                        <h3 className="pack-card__title">{pack.name}</h3>
-                        {pack.subtitle && (
-                          <p className="pack-card__subtitle">{pack.subtitle}</p>
-                        )}
-
-                        <div className="pack-meta">
-                          <span>{pack.sections.length} Bagian</span>
-                          <span>•</span>
-                          <span>{Math.round(pack.durationSec / 60)} Menit</span>
-                          <span>•</span>
-                          <span>Lulus {pack.passingPct}%</span>
-                          {bestScore !== null && (
-                            <>
-                              <span>•</span>
-                              <span className="best-inline">
-                                <Trophy size={12} /> Terbaik {bestScore}%
-                              </span>
-                            </>
-                          )}
-                        </div>
-
-                        {/* Persistent Study Progress & Bookmarks */}
-                        {(masteredCount > 0 || flaggedCount > 0 || draft) && (
-                          <div className="pack-study-strip">
-                            <div className="pack-study-strip__row">
-                              <span>
-                                ☑ Paham: <b>{masteredCount}</b>/{qCount} ({masteredPct}%)
-                              </span>
-                              <span>
-                                ⚑ Ditandai: <b>{flaggedCount}</b>
-                              </span>
-                            </div>
-                            {masteredCount > 0 && (
-                              <div className="pack-study-bar">
-                                <div style={{ width: `${masteredPct}%` }} />
-                              </div>
-                            )}
-                            {draft && (
-                              <div className="pack-draft-banner">
-                                <span>
-                                  💾 Sesi tersimpan ({draftAnswered}/{draftTotal} dijawab •{' '}
-                                  {formatSavedTime(draft.savedAt)})
-                                </span>
+                            <div className="dash-ledger-row__launch">
+                              {draft ? (
                                 <button
                                   type="button"
-                                  className="pack-draft-clear"
-                                  onClick={() => onDiscardDraft(pack.id)}
-                                  title="Hapus sesi tersimpan"
+                                  className="dash-btn dash-btn--primary"
+                                  onClick={() => onResumeDraft(pack, draft)}
                                 >
-                                  Reset
+                                  <Play size={14} strokeWidth={2} aria-hidden="true" />
+                                  <span>Lanjut ({draftAnswered}/{draftTotal})</span>
                                 </button>
-                              </div>
+                              ) : (
+                                <button
+                                  type="button"
+                                  className="dash-btn dash-btn--primary"
+                                  onClick={() => openConfigurator(pack, 'exam')}
+                                >
+                                  <Play size={14} strokeWidth={2} aria-hidden="true" />
+                                  <span>Simulasi CBT</span>
+                                </button>
+                              )}
+                              <button
+                                type="button"
+                                className="dash-btn dash-btn--outline"
+                                onClick={() => openConfigurator(pack, 'study')}
+                              >
+                                <BookOpen size={14} strokeWidth={1.8} aria-hidden="true" />
+                                <span>Latihan</span>
+                              </button>
+                            </div>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div
+                    className={
+                      tier.layout === 'featured'
+                        ? 'dash-grid dash-grid--featured'
+                        : 'dash-grid dash-grid--compact'
+                    }
+                  >
+                    {tier.packs.map((pack) => {
+                      const qCount = getPackQuestionCount(pack);
+                      const bestScore = getBestPackScore(pack.id);
+                      const latestRun = getLatestPackAttempt(pack.id);
+                      const hasWrong = Boolean(
+                        latestRun && latestRun.wrongQuestionIds.length > 0
+                      );
+                      const st = studyStates[pack.id] || EMPTY_STUDY_STATE;
+                      const draft = drafts[pack.id];
+
+                      const validQIds = new Set(
+                        pack.sections.flatMap((s) => s.questions.map((q) => q.id))
+                      );
+                      const flaggedCount = st.flaggedIds.filter((id) =>
+                        validQIds.has(id)
+                      ).length;
+                      const masteredCount = st.masteredIds.filter((id) =>
+                        validQIds.has(id)
+                      ).length;
+                      const unmasteredCount = Math.max(0, qCount - masteredCount);
+                      const masteredPct = qCount
+                        ? Math.round((masteredCount / qCount) * 100)
+                        : 0;
+                      const draftAnswered = draft ? Object.keys(draft.answers).length : 0;
+                      const draftTotal = draft
+                        ? draft.sectionsLayout.reduce(
+                            (sum, s) => sum + s.questions.length,
+                            0
+                          )
+                        : 0;
+                      const parsedHeading = formatPackHeading(pack.name);
+
+                      return (
+                        <article
+                          key={pack.id}
+                          className={`dash-card ${st.completedPack ? 'is-completed' : ''} ${
+                            tier.layout === 'featured' ? 'is-featured' : 'is-compact'
+                          }`}
+                        >
+                          <div className="dash-card__top">
+                            <div className="dash-meta-line">
+                              <span className="dash-cat-tag">{pack.category}</span>
+                              {parsedHeading.series && (
+                                <span className="dash-series-tag">{parsedHeading.series}</span>
+                              )}
+                              <span className="dash-mono-meta">{qCount} soal</span>
+                            </div>
+
+                            <button
+                              type="button"
+                              aria-pressed={st.completedPack}
+                              className={`dash-check-btn ${
+                                st.completedPack ? 'is-checked' : ''
+                              }`}
+                              onClick={() => onTogglePackCompleted(pack.id)}
+                              title="Tandai paket ini sudah selesai dipelajari"
+                            >
+                              {st.completedPack ? (
+                                <CheckSquare size={15} strokeWidth={2.2} aria-hidden="true" />
+                              ) : (
+                                <Square size={14} strokeWidth={1.8} aria-hidden="true" />
+                              )}
+                              <span>{st.completedPack ? 'Selesai' : 'Checklist'}</span>
+                            </button>
+                          </div>
+
+                          <h3 className="dash-card__title">{parsedHeading.title}</h3>
+
+                          <div className="dash-card__facts">
+                            <span>{pack.sections.length} bab</span>
+                            <span aria-hidden="true">·</span>
+                            <span>{Math.round(pack.durationSec / 60)} menit</span>
+                            <span aria-hidden="true">·</span>
+                            <span>Lulus {pack.passingPct}%</span>
+                            {bestScore !== null && (
+                              <>
+                                <span aria-hidden="true">·</span>
+                                <span className="dash-best-tag">
+                                  <Trophy size={12} aria-hidden="true" /> Terbaik {bestScore}%
+                                </span>
+                              </>
                             )}
                           </div>
-                        )}
 
-                        {/* Chapter preview pills */}
-                        <div className="pack-chapters">
-                          {pack.sections.slice(0, 3).map((s) => (
-                            <span key={s.id} className="chapter-mini">
-                              {s.shortLabel}. {s.title} ({s.questions.length})
-                            </span>
-                          ))}
-                          {pack.sections.length > 3 && (
-                            <span className="chapter-mini is-more">
-                              +{pack.sections.length - 3} bab lainnya
-                            </span>
+                          {(masteredCount > 0 || flaggedCount > 0 || draft) && (
+                            <div className="dash-study-box">
+                              <div className="dash-study-box__row">
+                                <span>
+                                  Paham: <strong>{masteredCount}/{qCount}</strong> ({masteredPct}%)
+                                </span>
+                                <span className={flaggedCount > 0 ? 'is-accent-text' : ''}>
+                                  Ditandai: <strong>{flaggedCount}</strong>
+                                </span>
+                              </div>
+                              {masteredCount > 0 && (
+                                <div className="dash-study-meter" aria-hidden="true">
+                                  <div style={{ width: `${masteredPct}%` }} />
+                                </div>
+                              )}
+                              {draft && (
+                                <div className="dash-draft-row">
+                                  <span>
+                                    Sesi tersimpan ({draftAnswered}/{draftTotal} ·{' '}
+                                    {formatSavedTime(draft.savedAt)})
+                                  </span>
+                                  <button
+                                    type="button"
+                                    className="dash-draft-reset"
+                                    onClick={() => onDiscardDraft(pack.id)}
+                                  >
+                                    Reset
+                                  </button>
+                                </div>
+                              )}
+                            </div>
                           )}
-                        </div>
 
-                        <div className="pack-card__primary">
-                          {draft ? (
-                            <>
-                              <button
-                                type="button"
-                                className="studio-btn studio-btn--primary"
-                                onClick={() => onResumeDraft(pack, draft)}
-                              >
-                                <Play size={15} /> Lanjutkan ({draftAnswered}/{draftTotal})
-                              </button>
-                              <button
-                                type="button"
-                                className="studio-btn studio-btn--accent"
-                                onClick={() => openConfigurator(pack, 'study')}
-                              >
-                                <BookOpen size={15} /> Sesi Baru
-                              </button>
-                            </>
-                          ) : (
-                            <>
-                              <button
-                                type="button"
-                                className="studio-btn studio-btn--primary"
-                                onClick={() => openConfigurator(pack, 'exam')}
-                              >
-                                <Play size={15} /> Simulasi CBT
-                              </button>
-                              <button
-                                type="button"
-                                className="studio-btn studio-btn--accent"
-                                onClick={() => openConfigurator(pack, 'study')}
-                              >
-                                <BookOpen size={15} /> Mode Latihan
-                              </button>
-                            </>
-                          )}
-                        </div>
+                          <div className="dash-card__primary">
+                            {draft ? (
+                              <>
+                                <button
+                                  type="button"
+                                  className="dash-btn dash-btn--primary"
+                                  onClick={() => onResumeDraft(pack, draft)}
+                                >
+                                  <Play size={15} strokeWidth={2} aria-hidden="true" />
+                                  <span>Lanjutkan ({draftAnswered}/{draftTotal})</span>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="dash-btn dash-btn--outline"
+                                  onClick={() => openConfigurator(pack, 'study')}
+                                >
+                                  <BookOpen size={15} strokeWidth={1.8} aria-hidden="true" />
+                                  <span>Sesi Baru</span>
+                                </button>
+                              </>
+                            ) : (
+                              <>
+                                <button
+                                  type="button"
+                                  className="dash-btn dash-btn--primary"
+                                  onClick={() => openConfigurator(pack, 'exam')}
+                                >
+                                  <Play size={15} strokeWidth={2} aria-hidden="true" />
+                                  <span>Simulasi CBT</span>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="dash-btn dash-btn--outline"
+                                  onClick={() => openConfigurator(pack, 'study')}
+                                >
+                                  <BookOpen size={15} strokeWidth={1.8} aria-hidden="true" />
+                                  <span>Mode Latihan</span>
+                                </button>
+                              </>
+                            )}
+                          </div>
 
-                        <div className="pack-card__secondary">
-                          {flaggedCount > 0 && (
-                            <button
-                              type="button"
-                              className="mini-action is-warn"
-                              onClick={() => handleLaunchFlaggedDrill(pack)}
-                            >
-                              <Flag size={13} /> Latih Ditandai ({flaggedCount})
-                            </button>
+                          {renderPackSecondaryActions(
+                            pack,
+                            flaggedCount,
+                            masteredCount,
+                            unmasteredCount,
+                            hasWrong,
+                            latestRun
                           )}
-                          {masteredCount > 0 && unmasteredCount > 0 && (
-                            <button
-                              type="button"
-                              className="mini-action is-checked-action"
-                              onClick={() => handleLaunchUnmasteredDrill(pack)}
-                            >
-                              <Square size={13} /> Belum Paham ({unmasteredCount})
-                            </button>
-                          )}
-                          {hasWrong && (
-                            <button
-                              type="button"
-                              className="mini-action is-warn"
-                              onClick={() => handleLaunchWrongDrill(pack)}
-                            >
-                              <RotateCcw size={13} /> Ulangi Salah (
-                              {latestRun.wrongQuestionIds.length})
-                            </button>
-                          )}
-                          {pack.studyNotes && (
-                            <button
-                              type="button"
-                              className="mini-action"
-                              onClick={() => setNotesPack(pack)}
-                            >
-                              <FileText size={13} /> Peta Cepat
-                            </button>
-                          )}
-                          {pack.source === 'custom' ? (
-                            <button
-                              type="button"
-                              className="mini-action"
-                              onClick={() => onEditCustomPack(pack)}
-                            >
-                              <Edit3 size={13} /> Edit
-                            </button>
-                          ) : (
-                            <button
-                              type="button"
-                              className="mini-action"
-                              onClick={() => onDuplicatePackToCustom(pack)}
-                              title="Salin ke koleksi saya agar bisa diedit bebas"
-                            >
-                              <Copy size={13} /> Duplikat
-                            </button>
-                          )}
-                          <button
-                            type="button"
-                            className="mini-action"
-                            onClick={() =>
-                              downloadFile(
-                                `${pack.id}.txt`,
-                                exportPackToBombTxt(pack),
-                                'text/plain;charset=utf-8'
-                              )
-                            }
-                            title="Unduh sebagai file Bomb Soal (.txt)"
-                          >
-                            <Download size={13} /> .txt
-                          </button>
-                          <button
-                            type="button"
-                            className="mini-action"
-                            onClick={() =>
-                              downloadFile(
-                                `${pack.id}.json`,
-                                JSON.stringify(pack, null, 2),
-                                'application/json'
-                              )
-                            }
-                            title="Unduh sebagai .json untuk folder packs/"
-                          >
-                            <Download size={13} /> .json
-                          </button>
-                          {pack.source === 'custom' && (
-                            <button
-                              type="button"
-                              className="mini-action is-danger"
-                              onClick={() => {
-                                if (
-                                  window.confirm(
-                                    `Hapus paket "${pack.name}" dari koleksi?`
-                                  )
-                                ) {
-                                  onDeleteCustomPack(pack.id);
-                                }
-                              }}
-                            >
-                              <Trash2 size={13} /> Hapus
-                            </button>
-                          )}
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                )}
               </section>
             );
           })
         )}
 
-        {/* Attempt History */}
+        {/* Attempt History Ledger */}
         {history.length > 0 && (
-          <section className="panel-card history-panel">
-            <div className="panel-card__head">
+          <section className="dash-history" aria-labelledby="dash-history-title">
+            <div className="dash-history__head">
               <div>
-                <h2>Riwayat Latihan &amp; Simulasi Terakhir</h2>
-                <span>Pantau perkembangan skormu di tiap percobaan</span>
+                <h2 id="dash-history-title">Riwayat Latihan dan Simulasi Terakhir</h2>
+                <p>Catatan skor percobaan yang selesai pada perangkat ini.</p>
               </div>
-              <button
-                type="button"
-                className="studio-btn studio-btn--ghost"
-                onClick={() => {
-                  if (window.confirm('Bersihkan semua riwayat skor?')) {
-                    onClearHistory();
-                  }
-                }}
-              >
-                Bersihkan Riwayat
-              </button>
+              <div className="dash-history__actions">
+                <button
+                  type="button"
+                  className="dash-btn dash-btn--outline"
+                  onClick={onOpenHistory}
+                >
+                  <History size={15} strokeWidth={1.8} aria-hidden="true" />
+                  <span>Analisa Progres &amp; Soal Salah</span>
+                </button>
+                <button
+                  type="button"
+                  className="dash-btn dash-btn--danger-outline"
+                  onClick={() => {
+                    if (window.confirm('Bersihkan semua riwayat skor?')) {
+                      onClearHistory();
+                    }
+                  }}
+                >
+                  Bersihkan Riwayat
+                </button>
+              </div>
             </div>
+
             <div className="history-table-wrap">
-              <table className="history-table">
+              <table className="history-table dash-table">
                 <thead>
                   <tr>
                     <th>Tanggal</th>
@@ -842,22 +1154,22 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 <tbody>
                   {history.slice(0, 12).map((item) => (
                     <tr key={item.id}>
-                      <td>
+                      <td className="dash-mono-cell">
                         {new Date(item.completedAt).toLocaleString('id-ID', {
                           dateStyle: 'short',
                           timeStyle: 'short',
                         })}
                       </td>
-                      <td>{item.packName}</td>
+                      <td>{formatPackHeading(item.packName).fullTitle}</td>
                       <td>
                         <span className={`mode-tag is-${item.mode}`}>
                           {item.mode === 'exam' ? 'Simulasi CBT' : 'Latihan'}
                         </span>
                       </td>
-                      <td>
-                        <b>
+                      <td className="dash-mono-cell">
+                        <strong>
                           {item.correct}/{item.total}
-                        </b>{' '}
+                        </strong>{' '}
                         ({item.pct}%)
                       </td>
                       <td>
@@ -883,6 +1195,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
           onClick={() => setConfiguringPack(null)}
           role="dialog"
           aria-modal="true"
+          aria-labelledby="config-modal-title"
         >
           <div
             className="modal-panel modal-panel--wide"
@@ -890,15 +1203,18 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
           >
             <div className="modal-header">
               <div className="modal-title-row">
-                <SlidersHorizontal size={18} />
-                <h3>Konfigurasi Sesi — {configuringPack.name}</h3>
+                <SlidersHorizontal size={18} aria-hidden="true" />
+                <h3 id="config-modal-title">
+                  Konfigurasi Sesi: {formatPackHeading(configuringPack.name).fullTitle}
+                </h3>
               </div>
               <button
+                type="button"
                 className="modal-close"
                 onClick={() => setConfiguringPack(null)}
                 aria-label="Tutup"
               >
-                <X size={20} />
+                <X size={20} aria-hidden="true" />
               </button>
             </div>
 
@@ -906,6 +1222,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
               <div className="config-mode-grid">
                 <button
                   type="button"
+                  aria-pressed={mode === 'exam'}
                   className={`mode-card ${mode === 'exam' ? 'is-active' : ''}`}
                   onClick={() => {
                     setMode('exam');
@@ -914,12 +1231,13 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 >
                   <strong>Simulasi Ujian CBT</strong>
                   <small>
-                    Tampilan Prometric asli dengan timer mundur. Kunci &amp; pembahasan
-                    dibuka setelah klik Finish.
+                    Tampilan Prometric dengan timer mundur. Kunci dan pembahasan dibuka setelah
+                    klik Finish.
                   </small>
                 </button>
                 <button
                   type="button"
+                  aria-pressed={mode === 'study'}
                   className={`mode-card ${mode === 'study' ? 'is-active' : ''}`}
                   onClick={() => {
                     setMode('study');
@@ -928,8 +1246,8 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 >
                   <strong>Mode Latihan / Belajar</strong>
                   <small>
-                    Pembahasan langsung tampil setelah memilih jawaban, bebas waktu atau
-                    pakai target waktu.
+                    Pembahasan langsung tampil setelah memilih jawaban, tanpa timer atau dengan
+                    target waktu opsional.
                   </small>
                 </button>
               </div>
@@ -991,7 +1309,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 <label className="setting-toggle">
                   <div>
                     <strong>
-                      <Shuffle size={14} /> Acak Urutan Soal
+                      <Shuffle size={14} aria-hidden="true" /> Acak Urutan Soal
                     </strong>
                     <small>Mengacak urutan soal di dalam setiap bab</small>
                   </div>
@@ -1005,7 +1323,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                 <label className="setting-toggle">
                   <div>
                     <strong>
-                      <Shuffle size={14} /> Acak Posisi Opsi (A/B/C/D)
+                      <Shuffle size={14} aria-hidden="true" /> Acak Posisi Opsi (A/B/C/D)
                     </strong>
                     <small>Agar tidak menghafal posisi huruf jawaban</small>
                   </div>
@@ -1020,7 +1338,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
               <div className="config-numbers-row">
                 <label className="setting-field">
                   <span>
-                    <Clock size={14} /> Batas Waktu (menit, 0 = tanpa timer)
+                    <Clock size={14} aria-hidden="true" /> Batas Waktu (menit, 0 = tanpa timer)
                   </span>
                   <input
                     type="number"
@@ -1053,14 +1371,14 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
             <div className="modal-footer">
               <button
                 type="button"
-                className="studio-btn studio-btn--ghost"
+                className="dash-btn dash-btn--outline"
                 onClick={() => setConfiguringPack(null)}
               >
                 Batal
               </button>
               <button
                 type="button"
-                className="studio-btn studio-btn--primary"
+                className="dash-btn dash-btn--primary"
                 disabled={selectedQuestionCount === 0}
                 onClick={() => {
                   const chosen = configuringPack;
@@ -1076,7 +1394,8 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
                   });
                 }}
               >
-                <Play size={16} /> Mulai Sekarang ({selectedQuestionCount} Soal)
+                <Play size={16} strokeWidth={2} aria-hidden="true" />
+                <span>Mulai Sekarang ({selectedQuestionCount} Soal)</span>
               </button>
             </div>
           </div>
@@ -1085,7 +1404,7 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
 
       {notesPack && notesPack.studyNotes && (
         <StudyNotesModal
-          title={notesPack.name}
+          title={formatPackHeading(notesPack.name).fullTitle}
           notes={notesPack.studyNotes}
           showFurigana={settings.showFurigana}
           onClose={() => setNotesPack(null)}

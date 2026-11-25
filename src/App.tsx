@@ -5,26 +5,31 @@ import {
   ExamPack,
   ExamSessionConfig,
   ExamSettings,
+  QuestionAttemptStat,
   QuestionItem,
   QuestionStudyState,
   SavedExamDraft,
 } from './types/exam';
 import {
   clearAttemptHistory,
+  clearQuestionStats,
   deleteExamDraft,
   EMPTY_STUDY_STATE,
   loadActiveExamPackId,
   loadAttemptHistory,
   loadCustomPacks,
   loadExamDrafts,
+  loadQuestionStats,
   loadSettings,
   loadStudyStates,
+  recordSessionQuestionStats,
   saveActiveExamPackId,
   saveAttemptRecord,
   saveCustomPacks,
   saveExamDraft,
   saveSettings,
   saveStudyStates,
+  SessionQuestionOutcome,
 } from './utils/storage';
 import {
   ActiveExamSession,
@@ -35,9 +40,11 @@ import { LobbyView } from './components/LobbyView';
 import { CbtExamView, ExamCompletionPayload } from './components/CbtExamView';
 import { ResultView } from './components/ResultView';
 import { QuestionStudioView, StudioTab } from './components/QuestionStudioView';
+import { HistoryView } from './components/HistoryView';
 
 type AppRoute =
   | { view: 'lobby' }
+  | { view: 'history' }
   | { view: 'exam'; session: ActiveExamSession }
   | { view: 'result'; session: ActiveExamSession; result: ExamCompletionPayload }
   | { view: 'studio'; tab: StudioTab; editingPack: ExamPack | null };
@@ -47,6 +54,9 @@ export const App: React.FC = () => {
   const [customPacks, setCustomPacks] = useState<ExamPack[]>(() => loadCustomPacks());
   const [settings, setSettings] = useState<ExamSettings>(() => loadSettings());
   const [history, setHistory] = useState<AttemptRecord[]>(() => loadAttemptHistory());
+  const [questionStats, setQuestionStats] = useState<Record<string, QuestionAttemptStat>>(
+    () => loadQuestionStats()
+  );
   const [studyStates, setStudyStates] = useState<Record<string, QuestionStudyState>>(() =>
     loadStudyStates()
   );
@@ -59,6 +69,18 @@ export const App: React.FC = () => {
     [customPacks, builtinPacks]
   );
 
+  const questionOriginPackId = useMemo(() => {
+    const map = new Map<string, string>();
+    allPacks.forEach((p) => {
+      p.sections.forEach((sec) => {
+        sec.questions.forEach((q) => {
+          if (!map.has(q.id)) map.set(q.id, p.id);
+        });
+      });
+    });
+    return map;
+  }, [allPacks]);
+
   // Restore active exam immediately if the user reloaded the page mid-session
   const [route, setRoute] = useState<AppRoute>(() => {
     const activePackId = loadActiveExamPackId();
@@ -67,9 +89,21 @@ export const App: React.FC = () => {
     const draft = savedDrafts[activePackId];
     if (!draft) return { view: 'lobby' };
     const packsNow = [...loadCustomPacks(), ...loadBuiltinPacks()];
-    const targetPack = packsNow.find((p) => p.id === activePackId);
+    const targetPack: ExamPack | undefined =
+      packsNow.find((p) => p.id === activePackId) ||
+      (activePackId === 'drill-wrong-all'
+        ? {
+            id: 'drill-wrong-all',
+            name: draft.config.sessionLabel || 'Latihan Soal Sering Salah',
+            category: 'SSW',
+            durationSec: draft.config.durationSec,
+            passingPct: draft.config.passingPct,
+            source: 'custom',
+            sections: [],
+          }
+        : undefined);
     if (!targetPack) return { view: 'lobby' };
-    const restored = restoreSessionFromDraft(targetPack, draft);
+    const restored = restoreSessionFromDraft(targetPack, draft, packsNow);
     return restored ? { view: 'exam', session: restored } : { view: 'lobby' };
   });
 
@@ -156,10 +190,48 @@ export const App: React.FC = () => {
   };
 
   const handleResumeDraft = (pack: ExamPack, draft: SavedExamDraft) => {
-    const restored = restoreSessionFromDraft(pack, draft);
+    const restored = restoreSessionFromDraft(pack, draft, allPacks);
     if (!restored) return;
     saveActiveExamPackId(pack.id);
     setRoute({ view: 'exam', session: restored });
+  };
+
+  const handleStartDrillQuestions = (
+    targetPack: ExamPack | null,
+    questions: QuestionItem[],
+    label: string
+  ) => {
+    if (questions.length === 0) return;
+    const resolvedPack: ExamPack =
+      targetPack || {
+        id: 'drill-wrong-all',
+        name: 'Latihan Gabungan Soal Salah',
+        category: 'SSW',
+        durationSec: 0,
+        passingPct: 65,
+        source: 'custom',
+        sections: [
+          {
+            id: 'drill-sec-1',
+            shortLabel: '復習',
+            title: label,
+            questions,
+          },
+        ],
+      };
+
+    handleStartSession(resolvedPack, {
+      packId: resolvedPack.id,
+      mode: 'study',
+      sectionIds: [],
+      shuffleQuestions: false,
+      shuffleOptions: false,
+      durationSec: 0,
+      passingPct: resolvedPack.passingPct,
+      onlyWrongFromHistory: true,
+      customQuestionsOnly: questions,
+      sessionLabel: label,
+    });
   };
 
   const handleExamComplete = (
@@ -167,20 +239,35 @@ export const App: React.FC = () => {
     payload: ExamCompletionPayload
   ) => {
     let correct = 0;
+    let answeredCount = 0;
     let total = 0;
     const wrongIds: string[] = [];
+    const correctIds: string[] = [];
+    const outcomes: SessionQuestionOutcome[] = [];
 
     session.sections.forEach((sec) => {
       sec.questions.forEach((q) => {
         total++;
-        if (payload.answers[q.id] === q.answer) {
+        const userAnsIdx = payload.answers[q.id];
+        if (userAnsIdx !== undefined) answeredCount++;
+        const isCorrect = userAnsIdx === q.answer;
+        if (isCorrect) {
           correct++;
+          correctIds.push(q.id);
         } else {
           wrongIds.push(q.id);
         }
+        outcomes.push({
+          questionId: q.id,
+          sourcePackId: questionOriginPackId.get(q.id),
+          isCorrect,
+          selectedOptionText:
+            userAnsIdx !== undefined ? q.options[userAnsIdx] : 'Tidak dijawab',
+        });
       });
     });
 
+    const completedAt = new Date().toISOString();
     const pct = total ? Math.round((correct / total) * 100) : 0;
     const record: AttemptRecord = {
       id: `att-${Date.now().toString(36)}`,
@@ -195,11 +282,15 @@ export const App: React.FC = () => {
       passed: pct >= session.config.passingPct,
       elapsedSec: payload.elapsedSec,
       wrongQuestionIds: wrongIds,
-      completedAt: new Date().toISOString(),
+      correctQuestionIds: correctIds,
+      answeredCount,
+      completedAt,
     };
 
     const nextHistory = saveAttemptRecord(record);
     setHistory(nextHistory);
+    const nextStats = recordSessionQuestionStats(session.pack.id, outcomes, completedAt);
+    setQuestionStats(nextStats);
     // Clear active in-progress draft when test finishes (while keeping persistent flags & mastered checklist!)
     handleDiscardDraft(session.pack.id);
     saveActiveExamPackId(null);
@@ -286,7 +377,35 @@ export const App: React.FC = () => {
             sessionLabel: `Ulangi Salah (${wrongQs.length} soal)`,
           })
         }
+        onOpenHistory={() => setRoute({ view: 'history' })}
         onBackToLobby={() => setRoute({ view: 'lobby' })}
+      />
+    );
+  }
+
+  if (route.view === 'history') {
+    return (
+      <HistoryView
+        packs={allPacks}
+        settings={settings}
+        history={history}
+        questionStats={questionStats}
+        studyStates={studyStates}
+        onBackToLobby={() => setRoute({ view: 'lobby' })}
+        onToggleFurigana={() =>
+          setSettings((s) => ({ ...s, showFurigana: !s.showFurigana }))
+        }
+        onToggleQuestionFlag={handleToggleQuestionFlag}
+        onToggleQuestionMastered={handleToggleQuestionMastered}
+        onStartDrillQuestions={handleStartDrillQuestions}
+        onClearAttemptHistory={() => {
+          clearAttemptHistory();
+          setHistory([]);
+        }}
+        onClearQuestionStats={() => {
+          const empty = clearQuestionStats();
+          setQuestionStats(empty);
+        }}
       />
     );
   }
@@ -311,6 +430,7 @@ export const App: React.FC = () => {
       packs={allPacks}
       settings={settings}
       history={history}
+      questionStats={questionStats}
       studyStates={studyStates}
       drafts={drafts}
       onUpdateSettings={setSettings}
@@ -318,6 +438,7 @@ export const App: React.FC = () => {
       onResumeDraft={handleResumeDraft}
       onDiscardDraft={handleDiscardDraft}
       onTogglePackCompleted={handleTogglePackCompleted}
+      onOpenHistory={() => setRoute({ view: 'history' })}
       onOpenStudioCreate={() =>
         setRoute({ view: 'studio', tab: 'editor', editingPack: null })
       }

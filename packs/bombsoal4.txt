@@ -1,5 +1,5 @@
 # SSW Pengolahan Makanan — Latihan Recall CBT Set 2 (20 Soal)
-> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal latihan SSW Pengolahan Makanan Set 2 (opsi campuran A–C & A–D, furigana rapi, terjemahan & catatan jebakan)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal latihan CBT SSW Pengolahan Makanan Set 2 (diselaraskan ke OTAFF Edisi 5.1)
 
 ## 飲食料品製造業 練習問題 Set 2（20問）
 
@@ -8,142 +8,142 @@ Terjemahan: Mengapa kita harus membuat makanan yang aman? Pilihlah satu pernyata
 A. 消費者(しょうひしゃ)が安心(あんしん)するように
 B. 消費者(しょうひしゃ)に健康障害(けんこうしょうがい)がおこらないように
 C. 食(た)べやすいように
-**Jawaban: C** — Tujuan utama membuat makanan yang aman adalah agar konsumen merasa tenang (安心) dan tidak mengalami gangguan kesehatan (健康障害), bukan agar mudah dimakan (`食べやすいように` adalah salah satu manfaat pemanasan, bukan definisi tujuan keamanan pangan).
+**Jawaban: C** — Keamanan pangan bertujuan melindungi konsumen agar tidak sakit/cedera dan menjaga kepercayaan (P.3), sedangkan `食べやすいように` (agar mudah dimakan) adalah salah satu manfaat pemanasan (P.33), bukan tujuan keamanan pangan.
 
-**2. [感染型食中毒]** 感染型(かんせんがた)食中毒(しょくちゅうどく)の原因(げんいん)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Manakah yang merupakan penyebab keracunan makanan tipe infeksius (感染型食中毒)? Pilihlah satu yang benar.
+**2. [体内で増殖する食中毒菌]** 食品(しょくひん)についた細菌(さいきん)が、人(ひと)の体(からだ)の中(なか)で増(ふ)えて食中毒(しょくちゅうどく)を起(お)こす細菌(さいきん)の組合(くみあわ)せはどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah kombinasi bakteri keracunan makanan yang berkembang biak di dalam tubuh manusia (`体の中で増えて発症・毒素を作る`)? Pilihlah satu yang benar.
 A. 黄色(おうしょく)ブドウ球菌(きゅうきん)、ボツリヌス菌(きん)、サルモネラ属菌(ぞくきん)
 B. ボツリヌス菌(きん)、ウェルシュ菌(きん)、セレウス菌(きん)
 C. サルモネラ属菌(ぞくきん)、カンピロバクター属菌(ぞくきん)、腸炎(ちょうえん)ビブリオ
-**Jawaban: C** — Bakteri keracunan makanan tipe infeksius utama adalah **Salmonella (`サルモネラ属菌`), Campylobacter (`カンピロバクター属菌`), dan Vibrio parahaemolyticus (`腸炎ビブリオ`)**. (Opsi B seluruhnya bakteri pembentuk spora/toksin).
+**Jawaban: C** — Menurut tabel OTAFF v5.1 P.11: **`サルモネラ属菌`**, **`カンピロバクター属菌`**, dan **`腸炎ビブリオ`** berkembang biak **di dalam tubuh manusia**. (`黄色ブドウ球菌` dan `ボツリヌス菌` berkembang biak & membuat racun di dalam makanan).
 
-**3. [安全な食品の全体像]** 安全(あんぜん)な食品(しょくひん)を作(つく)るための全体像(ぜんたいぞう)について、間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Mengenai gambaran keseluruhan untuk membuat makanan yang aman, pilihlah satu yang SALAH.
+**3. [一般衛生管理と製造環境]** 安全(あんぜん)な食品(しょくひん)を作(つく)るための取(と)り組(く)みについて、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai upaya untuk membuat makanan yang aman, pilihlah satu pernyataan yang SALAH.
 A. 安全(あんぜん)な原材料(げんざいりょう)の受(う)け入(い)れ
-B. 製造中(せいぞうちゅう)の服装(ふくそう)の衛生的(えいせいてき)な取(と)り扱(あつか)い
+B. 不潔(ふけつ)な作業環境(さぎょうかんきょう)で製造(せいぞう)すること
 C. きれいな製造環境(せいぞうかんきょう)
-D. 製造中(せいぞうちゅう)の食品(しょくひん)の衛生的(えいせいてき)な取(と)り扱(あつか)い
-**Jawaban: B** — Dalam poin gambaran keseluruhan (`全体像`), yang dimaksud adalah penanganan higienis terhadap peralatan/mesin dan makanan serta bahan baku aman & lingkungan bersih — bukan istilah "penanganan pakaian selama proses produksi" (B).
+D. 製造中(せいぞうちゅう)の食品(しょくひん)・作業者(さぎょうしゃ)の衛生的(えいせいてき)な取(と)り扱(あつか)い
+**Jawaban: B** — Memproduksi makanan di lingkungan kerja yang kotor (`不潔な作業環境で製造すること`) tentu **salah**; menjaga bahan aman, lingkungan bersih, peralatan, serta pekerja & pakaian kerja higienis adalah pilar Manajemen Higiene Umum (P.5 & P.19).
 
-**4. [予防対策の加熱基準]** 感染型(かんせんがた)食中毒(しょくちゅうどく)の主(おも)な予防対策(よぼうたいさく)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa langkah pencegahan utama untuk keracunan makanan tipe infeksius? Pilihlah satu yang benar.
+**4. [一般的な食中毒菌の加熱基準]** 一般的(いっぱんてき)な食中毒菌(しょくちゅうどくきん)（サルモネラ属菌(ぞくきん)など）の主(おも)な予防対策(よぼうたいさく)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apa langkah pencegahan pemanasan utama untuk bakteri keracunan makanan umum (seperti Salmonella, dll.)? Pilihlah satu yang benar.
 A. 70℃以上(いじょう)、1分以上(いっぷんいじょう)加熱(かねつ)します
 B. 75℃以上(いじょう)、60秒以上(びょういじょう)加熱(かねつ)します
 C. 80℃以上(いじょう)、30秒以上(びょういじょう)加熱(かねつ)します
 D. 75℃以上(いじょう)、1時間(いちじかん)加熱(かねつ)します
-**Jawaban: B** — Standar pemanasan utama bakteri keracunan makanan umum adalah **75°C atau lebih selama 1 menit / 60 detik atau lebih (`75℃以上、60秒以上`)**.
+**Jawaban: B** — Standar pemanasan bakteri keracunan makanan umum adalah suhu inti **75℃ selama 1 menit (60 detik) atau lebih** (OTAFF v5.1 P.12 & P.33).
 
 **5. [保護具の使い方]** 保護具(ほごぐ)の使(つか)い方(かた)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Bagaimana cara penggunaan alat pelindung diri (保護具) yang benar? Pilihlah satu yang benar.
+Terjemahan: Bagaimana cara penggunaan alat pelindung diri (`保護具`) yang benar? Pilihlah satu yang benar.
 A. 古(ふる)いものと傷(きず)のあるものを使用(しよう)する
-B. 防護眼鏡(ぼうごめがね)や手袋(てぶくろ)を使用(しよう)する
+B. 保護(ほご)メガネ（防護眼鏡(ぼうごめがね)）や手袋(てぶくろ)を使用(しよう)する
 C. じゃまですから安全靴(あんぜんぐつ)を使(つか)わない
-**Jawaban: B** — Pekerja wajib mengenakan kacamata pelindung (`防護眼鏡`), sarung tangan (`手袋`), serta sepatu keselamatan yang sesuai dan tidak rusak.
+**Jawaban: B** — Pekerja wajib mengenakan APD keselamatan seperti kacamata pelindung (`保護メガネ`), sarung tangan pelindung, dan sepatu keselamatan (`安全靴`) yang masih baik sesuai prosedur (OTAFF v5.1 P.47).
 
 **6. [サルモネラ属菌]** サルモネラ属菌(ぞくきん)で原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Salmonella? Pilihlah satu yang benar.
 A. 野菜(やさい)、食肉(しょくにく)、牛肉(ぎゅうにく)、井戸水(いどみず)など
 B. 海水(かいすい)にいる魚介類(ぎょかいるい)、刺(さ)し身(み)、すしなど
-C. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)、鶏卵(けいらん)など
-**Jawaban: C** — Makanan penyebab khas Salmonella (`サルモネラ属菌`) adalah **telur ayam (`鶏卵`) dan daging/daging ayam (`食肉・鶏肉`)**.
+C. 食肉(しょくにく)（特(とく)に鶏肉(とりにく)）、鶏卵(けいらん)など
+**Jawaban: C** — Makanan penyebab khas **`サルモネラ属菌`** pada tabel OTAFF v5.1 P.11 adalah **telur ayam (`鶏卵`) dan daging, terutama daging ayam (`食肉・特に鶏肉`)**. (A = O157, B = Vibrio).
 
 **7. [腸炎ビブリオの症状]** 腸炎(ちょうえん)ビブリオの主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Apa saja gejala utama dari infeksi Vibrio parahaemolyticus (腸炎ビブリオ)? Pilih salah satu yang benar.
-A. 腹痛(ふくつう)、はげしい下痢(げり)
-B. 血便(けつべん)、はげしい下痢(げり)、腹痛(ふくつう)
-C. 下痢(げり)、はげしい下痢(げり)、発熱(はつねつ)
+A. 腹痛(ふくつう)、激(はげ)しい下痢(げり)
+B. 血便(けつべん)、激(はげ)しい下痢(げり)、腹痛(ふくつう)
+C. 下痢(げり)、吐(は)き気(け)、発熱(はつねつ)
 D. 腹痛(ふくつう)、下痢(げり)
-**Jawaban: A** — Gejala utama `腸炎ビブリオ` adalah **nyeri perut (`腹痛`) dan diare parah (`はげしい下痢`)**. (B yang disertai `血便`/tinja berdarah adalah ciri O157).
+**Jawaban: A** — Gejala utama `腸炎ビブリオ` adalah **nyeri perut (`腹痛`) dan diare parah (`激しい下痢`)** (OTAFF v5.1 P.11). (`血便` pada B adalah ciri O157).
 
 **8. [カンピロバクターの原因食品]** カンピロバクター属菌(ぞくきん)の原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Makanan apa yang rentan menyebabkan infeksi Campylobacter? Pilih satu jawaban yang benar.
-A. 食肉(しょくにく)、鶏肉(とりにく)
-B. 食肉(しょくにく)、牛肉(ぎゅうにく)
-C. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)
-D. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)、井戸水(いどみず)
-**Jawaban: D** — Campylobacter terutama terdapat pada daging (khususnya daging ayam `鶏肉`), serta dapat mengontaminasi sayuran dan air sumur (`井戸水`).
+A. 食肉(しょくにく)（特(とく)に鶏肉(とりにく)）
+B. 食肉(しょくにく)（特(とく)に牛肉(ぎゅうにく)）
+C. 缶詰(かんづめ)、瓶詰(びんづ)め
+D. 野菜(やさい)、食肉(しょくにく)（特(とく)に牛肉(ぎゅうにく)）、井戸水(いどみず)
+**Jawaban: A** — Menurut tabel OTAFF v5.1 P.11, penyebab khas **`カンピロバクター属菌`** adalah **daging, terutama daging ayam (`食肉・特に鶏肉`)**. (`野菜・牛肉・井戸水` adalah penyebab **腸管出血性大腸菌 O157**).
 
 **9. [セレウス菌]** セレウス菌(きん)で原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Makanan apa yang rentan menjadi penyebab keracunan Bacillus cereus (セレウス菌)? Pilih satu jawaban yang benar.
-A. 米(こめ)や小麦(こむぎ)などを使(つか)って調理(ちょうり)した食品(しょくひん)
+A. 穀物加工品(こくもつかこうひん)（米(こめ)や小麦(こむぎ)の食品(しょくひん)）、炒飯(ちゃーはん)など
 B. 缶詰(かんづめ)、びんづめ
 C. 手(て)や指(ゆび)に傷(きず)のある人(ひと)が調理(ちょうり)した食品(しょくひん)
-**Jawaban: A** — Bacillus cereus khas pada **makanan berbahan beras (`米`) dan gandum (`小麦`)** seperti nasi goreng (`チャーハン`) dan pasta. (B = Botulinum, C = Staphylococcus aureus).
+**Jawaban: A** — `セレウス菌` khas pada **olahan serealia/biji-bijian (beras/gandum) dan nasi goreng (`炒飯`)** (OTAFF v5.1 P.11). (B = Botulinum, C = Staphylococcus aureus).
 
 **10. [黄色ブドウ球菌の症状]** 黄色(おうしょく)ブドウ球菌(きゅうきん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Apa gejala utama dari keracunan Staphylococcus aureus (黄色ブドウ球菌)? Pilih satu jawaban yang benar.
 A. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
 B. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
 C. 吐(は)き気(け)、おう吐(と)、下痢(げり)
-**Jawaban: B** — Gejala khas keracunan `黄色ブドウ球菌` adalah **mual (`吐き気`), muntah (`おう吐`), dan sakit perut (`腹痛`)**. (`呼吸困難` di A adalah ciri Botulinum).
+**Jawaban: B** — Gejala khas keracunan `黄色ブドウ球菌` adalah **mual (`吐き気`), muntah (`おう吐`), dan sakit perut (`腹痛`)** (OTAFF v5.1 P.11). (`呼吸困難` di A adalah ciri Botulinum).
 
 **11. [食中毒予防の3原則]** 食中毒(しょくちゅうどく)予防(よぼう)の3原則(げんそく)で、間違(まちが)っているものをひとつえらびなさい。
 Terjemahan: Pilih satu yang SALAH dari tiga prinsip pencegahan keracunan makanan akibat bakteri.
 A. つけない
 B. ころさない
 C. 増(ふ)やさない
-**Jawaban: B** — Tiga prinsip pencegahan keracunan makanan oleh bakteri adalah `つけない` (tidak menempel), `増やさない` (tidak memperbanyak), dan `やっつける` (membasmi) — bukan `ころさない` (tidak membunuh).
+**Jawaban: B** — Tiga prinsip pencegahan keracunan makanan akibat bakteri adalah `つけない`, `増やさない`, dan `やっつける（殺す）` — bukan `ころさない` (OTAFF v5.1 P.12).
 
 **12. [増殖の3要素]** 微生物(びせいぶつ)が増殖(ぞうしょく)する3つの要素(ようそ)のうち、間違(まちが)っているものをひとつえらびなさい。
 Terjemahan: Dari tiga elemen yang membuat mikroorganisme berkembang biak, pilih satu yang SALAH.
 A. 水(みず)
 B. 水分(すいぶん)
 C. 栄養(えいよう)
-**Jawaban: A** — Tiga elemen pertumbuhan bakteri adalah **suhu (`温度`), kelembapan/kadar air (`水分`), dan nutrisi (`栄養`)** — bukan `水` (air).
+**Jawaban: A** — Tiga elemen pertumbuhan bakteri adalah **suhu (`温度`), kadar air/kelembapan (`水分`), dan nutrisi (`栄養`)** — bukan `水` (OTAFF v5.1 P.12).
 
-**13. [増殖しやすい食品]** 微生物(びせいぶつ)が増殖(ぞうしょく)しやすい食品(しょくひん)はどの食品(しょくひん)ですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Jenis makanan manakah yang paling mudah ditumbuhi mikroorganisme? Pilih satu yang benar.
-A. 鶏肉(とりにく)
-B. 豚肉(ぶたにく)
-C. 魚(さかな)
-**Jawaban: C** — Sebenarnya daging ayam, babi, dan ikan sama-sama bahan segar yang mudah ditumbuhi mikroba, tetapi **C (`魚` / ikan)** paling masuk akal dipilih karena kadar airnya lebih tinggi dan paling cepat membusuk dibanding dua pilihan daging lainnya.
+**13. [最速増殖温度帯]** 細菌(さいきん)の増(ふ)え方(かた)が特(とく)に速(はや)くなる温度帯(おんどたい)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Pada rentang suhu berapakah bakteri berkembang biak paling cepat? Pilih satu yang benar.
+A. 4℃以下(いか)
+B. 10℃〜15℃
+C. 30℃〜40℃
+**Jawaban: C** — Sesuai OTAFF v5.1 P.12, bakteri paling cepat berkembang biak pada suhu **30℃〜40℃** (`4℃以下` hampir tidak berkembang biak).
 
-**14. [カビの殺菌]** カビを殺(ころ)すための方法(ほうほう)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Metode apa yang digunakan untuk membunuh jamur (カビ)? Pilih satu yang benar.
-A. 加熱(かねつ)します
-B. 冷却(れいきゃく)します
-C. 破壊(はかい)します
-**Jawaban: A** — Jamur (`カビ`) dapat dibunuh dengan **pemanasan (`加熱`)**, sedangkan pendinginan hanya memperlambat pertumbuhan.
+**14. [カビの対策]** カビについて、正(ただ)しい説明(せつめい)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Mengenai jamur/kapang (`カビ`), manakah penjelasan dan penanganan yang benar? Pilih satu yang benar.
+A. カビが生(は)えた食品(しょくひん)は使(つか)わない
+B. カビが生(は)えた部分(ぶぶん)だけ取(と)ればそのまま使(つか)ってもよい
+C. カビの胞子(ほうし)は加熱(かねつ)すれば完全(かんぜん)になくすことができる
+**Jawaban: A** — Menurut OTAFF v5.1 P.14, spora jamur ada di mana-mana dan **tidak bisa dihilangkan sepenuhnya**; **makanan yang sudah berjamur tidak boleh dipakai (`使わない`)**.
 
-**15. [微生物の増殖温度帯]** 微生物(びせいぶつ)は何(なん)℃の間(あいだ)で増殖(ぞうしょく)しますか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Pada rentang suhu berapa mikroorganisme dapat berkembang biak? Pilih satu yang benar.
-A. 30℃ - 40℃の間(あいだ)で
-B. 10℃ - 60℃の間(あいだ)で
-C. 10℃ - 40℃の間(あいだ)で
-**Jawaban: B** — Zona suhu bahaya tempat mikroorganisme berkembang biak pada soal ini adalah **10°C–60°C** (sedangkan 30°C–40°C adalah kisaran pertumbuhan paling cepat).
+**15. [微生物が好む増殖温度帯]** 一般(いっぱん)の細菌(さいきん)が好(この)んで増殖(ぞうしょく)する高(たか)い温度帯(おんどたい)は何(なん)℃の間(あいだ)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Pada rentang suhu tinggi berapa bakteri umumnya menyukai dan berkembang biak? Pilih satu yang benar.
+A. 4℃ - 10℃の間(あいだ)で
+B. 20℃ - 50℃の間(あいだ)で
+C. 60℃ - 75℃の間(あいだ)で
+**Jawaban: B** — Sesuai OTAFF v5.1 P.12, bakteri menyukai suhu tinggi **20℃〜50℃** (`10℃以下` melambat, `4℃以下` hampir berhenti, `-15℃以下` berhenti).
 
 **16. [腸管出血性大腸菌]** 腸管出血性大腸菌(ちょうかんしゅっけつせいだいちょうきん)の原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Makanan apa yang rentan menyebabkan infeksi E. coli enterohemoragik (O157, dll.)? Pilih satu yang benar.
 A. 食肉(しょくにく)、鶏肉(とりにく)、井戸水(いどみず)
-B. 食肉(しょくにく)、牛肉(ぎゅうにく)、井戸水(いどみず)
+B. 食肉(しょくにく)（特(とく)に牛肉(ぎゅうにく)）、野菜(やさい)、井戸水(いどみず)
 C. 食肉(しょくにく)、牛肉(ぎゅうにく)、鶏卵(けいらん)
-**Jawaban: B** — Penyebab utama `腸管出血性大腸菌` (O157) adalah **daging/daging sapi (`食肉・牛肉`), sayuran, dan air sumur (`井戸水`)**.
+**Jawaban: B** — Penyebab utama `腸管出血性大腸菌` (O157/O111) adalah **daging (terutama daging sapi `牛肉`), sayuran (`野菜`), dan air sumur (`井戸水`)** (OTAFF v5.1 P.11).
 
-**17. [感染型食中毒の予防]** 感染型(かんせんがた)食中毒(しょくちゅうどく)の主(おも)な予防対策(よぼうたいさく)について、間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Mengenai langkah pencegahan utama keracunan makanan tipe infeksius, pilih satu yang SALAH.
-A. 75℃以上(いじょう)、1分以上(いっぷんいじょう)加熱(かねつ)します
-B. 調理器具(ちょうりきぐ)などを洗浄(せんじょう)します
-C. 海水(かいすい)の魚介類(ぎょかいるい)を加熱(かねつ)します
-**Jawaban: C** — Secara materi OTAFF, **C** menjadi jawaban yang salah karena aturan khusus untuk hasil laut (`海水の魚介類`) untuk mencegah *Vibrio parahaemolyticus* yang tercantum di teks adalah **dicuci bersih dengan air tawar (`真水でよく洗います`)**, bukan sekadar dipanaskan.
+**17. [食中毒の予防対策]** 食中毒(しょくちゅうどく)の主(おも)な予防対策(よぼうたいさく)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai langkah pencegahan utama keracunan makanan, pilih satu yang SALAH.
+A. 中心温度(ちゅうしんおんど)75℃以上(いじょう)、1分以上(いっぷんいじょう)加熱(かねつ)します
+B. 調理器具(ちょうりきぐ)などを洗浄(せんじょう)・殺菌(さっきん)します
+C. 生(なま)の魚介類(ぎょかいるい)を室温(しつおん)で長(なが)く放置(ほうち)します
+**Jawaban: C** — Membiarkan hasil laut mentah (`生の魚介類`) lama di suhu ruang akan memicu pertumbuhan bakteri dan pembentukan **histamin (`ヒスタミン`)**; bahan laut wajib segera didinginkan/dibekukan (P.10–12).
 
 **18. [異常時の報告]** もし、温度(おんど)や時間(じかん)に異常(いじょう)があったら、どうしたらいいですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Jika terdapat kejanggalan pada suhu atau waktu, apa yang harus dilakukan? Pilih satu yang benar.
 A. すぐに同僚(どうりょう)に報告(ほうこく)します
 B. すぐに責任者(せきにんしゃ)に報告(ほうこく)します
 C. すぐに警察(けいさつ)に報告(ほうこく)します
-**Jawaban: B** — Setiap penyimpangan suhu atau waktu wajib **segera dilaporkan kepada penanggung jawab (`責任者`)**.
+**Jawaban: B** — Setiap penyimpangan batas kritis (suhu atau waktu) wajib **segera dilaporkan kepada penanggung jawab (`責任者`)** (OTAFF v5.1 P.39).
 
-**19. [5S：整理]** 必要(ひつよう)なものは保管(ほかん)して、不要(ふよう)なものは捨(す)てる。これは何(なん)の意味(いみ)ですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: "Menyimpan barang yang diperlukan dan membuang barang yang tidak diperlukan." Apa arti dari kegiatan ini? Pilih satu yang benar.
+**19. [5S：整理]** 必要(ひつよう)なものは保管(ほかん)して、不要(ふよう)なものは捨(す)てる（なくす）。これは何(なん)の意味(いみ)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: "Menyimpan barang yang diperlukan dan menyingkirkan barang yang tidak diperlukan." Apa arti dari kegiatan ini? Pilih satu yang benar.
 A. 整頓(せいとん)
 B. 整理(せいり)
 C. 清掃(せいそう)
-**Jawaban: B** — Memisahkan yang perlu dan membuang yang tidak perlu adalah definisi **整理 (Seiri)**.
+**Jawaban: B** — Memilah barang perlu dan menyingkirkan barang tak terpakai adalah definisi **整理 (*Seiri*)** (OTAFF v5.1 P.15).
 
-**20. [3密の予防]** 新型(しんがた)コロナウイルス感染症(かんせんしょう)予防(よぼう)の「3密(みつ)」について、間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Berkaitan dengan pencegahan "3 Mitsu" (3 kepadatan) COVID-19, pilih satu yang SALAH.
-A. 密集(みっしゅう)
-B. 密閉(みっぺい)
-C. 密接(みっせつ)
-D. 密殺(みっさつ)
-**Jawaban: D** — 3 hal yang harus dihindari (`3密`) adalah `密閉` (ruangan tertutup), `密集` (kerumunan), dan `密接` (kontak dekat). `密殺` bukan bagian dari istilah tersebut.
+**20. [寄生虫：アニサキス]** アニサキスによる食中毒(しょくちゅうどく)を防(ふせ)ぐための殺(ころ)す条件(じょうけん)として、間違(まちが)っているものはどれですか。
+Terjemahan: Mengenai syarat pemanasan/pembekuan untuk mematikan parasit Anisakis, pilih satu yang SALAH.
+A. 70℃以上(いじょう)で加熱(かねつ)する
+B. 60℃で1分間(ふんかん)加熱(かねつ)する
+C. -20℃で24時間以上(じかんいじょう)冷凍(れいとう)する
+D. アルコール消毒液(しょうどくえき)に10秒(びょう)つける
+**Jawaban: D** — Syarat mematikan Anisakis sesuai OTAFF v5.1 P.14 adalah **pemanasan ≥ 70℃**, **60℃ selama 1 menit**, atau **pembekuan ≤ -20℃ selama ≥ 24 jam**; disinfeksi alkohol 10 detik tidak efektif.

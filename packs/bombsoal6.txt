@@ -1,5 +1,5 @@
 # SSW Pengolahan Makanan — Latihan Recall CBT Set 4 / Latihan 3 (20 Soal)
-> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 3 SSW Pengolahan Makanan (furigana rapi, terjemahan Your Language, dan catatan edisi)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 3 SSW Pengolahan Makanan (diselaraskan ke OTAFF Edisi 5.1)
 
 ## 飲食料品製造業 練習問題 Latihan 3（20問）
 
@@ -8,137 +8,137 @@ Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Vibrio paraha
 A. 食肉(しょくにく)、牛肉(ぎゅうにく)、鶏卵(けいらん)
 B. 海水(かいすい)にいる魚介類(ぎょかいるい)、さしみ、すしなど
 C. 食肉(しょくにく)、鶏肉(とりにく)、井戸水(いどみず)
-**Jawaban: B** — `腸炎ビブリオ` hidup di air laut sehingga sering menyebabkan keracunan pada **hasil laut (`魚介類`), sashimi, dan sushi**.
+**Jawaban: B** — `腸炎ビブリオ` hidup di air laut sehingga sering menyebabkan keracunan pada **hasil laut (`魚介類`), sashimi, dan sushi** (OTAFF v5.1 P.11).
 
 **2. [サルモネラ属菌の症状]** サルモネラ属菌(ぞくきん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Apa saja gejala utama dari infeksi Salmonella (サルモネラ属菌)? Pilih satu yang benar.
 A. 発熱(はつねつ)、腹痛(ふくつう)、激(はげ)しい下痢(げり)
 B. 発熱(はつねつ)、腹痛(ふくつう)、下痢(げり)
 C. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
-**Jawaban: B** — Gejala khas Salmonella adalah **demam (`発熱`), sakit perut (`腹痛`), dan diare (`下痢`)**. (`激しい下痢` di A adalah ciri 腸炎ビブリオ/O157; mual & muntah di C ciri 黄色ブドウ球菌).
+**Jawaban: B** — Gejala khas Salmonella adalah **demam (`発熱`), sakit perut (`腹痛`), dan diare (`下痢`)** (OTAFF v5.1 P.11).
 
 **3. [黄色ブドウ球菌]** 黄色(おうしょく)ブドウ球菌(きゅうきん)の原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Staphylococcus aureus (黄色ブドウ球菌)? Pilih satu yang benar.
 A. 米(こめ)や小麦(こむぎ)などを使(つか)って調理(ちょうり)した食品(しょくひん)
 B. 手(て)や指(ゆび)に傷(きず)、おにぎり、すし、弁当(べんとう)など
 C. 缶詰(かんづめ)、びんづめ
-**Jawaban: B** — `黄色ブドウ球菌` berasal dari luka di tangan/jari manusia dan sering mencemari **onigiri, sushi, atau bento** yang disentuh langsung oleh tangan. (A = セレウス菌, C = ボツリヌス菌).
+**Jawaban: B** — `黄色ブドウ球菌` berasal dari luka di tangan/jari manusia dan sering mencemari **onigiri, sandwich, sushi, atau bento** yang disentuh langsung oleh tangan (OTAFF v5.1 P.11).
 
 **4. [微生物検査の項目]** 微生物検査(びせいぶつけんさ)を自主的(じしゅてき)に行(おこな)う場合(ばあい)の一般的(いっぱんてき)な検査項目(けんさこうもく)はどれですか。間違(まちが)っているものを一(ひと)つ選(えら)んでください。
-Terjemahan: Ketika melakukan uji mikroorganisme secara mandiri, manakah yang BUKAN item pemeriksaan umum? Pilih satu yang salah.
+Terjemahan: Ketika melakukan uji mikroorganisme secara mandiri, manakah yang BUKAN item pemeriksaan umum dasar? Pilih satu yang salah.
 A. 一般生菌数(いっぱんせいきんすう)
 B. 大腸菌(だいちょうきん)
 C. ノロウイルス
-**Jawaban: C** — Item pemeriksaan mikroorganisme mandiri yang umum di pabrik makanan adalah **`一般生菌数`, `大腸菌`, dan `大腸菌群`** — bukan Norovirus.
+**Jawaban: C** — Item pemeriksaan mikroorganisme mandiri yang paling umum adalah **`一般生菌数`, `大腸菌`, dan `大腸菌群`** — bukan Norovirus (OTAFF v5.1 P.36).
 
-**5. [表示推奨アレルギー]** 表示(ひょうじ)することが望(のぞ)ましい食品(しょくひん)は何種類(なんしゅるい)ありますか。正(ただ)しいものを選(えら)んでください。
-Terjemahan: Ada berapa jenis makanan yang dianjurkan (望ましい / 推奨) untuk dicantumkan sebagai alergen? Pilih satu yang benar.
+**5. [表示推奨アレルギー]** 特定原材料(とくていげんざいりょう)に準(じゅん)ずるもの（表示(ひょうじ)することが望(のぞ)ましい・推奨(すいしょう)される食品(しょくひん)）は、2026年(ねん)4月(がつ)改訂(かいてい)（OTAFF第(だい)5.1版(はん)）では何種類(なんしゅるい)ありますか。正(ただ)しいものを選(えら)んでください。
+Terjemahan: Menurut revisi 1 April 2026 (OTAFF v5.1), ada berapa jenis makanan yang dianjurkan/direkomendasikan (`望ましい / 推奨`) untuk dicantumkan sebagai alergen? Pilih satu yang benar.
 A. 20種類(しゅるい)
 B. 21種類(しゅるい)
-C. 7種類(しゅるい)
-**Jawaban: B** — Pada naskah soal edisi sebelumnya, alergen rekomendasi (`準ずるもの`) berjumlah **21 jenis** (ketika wajibnya 7 jenis). *(Catatan update OTAFF Edisi 5.1/2026: くるみ dan カシューナッツ naik ke daftar wajib menjadi 9 wajib + 20 rekomendasi).*
+C. 9種類(しゅるい)
+**Jawaban: A** — Mulai 1 April 2026 (OTAFF v5.1 P.8–9), alergen rekomendasi (`特定原材料に準ずるもの`) berjumlah **20 jenis (`20品目`)** setelah `カシューナッツ` naik ke daftar wajib dan `ピスタチオ` ditambahkan (`9 wajib + 20 rekomendasi`).
 
 **6. [物理的危害要因]** 物理的危害要因(ぶつりてききがいよういん)によるケガの原因(げんいん)はどれですか。間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Manakah yang BUKAN penyebab cedera dari bahaya fisik (物理的危害要因)? Pilih satu yang salah.
+Terjemahan: Manakah yang BUKAN penyebab cedera dari bahaya fisik (`物理的危害要因`)? Pilih satu yang salah.
 A. 硬質(こうしつ)プラスチック
 B. 交差汚染(こうさおせん)
 C. 金属(きんぞく)、石(いし)、ガラス
-**Jawaban: B** — Logam, batu, kaca, dan plastik keras adalah contoh benda asing keras penyebab luka (`物理的危害要因`), sedangkan `交差汚染` berarti kontaminasi silang.
+**Jawaban: B** — Logam, batu, kaca, dan plastik keras adalah benda asing keras penyebab luka (`物理的危害要因`, P.7), sedangkan `交差汚染` berarti kontaminasi silang (P.16).
 
 **7. [安全な服装]** 安全(あんぜん)のための正(ただ)しい服装(ふくそう)はなんですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Manakah cara berpakaian yang benar demi keselamatan kerja? Pilih satu yang benar.
 A. 刃物(はもの)やドライバーなどを、ポケットに入(い)れて作業(さぎょう)しています
 B. タオルなどを首(くび)に巻(ま)いています
 C. 作業(さぎょう)をするときは、決(き)められた安全(あんぜん)な服装(ふくそう)・作業服(さぎょうふく)を着用(ちゃくよう)します
-**Jawaban: C** — Pekerja wajib mengenakan seragam kerja aman yang telah ditetapkan. Membawa pisau/obeng di saku atau melilitkan handuk di leher sangat berbahaya (bisa tersangkut mesin atau melukai diri).
+**Jawaban: C** — Pekerja wajib mengenakan baju kerja aman sesuai ukuran & ketentuan (OTAFF v5.1 P.46); menyimpan benda tajam di saku atau melilit handuk di leher berbahaya tersangkut mesin.
 
-**8. [作業手順の意味]** 作業手順(さぎょうてじゅん)はどういう意味(いみ)ですか。間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Apa maksud/tujuan dari prosedur kerja (作業手順)? Pilih satu jawaban sesuai kunci soal.
-A. 作業場(さぎょうじょう)で決(き)められていることを守(まも)って
-B. よい製品(せいひん)を作(つく)るためだけでなく、働(はたら)く人(ひと)たちが危険(きけん)を避(さ)ける
-C. 決(き)められた作業手順(さぎょうてじゅん)を守(まも)って
-**Jawaban: A** — Pada bank soal ini kuncinya adalah **A** (membedakan definisi/tujuan khusus prosedur kerja pada B yaitu membuat produk baik sekaligus menghindari bahaya bagi pekerja, sedangkan A hanya menyebut mematuhi aturan tempat kerja secara umum).
+**8. [作業手順書の目的]** 作業手順書(さぎょうてじゅんしょ)を守(まも)ることについて、間違(まちが)っているものはどれですか。
+Terjemahan: Mengenai kepatuhan terhadap prosedur kerja standar (`作業手順書`), pilih satu pernyataan yang SALAH.
+A. 自分(じぶん)のやりやすい勝手(かって)な方法(ほうほう)に変(か)えて作業(さぎょう)する
+B. よい製品(せいひん)を作(つく)るだけでなく、働(はたら)く人(ひと)の危険(きけん)を避(さ)けるために守(まも)る
+C. 仕事(しごと)の前(まえ)に作業手順書(さぎょうてじゅんしょ)を見(み)て作業内容(さぎょうないよう)を確認(かくにん)する
+**Jawaban: A** — Mengubah cara kerja seenaknya sendiri tanpa mengikuti prosedur standar (`自分のやりやすい勝手な方法に変えて作業する`) adalah **salah** dan memicu kecelakaan (OTAFF v5.1 P.26 & P.48).
 
-**9. [労働災害が起こりやすい人]** 人(ひと)たちが労働災害(ろうどうさいがい)が起(お)こりやすいときはどんな人(ひと)ですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Siapakah yang paling rentan mengalami kecelakaan kerja (労働災害)? Pilih satu yang benar.
+**9. [労働災害が起こりやすい人]** 労働災害(ろうどうさいがい)が特(とく)に起(お)こりやすいのはどんな人(ひと)ですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Siapakah yang paling rentan mengalami kecelakaan kerja (`労働災害`)? Pilih satu yang benar.
 A. 経験(けいけん)が長(なが)い人達(ひとたち)
 B. 経験(けいけん)が少(すく)ない人達(ひとたち)
 C. 長(なが)く働(はたら)いています
-**Jawaban: B** — Pekerja dengan **pengalaman sedikit (`経験が少ない人達` / kurang dari 3 tahun — `未熟練作業者`)** paling rentan mengalami kecelakaan kerja karena belum terbiasa mengenali bahaya.
+**Jawaban: B** — Pekerja dengan **pengalaman sedikit (`未熟練作業者` / pengalaman < 3 tahun)** menyumbang sekitar setengah korban kecelakaan kerja di pabrik makanan karena belum terbiasa mengenali bahaya (OTAFF v5.1 P.43).
 
-**10. [災害の種類（イラスト問題）]** この人(ひと)はどうしてですか（※元(もと)のPDFではイラスト付(つ)き問題(もんだい)）。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Kecelakaan apa yang dialami orang pada gambar? (Catatan: di PDF sumber, soal ini disertai gambar ilustrasi kecelakaan terjepit/tergulung mesin).
+**10. [災害の種類：事例判断]** 機械(きかい)の停止(ていし)ボタンを押(お)さずにカバーを開(あ)けてつまった製品(せいひん)を取(と)り除(のぞ)こうとしたり、動(うご)いているコンベアを清掃(せいそう)して手(て)が引(ひ)き込(こ)まれそうになる労働災害(ろうどうさいがい)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Kecelakaan kerja apakah yang terjadi ketika membuka penutup mesin tanpa menekan tombol berhenti atau membersihkan konveyor berjalan hingga tangan nyaris tertarik? Pilih satu yang benar.
 A. はさまれ・巻(ま)き込(こ)まれ
 B. 転倒(てんとう)
 C. こすれ・擦(す)り傷(きず)
-**Jawaban: A** — Kunci soal ini adalah **A (`はさまれ・巻き込まれ` / terjepit & tergulung mesin)**. *(Tips: kamu dapat menambahkan gambar ilustrasinya sendiri via Studio Soal → Edit Paket jika ingin melengkapinya).*
+**Jawaban: A** — Kasus membuka tutup mesin macet tanpa menekan stop dan mengelap *belt conveyor* bergerak merupakan contoh kecelakaan **terjepit / tergulung (`はさまれ・巻き込まれ`)** di OTAFF v5.1 P.57–58.
 
-**11. [転倒防止]** 転倒(てんとう)防止(ぼうし)のためにはなんですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apakah tindakan yang benar untuk mencegah kecelakaan terpeleset/jatuh (転倒)? Pilih satu yang benar.
+**11. [転倒防止]** 転倒(てんとう)防止(ぼうし)のためには何(なに)をしますか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Apakah tindakan yang benar untuk mencegah kecelakaan terpeleset/jatuh (`転倒`)? Pilih satu yang benar.
 A. 床(ゆか)が濡(ぬ)れていたら、きちんと拭(ふ)き取(と)ります
 B. 床(ゆか)が濡(ぬ)れていたら、すぐに機械(きかい)を止(と)めます
 C. 足元(あしもと)に気(き)をつけて走(はし)ります
-**Jawaban: A** — Untuk mencegah terpeleset (`転倒`), jika lantai basah harus **segera dilap hingga kering (`きちんと拭き取ります`)** dan dilarang berlari di tempat kerja.
+**Jawaban: A** — Jika lantai basah harus **segera dilap hingga kering (`きちんと拭き取ります`)** dan dilarang berlari di tempat kerja (OTAFF v5.1 P.48 & P.56).
 
 **12. [切れ・こすれの防止]** 「切(き)れ・こすれ」の防止(ぼうし)はなんですか。間違(まちが)っているものをひとつえらびなさい。
 Terjemahan: Mengenai pencegahan kecelakaan terpotong/tergores (`切れ・こすれ`), pilih satu pernyataan yang SALAH.
 A. 作業中(さぎょうちゅう)の包丁(ほうちょう)は置(お)き方(かた)や置(お)き場所(ばしょ)の安全(あんぜん)を確認(かくにん)します
-B. 使(つか)い終(お)わった包丁(ほうちょう)は5S（整理(せいり)・整頓(せいとん)・清潔(せいけつ)・習慣(しゅうかん)）を徹底(てってい)して、きちんと片付(かたづ)けます
+B. 使(つか)い終(お)わった包丁(ほうちょう)は5S（整理(せいり)・整頓(せいとん)・清掃(せいそう)・清潔(せいけつ)・習慣付(しゅうかんづ)け）を徹底(てってい)して、きちんと片付(かたづ)けます
 C. 包丁(ほうちょう)はそのままにしておきます
-**Jawaban: C** — Membiarkan pisau tergeletak begitu saja (`そのままにしておきます`) sangat berbahaya dan merupakan jawaban yang **salah**.
+**Jawaban: C** — Membiarkan pisau tergeletak begitu saja (`そのままにしておきます`) sangat berbahaya dan merupakan jawaban yang **salah** (OTAFF v5.1 P.48).
 
 **13. [熱中症の症状]** 熱中症(ねっちゅしょう)の症状(しょうじょう)はなんですか。間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Manakah yang BUKAN merupakan gejala heatstroke (熱中症)? Pilih satu yang salah.
+Terjemahan: Manakah yang BUKAN merupakan gejala *heatstroke* (`熱中症`)? Pilih satu yang salah.
 A. 倦怠感(けんたいかん)
 B. 指(ゆび)がいたい
 C. 虚脱感(きょだつかん)（やる気(き)が出(で)ない）
-**Jawaban: B** — Sakit jari (`指がいたい`) bukan gejala heatstroke. Gejala awal heatstroke meliputi rasa lemas/lesu (`倦怠感`), lemas tak bertenaga (`虚脱感`), pusing, dan kram otot.
+**Jawaban: B** — Sakit jari (`指がいたい`) bukan gejala *heatstroke*; gejala *heatstroke* meliputi lesu/pusing/sempoyongan (`ふらつき`・`倦怠感`), kram, dan gangguan pengaturan suhu tubuh (OTAFF v5.1 P.45 & P.61).
 
 **14. [重い熱中症の症状]** 重(おも)い熱中症(ねっちゅしょう)の症状(しょうじょう)はなんですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa gejala heatstroke (熱中症) yang sudah berat? Pilih satu yang benar.
+Terjemahan: Apa gejala *heatstroke* (`熱中症`) yang sudah berat? Pilih satu yang benar.
 A. 体(からだ)が寒(さむ)い
 B. 目(め)の前(まえ)が白(しろ)くなって、何(なに)もわからなくなって、倒(たお)れる
 C. 足(あし)がいたい
-**Jawaban: B** — Gejala heatstroke berat antara lain pandangan memutih/gelap, kehilangan kesadaran (`何もわからなくなって`), lalu pingsan/jatuh (`倒れる`).
+**Jawaban: B** — *Heatstroke* berat menyebabkan sempoyongan, kehilangan kesadaran (`何もわからなくなって`), jatuh/pingsan, hingga dapat berakibat fatal (OTAFF v5.1 P.45 & P.61).
 
 **15. [熱中症への対応]** 熱中症(ねっちゅしょう)の症状(しょうじょう)への対応(たいおう)はどうしたらいいですか。間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Bagaimana penanganan terhadap gejala heatstroke? Pilih satu tindakan yang SALAH.
-A. 熱(あつ)い場所(ばしょ)に避難(ひなん)しています
+Terjemahan: Bagaimana penanganan terhadap gejala *heatstroke*? Pilih satu tindakan yang SALAH.
+A. 暑(あつ)い場所(ばしょ)に避難(ひなん)させます
 B. 涼(すず)しい場所(ばしょ)に移動(いどう)させます
 C. 衣服(いふく)をゆるめて、体(からだ)を冷(ひ)やします
-**Jawaban: A** — Korban heatstroke harus dipindahkan ke **tempat yang sejuk (`涼しい場所`)**, bukan ke tempat yang panas (`熱い場所`).
+**Jawaban: A** — Korban *heatstroke* wajib segera dipindahkan ke **tempat sejuk (`涼しいところ`)**, dilonggarkan bajunya, dan didinginkan leher, ketiak, serta pangkal paha (OTAFF v5.1 P.62).
 
 **16. [異常事態の例]** 異常事態(いじょうじたい)の例(れい)はなんですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Manakah yang merupakan contoh kondisi abnormal (異常事態) pada mesin? Pilih satu yang benar.
+Terjemahan: Manakah yang merupakan contoh kondisi abnormal (`異常事態`) pada mesin? Pilih satu yang benar.
 A. 赤(あか)いランプがついていません
 B. レバーがぐらぐらします
 C. 青(あお)いランプがついています
-**Jawaban: B** — Tuas mesin yang longgar/goyang (`レバーがぐらぐらします`) adalah salah satu tanda kondisi abnormal mesin yang wajib dilaporkan. (Lampu merah mati & lampu biru menyala adalah kondisi normal).
+**Jawaban: B** — Tuas mesin yang longgar/goyang (`レバーがぐらぐらします`) adalah salah satu tanda kondisi abnormal yang wajib dilaporkan (OTAFF v5.1 P.53).
 
 **17. [5S：習慣]** いつでも職場(しょくば)のルールを守(まも)って行動(こうどう)できるようにする、それは何(なん)の活動(かつどう)ですか。正(ただ)しいものをひとつえらびなさい。
 Terjemahan: Membiasakan diri agar selalu dapat bertindak mematuhi aturan tempat kerja termasuk kegiatan 5S yang mana? Pilih satu yang benar.
 A. 整理(せいり)
-B. 習慣(しゅうかん)
+B. 習慣付(しゅうかんづ)け（習慣(しゅうかん)／しつけ）
 C. 整頓(せいとん)
-**Jawaban: B** — Membiasakan diri menaati aturan secara konsisten disebut **習慣 / 習慣付け (しつけ)**.
+**Jawaban: B** — Melaksanakan aturan yang sudah ditetapkan secara konsisten disebut **習慣付け / しつけ** (OTAFF v5.1 P.15).
 
-**18. [5S：整理]** 必要(ひつよう)なものは保管(ほかん)して不要(ふよう)なものは捨(す)てる、それは何(なん)の活動(かつどう)ですか。正(ただ)しいものを一(ひと)つ選(えら)んでください。
-Terjemahan: Menyimpan barang yang diperlukan dan membuang barang yang tidak diperlukan termasuk kegiatan 5S yang mana? Pilih satu yang benar.
+**18. [5S：整理]** 必要(ひつよう)なものは保管(ほかん)して不要(ふよう)なものは捨(す)てる（なくす）、それは何(なん)の活動(かつどう)ですか。正(ただ)しいものを一(ひと)つ選(えら)んでください。
+Terjemahan: Menyimpan barang yang diperlukan dan menyingkirkan barang yang tidak diperlukan termasuk kegiatan 5S yang mana? Pilih satu yang benar.
 A. 整理(せいり)
 B. 清掃(せいそう)
 C. しつけ
-**Jawaban: A** — Memilah barang perlu dan membuang yang tidak perlu adalah **整理 (Seiri)**.
+**Jawaban: A** — Memilah barang perlu dan menyingkirkan yang tak dipakai adalah **整理 (*Seiri*)** (OTAFF v5.1 P.15).
 
 **19. [5S：整頓]** 必要(ひつよう)なものが取(と)り出(だ)しやすいように、置(おく)場所(ばしょ)を決(き)めておく、それは何(なん)の活動(かつどう)ですか。正(ただ)しいものを一(ひと)つ選(えら)んでください。
 Terjemahan: Menentukan tempat penyimpanan agar barang yang diperlukan mudah diambil termasuk kegiatan 5S yang mana? Pilih satu yang benar.
 A. 清潔(せいけつ)
 B. 整頓(せいとん)
 C. 習慣(しゅうかん)
-**Jawaban: B** — Menentukan tempat agar barang mudah diambil dan dikembalikan adalah **整頓 (Seiton)**.
+**Jawaban: B** — Menentukan tempat agar barang mudah diambil adalah **整頓 (*Seiton*)** (OTAFF v5.1 P.15).
 
 **20. [5S：清掃]** 作業場(さぎょうじょう)とその周辺(しゅうへん)をいつもきれいに掃除(そうじ)する、それは何(なん)の活動(かつどう)ですか。正(ただ)しいものを選(えら)んでください。
 Terjemahan: Selalu membersihkan area kerja dan sekitarnya dengan rapi termasuk kegiatan 5S yang mana? Pilih satu yang benar.
 A. 清潔(せいけつ)
 B. 整頓(せいとん)
 C. 清掃(せいそう)
-**Jawaban: C** — Membersihkan tempat kerja dan lingkungan sekitarnya secara rutin adalah **清掃 (Seisou)**.
+**Jawaban: C** — Membersihkan area kerja, mesin, dan lingkungan sekitarnya agar bebas kotoran adalah **清掃 (*Seisō*)** (OTAFF v5.1 P.15).

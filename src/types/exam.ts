@@ -70,7 +70,22 @@ export interface AttemptRecord {
   passed: boolean;
   elapsedSec: number;
   wrongQuestionIds: string[];
+  correctQuestionIds?: string[];
+  answeredCount?: number;
   completedAt: string;
+}
+
+export interface QuestionAttemptStat {
+  questionId: string;
+  packId: string;
+  attempts: number;
+  correctCount: number;
+  wrongCount: number;
+  consecutiveCorrect: number;
+  lastResult: 'correct' | 'wrong';
+  lastAttemptAt: string;
+  lastWrongAt?: string;
+  lastWrongAnswerText?: string;
 }
 
 export interface QuestionStudyState {

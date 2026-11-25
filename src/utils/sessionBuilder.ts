@@ -107,11 +107,19 @@ export function extractDraftLayout(session: ActiveExamSession): DraftSectionLayo
 
 export function restoreSessionFromDraft(
   pack: ExamPack,
-  draft: SavedExamDraft
+  draft: SavedExamDraft,
+  fallbackPacks: ExamPack[] = []
 ): ActiveExamSession | null {
   const questionById = new Map<string, QuestionItem>();
   pack.sections.forEach((sec) => {
     sec.questions.forEach((q) => questionById.set(q.id, q));
+  });
+  fallbackPacks.forEach((fp) => {
+    fp.sections.forEach((sec) => {
+      sec.questions.forEach((q) => {
+        if (!questionById.has(q.id)) questionById.set(q.id, q);
+      });
+    });
   });
 
   const sections = draft.sectionsLayout

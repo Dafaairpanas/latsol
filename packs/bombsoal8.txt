@@ -1,42 +1,42 @@
 # SSW Pengolahan Makanan — Latihan 5 (20 Soal)
-> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 5 SSW Pengolahan Makanan (5S & K3, Deterjen Alkali/Asam, HACCP Arsip, & Sanitasi)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 5 SSW Pengolahan Makanan (diselaraskan ke OTAFF Edisi 5.1: 5S, Cuci Tangan P.25, Pakaian P.22, Bahan Kimia P.52)
 
 ## 飲食料品製造業 練習問題 Latihan 5（20問）
 
 **1. [ボツリヌス菌]** ボツリヌス菌(きん)で原因(げんいん)になりやすい食品(しょくひん)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Clostridium botulinum (ボツリヌス菌)? Pilih satu yang benar.
+Terjemahan: Makanan manakah yang rentan menjadi penyebab keracunan Clostridium botulinum (`ボツリヌス菌`)? Pilih satu yang benar.
 A. 手(て)や指(ゆび)に傷(きず)のある人(ひと)が調理(ちょうり)した食品(しょくひん)
 B. 野菜(やさい)、食肉(しょくにく)、鶏肉(とりにく)
-C. 缶詰(かんづめ)、びんづめ、真空(しんくう)パック食品(しょくひん)
-**Jawaban: C** — `ボツリヌス菌` tumbuh di lingkungan tanpa oksigen sehingga khas pada **makanan kaleng (`缶詰`), makanan botolan (`びんづめ`), dan makanan kemasan vakum (`真空パック`)**.
+C. 缶詰(かんづめ)、瓶詰(びんづ)め、レトルト食品(しょくひん)など
+**Jawaban: C** — `ボツリヌス菌` membentuk spora dan tumbuh dalam kondisi tanpa oksigen sehingga khas pada **makanan kaleng, makanan botolan (`瓶詰め`), dan makanan *retort* / kemasan vakum** (OTAFF v5.1 P.11).
 
 **2. [ウェルシュ菌の症状]** ウェルシュ菌(きん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa saja gejala utama dari keracunan Clostridium perfringens (ウェルシュ菌)? Pilih satu yang benar.
+Terjemahan: Apa saja gejala utama dari keracunan Clostridium perfringens (`ウェルシュ菌`)? Pilih satu yang benar.
 A. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
 B. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
 C. 腹痛(ふくつう)、下痢(げり)
-**Jawaban: C** — Gejala utama `ウェルシュ菌` adalah **nyeri perut (`腹痛`) dan diare (`下痢`)**. (A = 黄色ブドウ球菌, B = ボツリヌス菌).
+**Jawaban: C** — Gejala utama `ウェルシュ菌` adalah **nyeri perut (`腹痛`) dan diare (`下痢`)** (OTAFF v5.1 P.11).
 
-**3. [芽胞菌の冷却対策]** 主(おも)な予防対策(よぼうたいさく)として、芽胞(がほう)について調理後(ちょうりご)すぐに20℃以下(いか)に冷却(れいきゃく)して保存(ほぞん)する対象(たいしょう)の菌(きん)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Bakteri pembentuk spora manakah yang pencegahan utamanya adalah segera mendinginkan makanan di bawah 20℃ setelah dimasak? Pilih satu yang benar.
+**3. [芽胞菌とカレー・シチュー]** 土(つち)のついた原材料(げんざいりょう)や水(みず)、カレー・シチューなど加熱調理(かねつちょうり)された食品(しょくひん)が原因(げんいん)になりやすく、加熱後(かねつご)ゆっくり温度(おんど)が下(さ)がる間(あいだ)に芽胞(がほう)から増(ふ)えるため、すぐに冷却(れいきゃく)すべき菌(きん)はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Bakteri pembentuk spora manakah yang khas pada bahan bertanah, kari, atau semur (`カレー・シチュー`) dan berkembang biak bila suhu turun perlahan setelah pemasakan sehingga wajib segera didinginkan? Pilih satu yang benar.
 A. ウェルシュ菌(きん)
 B. ボツリヌス菌(きん)
-C. セレウス菌(きん)
-**Jawaban: A** — Spora `ウェルシュ菌` (misal di kari/semur panci besar) berkembang biak saat suhu turun perlahan di kisaran 12–50℃, sehingga pencegahannya wajib **segera didinginkan hingga ≤ 20℃** setelah dimasak.
+C. 腸管出血性大腸菌(ちょうかんしゅっけつせいだいちょうきん)
+**Jawaban: A** — Menurut OTAFF v5.1 P.11 & P.13, **`ウェルシュ菌`** khas mencemari kari/semur dan sporanya tumbuh saat suhu turun perlahan sehingga makanan matang harus **segera didinginkan**. (`腸管出血性大腸菌` tidak membentuk spora).
 
 **4. [ノロウイルス対策]** ノロウイルスの主(おも)な予防対策(よぼうたいさく)について、間違(まちが)っているものはどれですか。
 Terjemahan: Mengenai langkah pencegahan utama Norovirus, manakah yang SALAH?
 A. 手洗(てあら)いを徹底(てってい)します
-B. 85℃〜90℃以上(いじょう)、90秒以上(びょういじょう)加熱(かねつ)します
+B. 中心温度(ちゅうしんおんど)85℃〜90℃以上(いじょう)、90秒以上(びょういじょう)加熱(かねつ)します
 C. 80℃以上(いじょう)、30秒以上(びょういじょう)加熱(かねつ)します
-**Jawaban: C** — Pemanasan untuk membunuh Norovirus wajib **85℃–90℃ selama 90 detik atau lebih**, sehingga 80℃ 30 detik tidak cukup (salah).
+**Jawaban: C** — Pemanasan untuk membunuh Norovirus wajib suhu inti **85℃〜90℃ selama 90 detik atau lebih** (OTAFF v5.1 P.13 & P.33).
 
 **5. [異常事態の例]** 異常事態(いじょうじたい)の例(れい)はなんですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Manakah yang merupakan contoh kondisi abnormal (異常事態) pada mesin? Pilih satu yang benar.
+Terjemahan: Manakah yang merupakan contoh kondisi abnormal (`異常事態`) pada mesin? Pilih satu yang benar.
 A. レバーがぐらぐらします
 B. 赤(あか)いランプがついていません
 C. 青(あお)いランプがついています
-**Jawaban: A** — Tuas yang goyang/longgar (`レバーがぐらぐらします`) menandakan kerusakan mekanis yang harus segera dilaporkan.
+**Jawaban: A** — Tuas yang goyang/longgar (`レバーがぐらぐらします`) adalah salah satu tanda abnormal mesin di OTAFF v5.1 P.53 yang wajib segera dilaporkan.
 
 **6. [HACCP：記録の保管]** 次(つぎ)を見(み)てみてください！
 1. 保管管理責任者(ほかんかんりせきにんしゃ)
@@ -44,107 +44,107 @@ C. 青(あお)いランプがついています
 3. 保管期間(ほかんきかん)
 4. 保管場所(ほかんばしょ)
 HACCP原則(げんそく)の「記録(きろく)の維持管理(いじかんり)」をするときは、記録(きろく)の保管(ほかん)について何(なに)を明確(めいかく)にしておくことが必要(ひつよう)ですか？
-Terjemahan: Saat melakukan "pemeliharaan & pengelolaan catatan" (prinsip 7 HACCP), hal apa saja yang perlu ditetapkan dengan jelas terkait penyimpanan dokumen catatan?
+Terjemahan: Saat melakukan "pemeliharaan & pengelolaan catatan" (Prinsip 7 HACCP), hal apa saja yang perlu ditetapkan dengan jelas terkait penyimpanan dokumen catatan?
 A. 1, 2, 3
 B. 1, 3, 4
 C. 1, 2, 4
 D. 2, 3, 4
-**Jawaban: B** — Yang harus jelas dalam penyimpanan arsip catatan HACCP adalah **penanggung jawab penyimpanan (1), masa/durasi simpan (3), dan lokasi penyimpanan (4)** — bukan suhu penyimpanan makanan (2).
+**Jawaban: B** — Dalam penyimpanan arsip dokumen catatan HACCP diperlukan kejelasan **penanggung jawab (1), masa simpan (3), dan lokasi simpan (4)** — bukan suhu penyimpanan makanan (2). *(Lihat juga aturan ketat pencatatan di OTAFF v5.1 P.40–41).*
 
 **7. [化学的危害要因]** 化学的危害要因(かがくてききがいよういん)について間違(まちが)っているものはどれですか？
-Terjemahan: Mengenai bahaya kimia (化学的危害要因), manakah yang SALAH (bukan termasuk bahaya kimia)?
-A. 農薬(のうやく)、抗生物質(こうせいぶっしつ)、洗浄剤(せんじょうざい)
+Terjemahan: Mengenai bahaya kimia (`化学的危害要因`, OTAFF v5.1 P.8), manakah yang BUKAN kelompok bahaya kimia?
+A. アレルギー物質(ぶっしつ)、ヒスタミン、洗浄剤(せんじょうざい)
 B. ミネラル、殺菌剤(さっきんざい)、洗浄剤(せんじょうざい)
-C. 抗生物質(こうせいぶっしつ)、農薬(のうやく)、殺菌剤(さっきんざい)
-**Jawaban: B** — Pestisida (`農薬`), antibiotik (`抗生物質`), pembersih (`洗浄剤`), dan disinfektan (`殺菌剤`) termasuk bahaya kimia, sedangkan **mineral (`ミネラル`)** bukan bahaya kimia.
+C. ソラニン、ヒスタミン、殺菌剤(さっきんざい)
+**Jawaban: B** — Alergen, histamin, solanin, deterjen (`洗浄剤`), dan disinfektan (`殺菌剤`) merupakan bahaya kimia pada OTAFF v5.1 P.8, sedangkan **mineral (`ミネラル`)** bukan bahaya kimia.
 
-**8. [手洗い方法（画像問題）]** 正(ただ)しい手洗(てあら)いの方法(ほうほう)はどれですか（※元(もと)のPDFではイラスト選択問題(せんたくもんだい)）。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Manakah cara mencuci tangan yang benar? (Catatan: di PDF sumber, pilihan A/B/C berupa gambar ilustrasi metode cuci tangan, dengan kunci jawaban B).
-A. [Ilustrasi A pada PDF sumber]
-B. [Ilustrasi B pada PDF sumber]
-C. [Ilustrasi C pada PDF sumber]
-**Jawaban: B** — Sesuai kunci PDF Latihan 5, pilihan gambar yang benar adalah **B**. *(Tips: kamu dapat menambahkan gambar ilustrasi A/B/C lewat Studio Soal bila diperlukan).*
+**8. [手洗い方法と時間]** 正(ただ)しい手洗(てあら)いの方法(ほうほう)・順序(じゅんじょ)と時間(じかん)（OTAFF第(だい)5.1版(はん) P.25）はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah metode, urutan, dan durasi cuci tangan yang benar sesuai OTAFF v5.1 P.25? Pilih satu yang benar.
+A. せっけんで約(やく)10秒(びょう)洗(あら)い、タオルで拭(ふ)いてそのまま作業(さぎょう)する
+B. せっけんで約(やく)30秒(びょう)洗(あら)い、流水(りゅうすい)で約(やく)20秒(びょう)すすぎ、ペーパータオル等(など)で乾(かわ)かして消毒用(しょうどくよう)アルコールをすりこむ
+C. バケツにためた水(みず)で20秒(びょう)洗(あら)い、ハンカチで拭(ふ)き取(と)る
+**Jawaban: B** — Sesuai OTAFF v5.1 P.25: basahi air mengalir → gosok sabun **±30 detik** → bilas air mengalir **±20 detik** → keringkan dengan tisu sekali pakai / *air towel* → gosokkan alkohol disinfektan.
 
-**9. [服装の着方（画像問題）]** 正(ただ)しい服装(ふくそう)の着方(きかた)はどれですか（※元(もと)のPDFではイラスト番号(ばんごう)1〜3から選択(せんたく)）。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Manakah cara mengenakan baju kerja yang benar? (Catatan: di PDF sumber merujuk pada gambar bernomor 1, 2, dan 3, dengan kunci jawaban gambar nomor 3 / opsi A).
-A. 3
-B. 1
-C. 2
-**Jawaban: A** — Sesuai kunci PDF Latihan 5, ilustrasi pemakaian seragam yang benar adalah gambar nomor **3** (**A**).
+**9. [作業服・マスクの着用ポイント]** 作業服(さぎょうふく)・帽子(ぼうし)・マスク・手袋(てぶくろ)の正(ただ)しい着用(ちゃくよう)ポイント（P.19〜23）はどれですか。正(ただ)しいものをひとつえらびなさい。
+Terjemahan: Manakah cara mengenakan baju kerja, topi, masker, dan sarung tangan yang benar (OTAFF v5.1 P.19–23)? Pilih satu yang benar.
+A. ヘアーネットを帽子(ぼうし)の内側(うちがわ)にかぶり、マスクは鼻(はな)からあごまで隙(すき)間(ま)なくかける
+B. マスクから鼻(はな)を出(だ)し、作業場(さぎょうじょう)が暑(あつ)いときは帽子(ぼうし)や袖(そで)を外(はず)す
+C. 爪(つめ)にマニキュアをぬり、手袋(てぶくろ)は破(やぶ)れていても使(つか)い続(つづ)ける
+**Jawaban: A** — Hairnet wajib di dalam topi tanpa ada rambut/telinga keluar, dan masker ditekuk kawat hidungnya menutupi hidung sampai dagu tanpa celah (OTAFF v5.1 P.19–23).
 
-**10. [ヒヤリ・ハット：転倒]** 弁当(べんとう)を持(も)ちながら移動(いどう)しようとしたとき、濡(ぬ)れた床(ゆか)で転倒(てんとう)しそうになった。転倒(てんとう)の原因(げんいん)について、正(ただ)しいものはどれですか？
-Terjemahan: Saat mencoba berjalan sambil membawa kotak bento, hampir terpeleset/jatuh di lantai basah. Manakah penyebab yang benar?
+**10. [ヒヤリ・ハット：転倒]** トレーや弁当(べんとう)を持(も)ちながら移動(いどう)しようとしたとき、濡(ぬ)れた床(ゆか)で転倒(てんとう)しそうになった。転倒(てんとう)の原因(げんいん)について、正(ただ)しいものはどれですか？
+Terjemahan: Saat berjalan membawa nampan/bento, hampir terpeleset di lantai basah (kasus P.56). Manakah penyebab yang benar?
 A. 滑(すべ)りにくい靴(くつ)を履(は)いた
 B. 頭(あたま)がぐるぐる回(まわ)った
 C. 濡(ぬ)れた床(ゆか)をきちんと拭(ふ)き取(と)らなかった
-**Jawaban: C** — Penyebab utama hampir terpeleset adalah **lantai yang basah tidak dilap hingga kering (`濡れた床をきちんと拭き取らなかった`)**.
+**Jawaban: C** — Penyebab hampir terpeleset pada kasus P.56 adalah **air di lantai basah tidak dilap bersih (`床の水をきちんとふき取っていなかった`)**.
 
 **11. [整理と労働安全]** 整理(せいり)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか。
-Terjemahan: Apa hubungan "Seiri" (整理) dengan keselamatan kerja (労働安全)? Pilih satu yang benar.
+Terjemahan: Apa hubungan "Seiri" (`整理`) dengan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
 A. いつでも職場(しょくば)のルールを守(まも)ること
-B. 作業効率(さぎょうこうりつ)があがって、転倒(てんとう)などの危険(きけん)が減(へ)る
+B. 不要(ふよう)なものが作業場(さぎょうじょう)にないことで動きやすくなり、転倒(てんとう)などの危険(きけん)が減(へ)る
 C. 作業(さぎょう)するとき守(まも)ること
-**Jawaban: B** — Dengan menyingkirkan barang yang tidak diperlukan (`整理`), ruang gerak menjadi lega, **efisiensi kerja meningkat dan risiko tersandung/jatuh (`転倒`) berkurang**.
+**Jawaban: B** — Menyingkirkan barang yang tidak diperlukan (`整理`) membuat ruang kerja lega dan **mengurangi risiko terpeleset/tersandung (`転倒`)** (OTAFF v5.1 P.46).
 
 **12. [整頓と労働安全]** 整頓(せいとん)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか？
-Terjemahan: Apa hubungan "Seiton" (整頓) dengan keselamatan kerja (労働安全)? Pilih satu yang benar.
+Terjemahan: Apa hubungan "Seiton" (`整頓`) dengan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
 A. 転倒(てんとう)災害(さいがい)が起(お)こること
-B. 器具(きぐ)の落下(らっか)などが原因(げんいん)のケガを防(ふせ)ぐことができる
-C. 酸欠(さんけつ)が起(お)こることができる
-**Jawaban: B** — Menempatkan alat di tempat tetap yang aman (`整頓`) **mencegah cedera akibat peralatan jatuh (`器具の落下`)** atau tersandung.
+B. 置(お)く場所(ばしょ)を決(き)めて正(ただ)しく置(お)くことで、器具(きぐ)の落下(らっか)や転倒災害(てんとうさいがい)を防(ふせ)ぐことができる
+C. 酸欠(さんけつ)が起(お)こること
+**Jawaban: B** — Menempatkan alat dan kotak di tempat/garis lantai tetap (`整頓`) **mencegah cedera peralatan jatuh dan kecelakaan terpeleset** (OTAFF v5.1 P.46).
 
 **13. [清掃と労働安全]** 清掃(せいそう)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか？
-Terjemahan: Apa hubungan "Seisou" (清掃) dengan keselamatan kerja (労働安全)? Pilih satu yang benar.
+Terjemahan: Apa hubungan "Seisou" (`清掃`) dengan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
 A. いつも体(からだ)を浴(あ)びる
 B. 職場(しょくば)のルールを守(まも)る
-C. 機械(きかい)などの機能(きのう)が維持(いじ)されて、転倒(てんとう)などの危険(きけん)が減(へ)る
-**Jawaban: C** — Membersihkan mesin dan lantai secara rutin (`清掃`) **menjaga fungsi mesin tetap optimal serta mengurangi bahaya terpeleset** akibat minyak/kotoran.
+C. 設備(せつび)・機械(きかい)をきれいに保(たも)つことで急(きゅう)な故障(こしょう)が減(へ)り、巻(ま)き込(こ)まれなどの危険(きけん)が減(へ)る
+**Jawaban: C** — Membersihkan mesin secara rutin (`清掃`) mengurangi kerusakan mendadak serta **mencegah kecelakaan tergulung/terpeleset** (OTAFF v5.1 P.46).
 
 **14. [清潔と労働安全]** 清潔(せいけつ)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか？
-Terjemahan: Apa hubungan "Seiketsu" (清潔) dengan keselamatan kerja (労働安全)? Pilih satu yang benar.
+Terjemahan: Apa hubungan "Seiketsu" (`清潔`) dengan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
 A. 作業場(さぎょうじょう)とその周辺(しゅうへん)をいつもきれいに掃除(そうじ)しない
 B. 働(はたら)く人(ひと)が感染症(かんせんしょう)などの病気(びょうき)になるのを防(ふせ)ぐ
 C. 働(はたら)く人(ひと)が経験(けいけん)が少(すく)ないから
-**Jawaban: B** — Mempertahankan kebersihan tempat kerja (`清潔`) **melindungi pekerja dari penyakit menular (`感染症`)** dan gangguan kesehatan kerja.
+**Jawaban: B** — Kebersihan (`清潔`) tidak hanya mencegah keracunan makanan tetapi juga **melindungi pekerja dari penyakit menular (`感染症`)** (OTAFF v5.1 P.46).
 
-**15. [習慣と労働安全]** 習慣(しゅうかん)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか？
-Terjemahan: Apa hubungan "Shuukan" (習慣 / pembiasaan) dengan keselamatan kerja (労働安全)? Pilih satu yang benar.
+**15. [習慣と労働安全]** 習慣付(しゅうかんづ)け（習慣(しゅうかん)）による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか？
+Terjemahan: Apa hubungan pembiasaan ("Shūkanzuke" / `習慣付け`) dengan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
 A. 働(はたら)く人(ひと)が感染症(かんせんしょう)などの病気(びょうき)になるのを防(ふせ)ぐ
 B. 機械(きかい)などをすぐに洗浄(せんじょう)します
 C. 繰(く)り返(かえ)すことで、安全(あんぜん)で衛生的(えいせいてき)な行動(こうどう)が自然(しぜん)にできるようになります
-**Jawaban: C** — Dengan membiasakan prosedur berulang-ulang (`習慣`), **perilaku aman dan higienis menjadi otomatis dilakukan secara alami**.
+**Jawaban: C** — Pembiasaan setiap hari menjaga kondisi tempat kerja selalu sama sehingga perilaku aman & higienis dilakukan secara alami (OTAFF v5.1 P.46).
 
-**16. [洗剤の使い分け：有機物]** 製品由来(せいひんゆらい)の蛋白質(たんぱくしつ)、油脂(ゆし)、脂肪(しぼう)、炭水化物(たんすいかぶつ)などに適(てき)した洗剤(せんざい)はなんですか？正(ただ)しいものを一(ひと)つえらびなさい。
-Terjemahan: Deterjen jenis apa yang cocok untuk membersihkan kotoran berasal dari produk pangan seperti protein, minyak/lemak, dan karbohidrat? Pilih satu yang benar.
-A. 酸性洗剤(さんせいせんざい)
-B. アルカリ性洗剤(せいせんざい)
-C. 無機物(むきぶつ)
-**Jawaban: B** — Kotoran organik (protein, minyak/lemak, karbohidrat) paling efektif dibersihkan menggunakan **deterjen alkali (`アルカリ性洗剤`)**.
+**16. [洗剤の混合禁止]** 塩素系(えんそけい)の洗剤(せんざい)と酸性洗剤(さんせいせんざい)を混(ま)ぜて同時(どうじ)に使(つか)うと、どうなりますか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Apa yang terjadi jika deterjen berklorin (`塩素系`) dan deterjen asam (`酸性洗剤`) dicampur dan digunakan bersamaan? Pilih satu yang benar.
+A. 洗浄力(せんじょうりょく)が強(つよ)くなり安全(あんぜん)である
+B. 有毒(ゆうどく)な塩素(えんそ)ガスが発生(はっせい)して大変危険(たいへんきけん)である
+C. 無機物(むきぶつ)が固(かた)まるだけで無害(むがい)である
+**Jawaban: B** — Menurut OTAFF v5.1 P.52 (`超頻出`), mencampur deterjen berklorin dan deterjen asam akan **menghasilkan gas klorin beracun (`有毒な塩素ガス`)** yang sangat berbahaya.
 
-**17. [洗剤の使い分け：無機物]** カルシウム、鉄分(てつぶん)、マグネシウム、ケイ素(そ)に適(てき)した洗剤(せんざい)はなんですか？正(ただ)しいものを一(ひと)つえらびなさい。
-Terjemahan: Deterjen jenis apa yang cocok untuk membersihkan kerak mineral seperti kalsium, zat besi, magnesium, dan silika? Pilih satu yang benar.
-A. 無機物(むきぶつ)
-B. アルカリ性洗剤(せいせんざい)
-C. 酸性洗剤(さんせいせんざい)
-**Jawaban: C** — Kerak mineral anorganik (`無機物`: kalsium, besi, magnesium, silika/water scale) dibersihkan menggunakan **deterjen asam (`酸性洗剤`)**.
+**17. [アルコールの保管・設置場所]** 消毒用(しょうどくよう)アルコールについて、作業場(さぎょうじょう)での正(ただ)しい取(と)り扱(あつか)い（OTAFF第(だい)5.1版(はん) P.52）はどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Manakah penanganan alkohol disinfektan yang benar di tempat kerja sesuai OTAFF v5.1 P.52? Pilih satu yang benar.
+A. 使(つか)いやすいようにオーブンやフライヤーのすぐ横(よこ)に置(お)く
+B. 高温(こうおん)になる機械(きかい)の近(ちか)くに置(お)いても火(ひ)はつかない
+C. 火災(かさい)の原因(げんいん)になるため、オーブンやフライヤーなど高温(こうおん)になる機械(きかい)の近(ちか)くに置(お)かない
+**Jawaban: C** — Alkohol mudah terbakar sehingga **dilarang diletakkan di dekat mesin bersuhu tinggi** seperti oven dan *fryer* karena dapat memicu kebakaran (OTAFF v5.1 P.52).
 
 **18. [トイレの衛生管理]** トイレの清潔(せいけつ)は何(なん)のためですか？間違(まちが)っているものを一(ひと)つえらびなさい。
 Terjemahan: Untuk apa kebersihan toilet dijaga? Pilih satu pernyataan yang SALAH.
 A. トイレは汚(よご)れたままにしておく
-B. トイレのあとは必(かなら)ず決(き)められた方法(ほうほう)で手洗(てあら)い・消毒(しょうどく)する
+B. トイレのあとは必(かなら)ず決(き)められた方法(ほうほう)で手洗(てあら)い・消毒(しょうどく)し、トイレ用履物(ようはきもの)を使(つか)う
 C. 作業場(さぎょうじょう)の中(なか)に微生物(びせいぶつ)を持(も)ち込(こ)まないために
-**Jawaban: A** — Membiarkan toilet dalam keadaan kotor (`汚れたままにしておく`) sangat berbahaya karena berpotensi menyebarkan bakteri/Norovirus ke ruang produksi.
+**Jawaban: A** — Membiarkan toilet kotor dilarang; wajib memakai alas kaki khusus toilet (P.21) dan mencuci tangan setelah dari toilet (P.24).
 
-**19. [ゴミ箱の取り扱い]** ゴミ箱(ばこ)の取(と)り扱(あつか)い・設置場所(せっちばしょ)はどうしたらいいですか？間違(まちが)っているものを一(ひと)つえらびなさい。
-Terjemahan: Bagaimana penanganan dan penempatan tempat sampah yang benar? Pilih satu pernyataan yang SALAH.
-A. ゴミは作業場内(さぎょうじょうない)の決(き)まった場所(ばしょ)にしておく
-B. ゴミ箱(ばこ)はふたのあるものを使用(しよう)し、ふたはしっかり閉(し)めます
-C. ゴミ箱(ばこ)の袋(ふくろ)は床(ゆか)に直接(ちょくせつ)おいておく
-**Jawaban: C** — Kantong sampah dilarang diletakkan langsung di atas lantai (`床に直接おいておく`), karena dapat mengotori lantai dan memicu kontaminasi silang maupun hama.
+**19. [ゴミ出し・管理のルール]** ゴミの取扱(とりあつか)いと区分衛生管理(くぶんえいせいかんり)について、間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Mengenai penanganan sampah dan manajemen zona (OTAFF v5.1 P.17), pilih satu pernyataan yang SALAH.
+A. ゴミは決(き)められたルートまたは時間(じかん)で出(だ)す
+B. ゴミ出(だ)しに使(つか)った通路(つうろ)はその後(あと)掃除(そうじ)・洗浄(せんじょう)・消毒(しょうどく)する
+C. ゴミ箱(ばこ)の袋(ふくろ)は床(ゆか)に直接(ちょくせつ)置(お)き、掃除(そうじ)もせずに放置(ほうち)する
+**Jawaban: C** — Kantong sampah dilarang diletakkan langsung di lantai/dibiarkan kotor; sampah dikeluarkan lewat jalur/jam tertentu lalu jalurnya dibersihkan & didisinfeksi (OTAFF v5.1 P.17).
 
-**20. [工具・部品箱の整理整頓]** 工具(こうぐ)や部品箱(ぶひんばこ)の整理整頓(せいりせいとん)についての解説(かいせつ)はどれですか。間違(まちが)っているものを一(ひと)つえらびなさい。
-Terjemahan: Mengenai penjelasan penataan (整理整頓) perkakas dan kotak komponen, pilih satu pernyataan yang SALAH.
-A. その写真(しゃしん)によって、どこに何(なに)があるのかがすぐわかります
-B. 写真(しゃしん)のようになる前(まえ)に交換(こうかん)します
-C. イラストがあるので、工具(こうぐ)が足(た)りない時(とき)にはすぐに見(み)つけることができます
-**Jawaban: B** — Papan bayangan/foto penempatan perkakas (`シャドーボード`) berfungsi agar pekerja langsung tahu letak alat (A) dan langsung sadar jika ada alat yang hilang/kurang (C), bukan mengganti sebelum menjadi seperti foto (B).
+**20. [工具・ナイフの置き場所]** 5S（整頓(せいとん)）や職場のルールに基づ(もとづ)く工具(こうぐ)・ナイフの置(お)き方(かた)について、間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Mengenai penataan (`整頓`) dan penyimpanan perkakas/pisau sesuai aturan tempat kerja (P.15 & P.48), pilih satu pernyataan yang SALAH.
+A. 置(お)く場所(ばしょ)や置(お)き方(かた)を決(き)めて名前(なまえ)・数量(すうりょう)を表示(ひょうじ)し、どこに何(なに)があるかすぐわかるようにする
+B. 写真(しゃしん)やイラストがあっても、使(つか)ったあと決(き)まった場所(ばしょ)に戻(もど)さず作業台(さぎょうだい)に放置(ほうち)する
+C. イラストや表示(ひょうじ)があると、工具(こうぐ)が足(た)りない時(とき)にすぐ見(み)つけることができる
+**Jawaban: B** — Penataan (*Seiton*, P.15) dan aturan kerja (P.48) mewajibkan alat/pisau dikembalikan ke lokasi & posisi tetap agar langsung terlihat bila hilang.

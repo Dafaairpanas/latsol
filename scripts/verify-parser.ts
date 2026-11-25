@@ -8,6 +8,15 @@ import {
   extractDraftLayout,
   restoreSessionFromDraft,
 } from '../src/utils/sessionBuilder.ts';
+import {
+  clearQuestionStats,
+  loadQuestionStats,
+  recordSessionQuestionStats,
+} from '../src/utils/storage.ts';
+import {
+  buildOtaffSimulationDecks,
+  buildRecallTryoutDecks,
+} from '../src/utils/deckBuilder.ts';
 import { renderRichJapaneseText, stripFurigana } from '../src/utils/rubyText.tsx';
 
 const bomb1Raw = fs.readFileSync(path.resolve(process.cwd(), 'bombsoal1.txt'), 'utf8');
@@ -88,7 +97,7 @@ assert.equal(res4.warnings.length, 0, 'Expected zero warnings on packs/bombsoal4
 assert.equal(res4.stats.sections, 1, 'Expected 1 section in bombsoal4.txt');
 assert.equal(res4.stats.questions, 20, 'Expected 20 questions in bombsoal4.txt');
 assert.equal(res4.stats.withExplanations, 20, 'Expected 20 explanations in bombsoal4.txt');
-const expectedSet4Keys = 'CCBBB CADAB BACAB BCBB D'.replace(/\s+/g, '');
+const expectedSet4Keys = 'CCBBB CAAAB BACAB BCBB D'.replace(/\s+/g, '');
 const p4Qs = res4.pack.sections.flatMap((s) => s.questions);
 p4Qs.forEach((q, idx) => {
   const expectedIdx = 'ABCD'.indexOf(expectedSet4Keys[idx]);
@@ -126,7 +135,7 @@ assert.equal(res6.warnings.length, 0, 'Expected zero warnings on packs/bombsoal6
 assert.equal(res6.stats.sections, 1, 'Expected 1 section in bombsoal6.txt');
 assert.equal(res6.stats.questions, 20, 'Expected 20 questions in bombsoal6.txt');
 assert.equal(res6.stats.withExplanations, 20, 'Expected 20 explanations in bombsoal6.txt');
-const expectedSet6Keys = 'BBBCB BCABA ACBBA BBABC'.replace(/\s+/g, '');
+const expectedSet6Keys = 'BBBCA BCABA ACBBA BBABC'.replace(/\s+/g, '');
 const p6Qs = res6.pack.sections.flatMap((s) => s.questions);
 p6Qs.forEach((q, idx) => {
   const expectedIdx = 'ABC'.indexOf(expectedSet6Keys[idx]);
@@ -331,5 +340,140 @@ assert.deepEqual(
 assert.equal(restored.sections[0].questions[0].answer, firstQ.answer);
 assert.equal(restored.initialDraft?.flags[firstQ.id], true);
 assert.equal(restored.initialDraft?.remainingSec, 1234);
+
+// Verify cross-pack mistake drill draft restore using fallbackPacks
+const crossPackDrillQs = [p1Qs[0], p2Qs[0]];
+const virtualDrillPack = {
+  id: 'drill-wrong-all',
+  name: 'Latihan Gabungan Soal Salah',
+  category: 'SSW' as const,
+  durationSec: 0,
+  passingPct: 65,
+  source: 'custom' as const,
+  sections: [
+    {
+      id: 'drill-sec-1',
+      shortLabel: '復習',
+      title: 'Latihan Gabungan (2 soal)',
+      questions: crossPackDrillQs,
+    },
+  ],
+};
+const crossSession = buildActiveSession(virtualDrillPack, {
+  packId: 'drill-wrong-all',
+  mode: 'study',
+  sectionIds: [],
+  shuffleQuestions: false,
+  shuffleOptions: true,
+  durationSec: 0,
+  passingPct: 65,
+  onlyWrongFromHistory: true,
+  customQuestionsOnly: crossPackDrillQs,
+  sessionLabel: 'Latihan Gabungan (2 soal)',
+});
+const crossRestored = restoreSessionFromDraft(
+  { ...virtualDrillPack, sections: [] },
+  {
+    packId: 'drill-wrong-all',
+    config: crossSession.config,
+    sectionsLayout: extractDraftLayout(crossSession),
+    sectionIdx: 0,
+    questionIdx: 1,
+    answers: { [crossPackDrillQs[0].id]: crossSession.sections[0].questions[0].answer },
+    flags: {},
+    revealedMap: {},
+    remainingSec: 0,
+    elapsedSec: 45,
+    savedAt: new Date().toISOString(),
+  },
+  [res1.pack, res2.pack]
+);
+assert.ok(crossRestored, 'Cross-pack drill draft restored via fallbackPacks');
+assert.equal(crossRestored.totalQuestions, 2);
+assert.deepEqual(
+  crossRestored.sections[0].questions[1].options,
+  crossSession.sections[0].questions[1].options
+);
+
+// Verify per-question mistake tracking & improved transition (using in-memory localStorage mock)
+const memStore = new Map<string, string>();
+(globalThis as unknown as { localStorage: Storage }).localStorage = {
+  get length() {
+    return memStore.size;
+  },
+  clear: () => memStore.clear(),
+  getItem: (k: string) => memStore.get(k) ?? null,
+  key: (i: number) => [...memStore.keys()][i] ?? null,
+  removeItem: (k: string) => {
+    memStore.delete(k);
+  },
+  setItem: (k: string, v: string) => {
+    memStore.set(k, String(v));
+  },
+};
+
+const s1 = recordSessionQuestionStats(
+  'bombsoal-3',
+  [
+    { questionId: p3Qs[0].id, isCorrect: false, selectedOptionText: p3Qs[0].options[0] },
+    { questionId: p3Qs[1].id, isCorrect: true, selectedOptionText: p3Qs[1].options[p3Qs[1].answer] },
+  ],
+  '2026-11-25T12:00:00.000Z'
+);
+assert.equal(s1[p3Qs[0].id].wrongCount, 1);
+assert.equal(s1[p3Qs[0].id].attempts, 1);
+assert.equal(s1[p3Qs[0].id].lastResult, 'wrong');
+assert.equal(s1[p3Qs[0].id].lastWrongAnswerText, p3Qs[0].options[0]);
+assert.equal(s1[p3Qs[1].id].correctCount, 1);
+assert.equal(s1[p3Qs[1].id].wrongCount, 0);
+
+// Simulate answering Q1 right later (status becomes 'correct' / Membaik while keeping wrongCount=1)
+const s2 = recordSessionQuestionStats(
+  'drill-wrong-all',
+  [{ questionId: p3Qs[0].id, sourcePackId: 'bombsoal-3', isCorrect: true }],
+  '2026-11-25T12:10:00.000Z'
+);
+assert.equal(s2[p3Qs[0].id].attempts, 2);
+assert.equal(s2[p3Qs[0].id].wrongCount, 1);
+assert.equal(s2[p3Qs[0].id].correctCount, 1);
+assert.equal(s2[p3Qs[0].id].consecutiveCorrect, 1);
+assert.equal(s2[p3Qs[0].id].lastResult, 'correct');
+assert.equal(s2[p3Qs[0].id].packId, 'bombsoal-3');
+assert.equal(loadQuestionStats()[p3Qs[0].id].wrongCount, 1);
+
+clearQuestionStats();
+assert.deepEqual(loadQuestionStats(), {});
+
+// Verify OTAFF split decks (4 decks: 37, 37, 37, 34 = 145 unique questions) & Recall consolidated decks (5 x 40 = 200)
+const otaffDecks = buildOtaffSimulationDecks(res1.pack, res2.pack);
+assert.equal(otaffDecks.length, 4, 'Expected 4 OTAFF v5.1 simulation decks');
+assert.deepEqual(
+  otaffDecks.map((d) => d.sections.reduce((s, sec) => s + sec.questions.length, 0)),
+  [37, 37, 37, 34],
+  'OTAFF simulation decks split cleanly into 34–37 question sets totaling 145'
+);
+const otaffSplitIds = new Set(
+  otaffDecks.flatMap((d) => d.sections.flatMap((s) => s.questions.map((q) => q.id)))
+);
+assert.equal(otaffSplitIds.size, 145, 'All 145 questions preserved uniquely across 4 OTAFF decks');
+
+const recallMap = new Map([
+  [3, res3.pack],
+  [4, res4.pack],
+  [5, res5.pack],
+  [6, res6.pack],
+  [7, res7.pack],
+  [8, res8.pack],
+  [9, res9.pack],
+  [10, res10.pack],
+  [11, res11.pack],
+]);
+const recallTryoutDecks = buildRecallTryoutDecks(recallMap);
+assert.equal(recallTryoutDecks.length, 5, 'Expected 5 Recall Tryout decks (40 questions each)');
+assert.deepEqual(
+  recallTryoutDecks.map((d) => d.sections.reduce((s, sec) => s + sec.questions.length, 0)),
+  [40, 40, 40, 40, 40],
+  'Recall Tryout decks A–E each contain exactly 40 questions'
+);
 
 console.log('ALL PART 1 (85) + PART 2 (60) = 145 QUESTIONS, MATH, RUBY & ROUND-TRIP CHECKS PASSED.');

@@ -1,5 +1,9 @@
 import { ExamPack } from '../types/exam';
 import { parseBombSoalText } from '../utils/bombParser';
+import {
+  buildOtaffSimulationDecks,
+  buildRecallTryoutDecks,
+} from '../utils/deckBuilder';
 
 // Auto-discover any bombsoal*.txt in project root and any .txt / .json files in /packs/
 const rootTxtModules = import.meta.glob('/bombsoal*.txt', {
@@ -154,11 +158,12 @@ function extractTrailingNumber(path: string): number {
 }
 
 export function loadBuiltinPacks(): ExamPack[] {
-  const packs: ExamPack[] = [];
   const txtEntries = { ...rootTxtModules, ...packsTxtModules };
 
   let bomb1Pack: ExamPack | null = null;
   let bomb2Pack: ExamPack | null = null;
+  const recallPacksByNum = new Map<number, ExamPack>();
+  const otherTxtPacks: ExamPack[] = [];
 
   const sortedPaths = Object.keys(txtEntries).sort((a, b) => {
     const na = extractTrailingNumber(a);
@@ -166,125 +171,54 @@ export function loadBuiltinPacks(): ExamPack[] {
     if (na !== nb) return na - nb;
     return a.localeCompare(b);
   });
+
   for (const path of sortedPaths) {
     const raw = txtEntries[path];
     if (!raw || !raw.trim()) continue;
     const fileName = path.split('/').pop() || path;
     const isBomb1 = /bombsoal1\.txt$/i.test(fileName);
     const isBomb2 = /bombsoal2\.txt$/i.test(fileName);
-    const isBomb3 = /bombsoal3\.txt$/i.test(fileName);
-    const isBomb4 = /bombsoal4\.txt$/i.test(fileName);
-    const isBomb5 = /bombsoal5\.txt$/i.test(fileName);
-    const isBomb6 = /bombsoal6\.txt$/i.test(fileName);
-    const isBomb7 = /bombsoal7\.txt$/i.test(fileName);
-    const isBomb8 = /bombsoal8\.txt$/i.test(fileName);
-    const isBomb9 = /bombsoal9\.txt$/i.test(fileName);
-    const isBomb10 = /bombsoal10\.txt$/i.test(fileName);
-    const isBomb11 = /bombsoal11\.txt$/i.test(fileName);
+    const recallMatch = fileName.match(/^bombsoal(3|4|5|6|7|8|9|10|11)\.txt$/i);
+    const recallNum = recallMatch ? Number(recallMatch[1]) : null;
+    const isRecallPack = recallNum !== null;
 
     const { pack } = parseBombSoalText(raw, {
       id: filenameToId(path),
       name: isBomb1
-        ? 'Bomb Soal 1: SSW Pengolahan Makanan (No. 1–85)'
+        ? 'Bomb Soal 1: Materi Lengkap P.1–P.65 (Marathon)'
         : isBomb2
-          ? 'Bomb Soal 2: SSW Pengolahan Makanan 補完 (No. 86–145)'
-          : isBomb3
-            ? 'SSW Pengolahan Makanan — Latihan Recall CBT Set 1 (20 Soal)'
-            : isBomb4
-              ? 'SSW Pengolahan Makanan — Latihan Recall CBT Set 2 (20 Soal)'
-              : isBomb5
-                ? 'SSW Pengolahan Makanan — Latihan Recall CBT Set 3 (20 Soal)'
-                : isBomb6
-                  ? 'SSW Pengolahan Makanan — Latihan 3 (20 Soal)'
-                  : isBomb7
-                    ? 'SSW Pengolahan Makanan — Latihan 4 (20 Soal)'
-                    : isBomb8
-                      ? 'SSW Pengolahan Makanan — Latihan 5 (20 Soal)'
-                      : isBomb9
-                        ? 'SSW Pengolahan Makanan — Latihan 6 (20 Soal)'
-                        : isBomb10
-                          ? 'SSW Pengolahan Makanan — Latihan 7 (20 Soal)'
-                          : isBomb11
-                            ? 'SSW Pengolahan Makanan — Latihan 8 (40 Soal)'
-                            : undefined,
-      subtitle: isBomb1
-        ? '85 soal jebakan CBT lengkap P.1–P.65 • 10 bagian (Bab 1–3, Hitungan, Rambu, & Campuran)'
-        : isBomb2
-          ? '60 soal pelengkap menutup seluruh poin OTAFF v5.1 P.1–P.69 • 7 bagian (Bab 1–3, Lampiran 1–2, & Hitungan)'
-          : isBomb3
-            ? '20 soal latihan CBT SSW Set 1 dengan terjemahan Your Language akurat & catatan koreksi naskah'
-            : isBomb4
-              ? '20 soal latihan CBT SSW Set 2 (opsi campuran A–C & A–D) lengkap dengan terjemahan & catatan'
-              : isBomb5
-                ? '20 soal latihan CBT SSW Set 3 (opsi A–D & A–C) lengkap dengan terjemahan Your Language & catatan materi'
-                : isBomb6
-                  ? '20 soal Latihan 3 SSW Pengolahan Makanan (5S, Heatstroke, APD, & Keracunan) + terjemahan Your Language'
-                  : isBomb7
-                    ? '20 soal Latihan 4 SSW Pengolahan Makanan (4 opsi A–D, HACCP, X-ray, Alergen) + terjemahan Your Language'
-                    : isBomb8
-                      ? '20 soal Latihan 5 SSW Pengolahan Makanan (5S & K3, Deterjen Alkali/Asam, Arsip HACCP) + Your Language'
-                      : isBomb9
-                        ? '20 soal Latihan 6 SSW Pengolahan Makanan (受入検査, 凍結, 期限表示, 保管サンプル, 薬剤管理)'
-                        : isBomb10
-                          ? '20 soal Latihan 7 SSW Pengolahan Makanan (Review Gabungan 3 Opsi + 事業者 & APD)'
-                          : isBomb11
-                            ? '40 soal Latihan 8 SSW Pengolahan Makanan (Review Lengkap + NaClO 100–200ppm, Lembar Inspeksi, & Tempat Sampah)'
-                            : undefined,
-      category:
-        isBomb1 ||
-        isBomb2 ||
-        isBomb3 ||
-        isBomb4 ||
-        isBomb5 ||
-        isBomb6 ||
-        isBomb7 ||
-        isBomb8 ||
-        isBomb9 ||
-        isBomb10 ||
-        isBomb11
-          ? 'SSW'
+          ? 'Bomb Soal 2: Pelengkap P.1–P.69 (Marathon)'
           : undefined,
-      durationSec: isBomb1
-        ? 60 * 60
-        : isBomb2
-          ? 45 * 60
-          : isBomb11
-            ? 40 * 60
-            : isBomb3 ||
-                isBomb4 ||
-                isBomb5 ||
-                isBomb6 ||
-                isBomb7 ||
-                isBomb8 ||
-                isBomb9 ||
-                isBomb10
-              ? 20 * 60
-              : undefined,
-      passingPct:
-        isBomb1 ||
-        isBomb2 ||
-        isBomb3 ||
-        isBomb4 ||
-        isBomb5 ||
-        isBomb6 ||
-        isBomb7 ||
-        isBomb8 ||
-        isBomb9 ||
-        isBomb10 ||
-        isBomb11
-          ? 65
-          : undefined,
+      category: isBomb1 || isBomb2 || isRecallPack ? 'SSW' : undefined,
+      durationSec: isBomb1 ? 60 * 60 : isBomb2 ? 45 * 60 : undefined,
+      passingPct: isBomb1 || isBomb2 || isRecallPack ? 65 : undefined,
       source: 'builtin',
       sourceFile: fileName,
     });
-    if (pack.sections.length > 0) {
-      if (isBomb1) bomb1Pack = pack;
-      if (isBomb2) bomb2Pack = pack;
-      packs.push(pack);
+
+    if (pack.sections.length === 0) continue;
+    if (isBomb1) {
+      bomb1Pack = pack;
+    } else if (isBomb2) {
+      bomb2Pack = pack;
+    } else if (recallNum !== null) {
+      recallPacksByNum.set(recallNum, pack);
+    } else {
+      otherTxtPacks.push(pack);
     }
   }
 
-  // Synthesize full combined 145-question SSW v5.1 pack when both Part 1 & Part 2 exist
+  const packs: ExamPack[] = [];
+
+  // 1) Split 145 official OTAFF v5.1 questions into 4 decks (34–37 questions each)
+  if (bomb1Pack && bomb2Pack) {
+    packs.push(...buildOtaffSimulationDecks(bomb1Pack, bomb2Pack));
+  }
+
+  // 2) Consolidate Recall CBT sets (bombsoal3..11) into 5 decks (40 questions each)
+  packs.push(...buildRecallTryoutDecks(recallPacksByNum));
+
+  // 3) Keep full 60–145 question marathon packs in archive tier
   if (bomb1Pack && bomb2Pack) {
     const combinedSections = [...bomb1Pack.sections, ...bomb2Pack.sections].map(
       (sec, idx) => ({
@@ -301,20 +235,21 @@ export function loadBuiltinPacks(): ExamPack[] {
       .filter(Boolean)
       .join('\n\n---\n\n');
 
-    packs.unshift({
+    packs.push({
       id: 'builtin-bombsoal-full-145',
-      name: 'Paket Lengkap SSW Pengolahan Makanan v5.1 (No. 1–145)',
-      subtitle:
-        'Gabungan Bomb Soal Part 1 + Part 2 — 145 soal menyapu 100% poin OTAFF Edisi 5.1 (P.1–P.69)',
+      name: 'Paket Lengkap OTAFF v5.1 (No. 1–145)',
       category: 'SSW',
       durationSec: 90 * 60,
       passingPct: 65,
       source: 'builtin',
-      sourceFile: 'Part 1 + Part 2',
+      sourceFile: 'Part 1 + 2',
       studyNotes: combinedNotes || undefined,
       sections: combinedSections,
     });
   }
+  if (bomb1Pack) packs.push(bomb1Pack);
+  if (bomb2Pack) packs.push(bomb2Pack);
+  packs.push(...otherTxtPacks);
 
   for (const path of Object.keys(packsJsonModules).sort()) {
     const data = packsJsonModules[path] as Partial<ExamPack> | undefined;

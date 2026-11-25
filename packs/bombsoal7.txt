@@ -1,5 +1,5 @@
 # SSW Pengolahan Makanan — Latihan 4 (20 Soal)
-> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 4 SSW Pengolahan Makanan (4 opsi A–D, furigana rapi, terjemahan Your Language, & catatan kunci)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 4 SSW Pengolahan Makanan (4 opsi A–D, diselaraskan ke OTAFF Edisi 5.1)
 
 ## 飲食料品製造業 練習問題 Latihan 4（20問）
 
@@ -9,31 +9,31 @@ A. しゅんかん
 B. せんり
 C. せいとん
 D. すいとん
-**Jawaban: C** — Yang termasuk 5S adalah **せいとん (整頓)** (`せいり・せいとん・せいそう・せいけつ・しつけ`). Pilihan lain (`しゅんかん`, `せんり`, `すいとん`) adalah jebakan kata mirip.
+**Jawaban: C** — Yang termasuk 5S adalah **せいとん (`整頓`)** (`せいり・せいとん・せいそう・せいけつ・習慣付け/しつけ`) sesuai OTAFF v5.1 P.15.
 
 **2. [表示推奨食品]** 表示(ひょうじ)することが望(のぞ)ましいとされる食品(しょくひん)について、正(ただ)しいものはどれですか。
-Terjemahan: Mengenai bahan pangan yang dianjurkan (望ましい / 推奨) untuk dicantumkan sebagai alergen, manakah yang benar?
+Terjemahan: Mengenai bahan pangan yang dianjurkan (`望ましい / 推奨`) untuk dicantumkan sebagai alergen, manakah yang benar?
 A. おにぎり
 B. てんぷら
 C. ゼラチン
 D. たまご
-**Jawaban: C** — `ゼラチン` termasuk dalam **特定原材料に準ずるもの (rekomendasi tampil)**, sedangkan `たまご` adalah item wajib tampil (`特定原材料`).
+**Jawaban: C** — `ゼラチン` termasuk dalam **20 item `特定原材料に準ずるもの` (rekomendasi tampil)**, sedangkan `たまご` adalah bagian dari 9 item wajib tampil (`特定原材料`) (OTAFF v5.1 P.9).
 
-**3. [異物混入の原因]** 異物混入(いぶつこんにゅう)の問題(もんだい)について、最(もっと)も多(おお)くの原因(げんいん)はどれですか。
-Terjemahan: Mengenai masalah kontaminasi benda asing (異物混入), manakah penyebab yang paling banyak terjadi?
+**3. [硬くない異物と苦情]** 硬質異物(こうしついぶつ)（物理的危害要因(ぶつりてききがいよういん)）ではないが、不潔(ふけつ)と思(おも)われ苦情(くじょう)や返品(へんぴん)の原因(げんいん)になるため混入(こんにゅう)を防(ふせ)ぐべきものはどれですか。
+Terjemahan: Manakah benda asing yang bukan termasuk benda asing keras (`物理的危害要因`), tetapi memicu keluhan dan pengembalian barang karena terkesan kotor sehingga wajib dicegah masuk?
 A. ガラス、金属(きんぞく)
 B. 金属(きんぞく)、虫(むし)
 C. 髪(かみ)の毛(け)、ガラス
 D. 虫(むし)、髪(かみ)の毛(け)
-**Jawaban: D** — Penyebab kontaminasi benda asing yang paling sering ditemukan adalah **serangga (`虫`) dan rambut (`髪の毛`)**.
+**Jawaban: D** — Menurut OTAFF v5.1 P.8, **serangga (`虫`), rambut (`髪の毛`), dan serpihan kertas** adalah benda asing tidak keras yang tidak melukai mulut/tenggorokan, namun memicu komplain dan retur sehingga wajib dicegah.
 
-**4. [感染型食中毒]** 感染型(かんせんがた)食中毒(しょくちゅうどく)について、正(ただ)しいものはどれですか。
-Terjemahan: Mengenai keracunan makanan tipe infeksius (感染型食中毒), manakah pernyataan yang benar?
-A. 食(た)べた食品(しょくひん)についていた細菌(さいきん)が増(ふ)えた毒素(どくそ)を作(つく)り、健康障害(けんこうしょうがい)を起(お)こすもの
-B. ノロウイルスはもっとも多(おお)くの原因(げんいん)となっているもの
-C. 食(た)べた食品(しょくひん)についていた細菌(さいきん)がヒトのおなかで増(ふ)え、毒素(どくそ)を作(つく)って健康障害(けんこうしょうがい)を起(お)こすもの
-D. ボツリヌス菌(きん)、ウェルシュ菌(きん)などは感染型(かんせんがた)食中毒(しょくちゅうどく)を引(ひ)き起(お)こすもの
-**Jawaban: C** — Pada tipe infeksius (`感染型`), bakteri masuk bersama makanan lalu **berkembang biak di dalam perut/usus manusia** (dan pada beberapa bakteri memproduksi racun di dalam tubuh).
+**4. [体内で増える食中毒菌]** 食中毒菌(しょくちゅうどくきん)のうち、人(ひと)の体(からだ)の中(なか)で増(ふ)えて発症(はっしょう)したり毒素(どくそ)を作(つく)ったりするものの説明(せつめい)として、正(ただ)しいものはどれですか。
+Terjemahan: Mengenai bakteri keracunan makanan yang berkembang biak di dalam tubuh manusia (`体の中で増える`), manakah pernyataan yang benar?
+A. 食品(しょくひん)の中(なか)で増(ふ)えて熱(ねつ)に強(つよ)い毒素(どくそ)を作(つく)り、加熱(かねつ)しても毒(どく)が残(のこ)るもの（黄色(おうしょく)ブドウ球菌(きゅうきん)）
+B. ノロウイルスは食品(しょくひん)の中(なか)で大量(たいりょう)に増殖(ぞうしょく)する細菌(さいきん)である
+C. 食(た)べた食品(しょくひん)についていた細菌(さいきん)がヒトのおなか（体(からだ)の中(なか)）で増(ふ)え、発症(はっしょう)や毒素(どくそ)を作(つく)って健康障害(けんこうしょうがい)を起(お)こすもの
+D. ボツリヌス菌(きん)、ウェルシュ菌(きん)などは人(ひと)の体(からだ)に入(はい)る前(まえ)に毒素(どくそ)が食品(しょくひん)になくても絶対(ぜったい)に芽胞(がほう)を作(つく)らない
+**Jawaban: C** — Bakteri seperti *Campylobacter*, *Salmonella*, *Vibrio parahaemolyticus*, dan *E. coli* O157 masuk bersama makanan lalu **berkembang biak di dalam tubuh/usus manusia** hingga menimbulkan gangguan kesehatan (OTAFF v5.1 P.11).
 
 **5. [持ち込み禁止物]** 作業場(さぎょうじょう)に持(も)ち込(こ)みはしないようにするものはどれですか。
 Terjemahan: Benda manakah yang tidak boleh dibawa masuk ke ruang kerja?
@@ -41,23 +41,23 @@ A. イヤリング
 B. マスク
 C. ヘアーネット
 D. くつ
-**Jawaban: A** — Anting (`イヤリング`) serta aksesori/perhiasan lainnya dilarang keras dibawa masuk ke area produksi karena berisiko jatuh ke dalam makanan.
+**Jawaban: A** — Anting (`イヤリング`) dan perhiasan lainnya dilarang keras dibawa masuk ke area produksi karena berisiko jatuh menjadi benda asing (OTAFF v5.1 P.19).
 
 **6. [腸管出血性大腸菌]** 腸管出血性大腸菌(ちょうかんしゅっけつせいだいちょうきん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa saja gejala utama dari infeksi E. coli enterohemoragik (腸管出血性大腸菌)? Pilih satu yang benar.
-A. 腹痛(ふくつう)、はげしい下痢(げり)
-B. 腹痛(ふくつう)、はげしい下痢(げり)、血便(けつべん)
-C. 下痢(げり)、はげしい下痢(げり)、発熱(はつねつ)
+Terjemahan: Apa saja gejala utama dari infeksi E. coli enterohemoragik (`腸管出血性大腸菌`)? Pilih satu yang benar.
+A. 腹痛(ふくつう)、激(はげ)しい下痢(げり)
+B. 腹痛(ふくつう)、激(はげ)しい下痢(げり)、血便(けつべん)
+C. 下痢(げり)、発熱(はつねつ)、発疹(ほっしん)
 D. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
-**Jawaban: B** — Gejala khas O157 (`腸管出血性大腸菌`) adalah **nyeri perut (`腹痛`), diare parah (`はげしい下痢`), dan tinja berdarah (`血便`)**.
+**Jawaban: B** — Gejala khas O157 (`腸管出血性大腸菌`) adalah **nyeri perut (`腹痛`), diare parah (`激しい下痢`), dan tinja berdarah (`血便`)** (OTAFF v5.1 P.11).
 
 **7. [HACCPの略語]** HACCPとは何(なん)の略語(りゃくご)ですか。
 Terjemahan: HACCP adalah singkatan dari apa?
 A. High-frequency Active Climate Control Program
 B. Health Analysis and Condition Control Principle
 C. Health And Care Certification Protocol
-D. Hazard Analysis Critical Control Point
-**Jawaban: D** — HACCP adalah singkatan dari **Hazard Analysis Critical Control Point** (`危害要因分析重要管理点`).
+D. Hazard Analysis and Critical Control Point
+**Jawaban: D** — HACCP adalah singkatan dari ***Hazard Analysis and Critical Control Point*** (`危害要因分析重要管理点`, OTAFF v5.1 P.6).
 
 **8. [食品安全の理由]** 食品安全(しょくひんあんぜん)はなぜ大切(たいせつ)かと理由(りゆう)がいくつかあります。間違(まちが)っているものはどれですか。
 Terjemahan: Ada beberapa alasan mengapa keamanan pangan penting. Manakah pernyataan yang SALAH?
@@ -65,87 +65,87 @@ A. 食品工場(しょくひんこうじょう)は、消費者(しょうひし�
 B. 食品工場(しょくひんこうじょう)は、消費者(しょうひしゃ)が満足(まんぞく)して、贅沢(ぜいたく)なものを作(つく)らなければなりません
 C. 消費者(しょうひしゃ)は、安全(あんぜん)で安心(あんしん)できる食品(しょくひん)を求(もと)めています
 D. 食品工場(しょくひんこうじょう)は、消費者(しょうひしゃ)の健康(けんこう)を守(まも)るために安全(あんぜん)が確保(かくほ)されたものを作(つく)らなければなりません
-**Jawaban: B** — Keamanan pangan bertujuan menjaga kesehatan konsumen serta menyediakan produk aman & layak makan, bukan membuat produk mewah (`贅沢なもの`).
+**Jawaban: B** — Keamanan pangan bertujuan melindungi kesehatan konsumen dan menjaga kepercayaan perusahaan (OTAFF v5.1 P.3), bukan membuat produk mewah (`贅沢なもの`).
 
 **9. [異物除去装置]** 粘着(ねんちゃく)ローラーとエアーシャワーについて正(ただ)しいものはどれですか。
-Terjemahan: Manakah pernyataan yang benar mengenai roller perekat (粘着ローラー) dan air shower (エアーシャワー)?
+Terjemahan: Manakah pernyataan yang benar mengenai roller perekat (`粘着ローラー`) dan air shower (`エアーシャワー`)?
 A. 作業服(さぎょうふく)から髪(かみ)の毛(け)などを落(お)とすために使用(しよう)する
 B. 作業服(さぎょうふく)のしわを伸(の)ばすために使用(しよう)する
 C. 作業服(さぎょうふく)の汚(よご)れをなくすために使用(しよう)する
 D. 正(ただ)しいものはない
-**Jawaban: A** — `粘着ローラー` dan `エアーシャワー` digunakan sebelum memasuki ruang kerja untuk **merontokkan rambut dan debu dari baju kerja**.
+**Jawaban: A** — `粘着ローラー` dan `エアーシャワー` digunakan sebelum masuk ruang kerja untuk **merontokkan rambut dan debu dari baju kerja** (OTAFF v5.1 P.21).
 
-**10. [身だしなみ確認（画像問題）]** 次(つぎ)の画像(がぞう)を見(み)てください！ 間違(まちが)っているものはどれですか（※元(もと)のPDFではイラスト付(つ)き問題(もんだい)）。
-Terjemahan: Lihat gambar berikut! Manakah yang salah? (Catatan: soal asli di PDF memiliki ilustrasi urutan/cara pemakaian seragam kerja).
-A. ヘアーネットをかぶる
-B. 髪(かみ)の毛(け)をよくブラッシングする
-C. 帽子(ぼうし)をきちんとかぶる
-D. 制服(せいふく)が正(ただ)しいかどうか確認(かくにん)する
-**Jawaban: D** — Sesuai kunci PDF Latihan 4, jawabannya **D**. *(Catatan: soal ini aslinya bergambar di PDF sumber; kamu bisa melampirkan gambarnya lewat Studio Soal bila diperlukan).*
+**10. [作業服の着用順序]** 作業服(さぎょうふく)などを着用(ちゃくよう)する一般的(いっぱんてき)な順序(じゅんじょ)について、間違(まちが)っているものはどれですか。
+Terjemahan: Mengenai urutan dan cara mengenakan pakaian kerja yang benar (`作業服の着用順序`), manakah pernyataan yang SALAH?
+A. 頭髪(とうはつ)をよくブラッシングする
+B. ヘアーネットをかぶった上(うえ)から帽子(ぼうし)をきちんとかぶる
+C. 作業服(さぎょうふく)を着用(ちゃくよう)し、ボタンやジッパーを留(と)めて最後(さいご)に鏡(かがみ)で確認(かくにん)する
+D. 帽子(ぼうし)を先(さき)にかぶってから、その外側(そとがわ)にヘアーネットをかぶる
+**Jawaban: D** — Sesuai OTAFF v5.1 P.20 & P.22, urutan yang benar adalah menyisir → memakai **hairnet di dalam topi** → memakai topi → memakai baju kerja → memeriksa di cermin (`ヘアーネットを帽子の内側に着用する`).
 
 **11. [作業中の製品管理]** 作業中(さぎょうちゅう)の製品(せいひん)の扱(あつか)い上(じょう)の注意事項(ちゅういじこう)について、どうするのが正(ただ)しいですか。
-Terjemahan: Mengenai hal yang harus diperhatikan dalam penanganan produk saat bekerja, manakah yang benar?
-A. 製品(せいひん)に水(みず)がかからないようにする
+Terjemahan: Mengenai hal yang harus diperhatikan dalam penanganan produk saat bekerja, manakah tindakan yang benar?
+A. 加熱不足(かねつぶそく)の製品(せいひん)でも確認(かくにん)せずそのまま出荷(しゅっか)する
 B. 加熱(かねつ)したものを長(なが)く室温(しつおん)で放置(ほうち)する
 C. 冷却(れいきゃく)したものを長(なが)く体温(たいおん)で放置(ほうち)する
-D. 製品(せいひん)に異常(いじょう)が見(み)つかったら、決(き)められた場所(ばしょ)に置(お)いておく
-**Jawaban: D** — Sesuai kunci PDF Latihan 4, pilihannya **D** (memisahkan produk abnormal di tempat khusus yang ditentukan agar tidak tercampur produk normal). *(Catatan penting: pada soal yang mirip di Latihan 2/Set 1, kuncinya adalah **A** `製品に水がかからないようにする`, dan pada materi OTAFF bila menemukan kelainan produk wajib juga segera melapor ke `責任者`).*
+D. 製品(せいひん)に異常(いじょう)が見(み)つかったら、作業(さぎょう)を止(と)めて決(き)められた場所(ばしょ)へ分(わ)け、すぐに責任者(せきにんしゃ)へ報告(ほうこく)する
+**Jawaban: D** — Sesuai OTAFF v5.1 P.8 & P.39, jika ditemukan kelainan/penyimpangan pada produk wajib **menghentikan pekerjaan, memisahkannya, dan segera melapor ke penanggung jawab (`責任者`)**.
 
-**12. [危険温度帯の時間短縮]** 微生物(びせいぶつ)が増殖(ぞうしょく)する10℃〜60℃の温度(おんど)にある時間(じかん)を短(みじか)くするためには、どうするのが正(ただ)しいですか。
-Terjemahan: Untuk mempersingkat waktu makanan berada pada suhu 10℃–60℃ (suhu pertumbuhan mikroba), tindakan apa yang benar?
+**12. [危険温度帯の時間短縮]** 微生物(びせいぶつ)が好(この)んで増殖(ぞうしょく)する20℃〜50℃の温度帯(おんどたい)にある時間(じかん)を短(みじか)くするためには、どうするのが正(ただ)しいですか。
+Terjemahan: Untuk mempersingkat waktu makanan berada pada zona suhu pertumbuhan bakteri 20℃–50℃ (OTAFF v5.1 P.12), tindakan apa yang benar?
 A. 弱火(よわび)で調理(ちょうり)する
-B. すぐに水(みず)であらう
-C. 冷凍庫(れいとうこ)で保管(ほかん)する
+B. 長(なが)く室温(しつおん)でゆっくり冷(さ)ます
+C. 冷凍庫(れいとうこ)での保管(ほかん)や急速(きゅうそく)な冷却(れいきゃく)をおこなう
 D. 室温(しつおん)で保管(ほかん)する
-**Jawaban: C** — Menyimpan di lemari pembeku (`冷凍庫で保管する`) atau mendinginkan dengan cepat menjauhkan makanan dari zona suhu bahaya 10℃–60℃.
+**Jawaban: C** — Bakteri menyukai suhu 20℃–50℃ (tercepat 30℃–40℃); menyimpannya di ***freezer*/suhu rendah atau mendinginkannya dengan cepat** menjauhkan makanan dari zona bahaya tersebut (OTAFF v5.1 P.12 & P.34).
 
-**13. [低温保管]** 食肉(しょくにく)、魚介類(ぎょかいるい)などは低温(ていおん)で保管(ほかん)しなければなりません。どうするのが正(ただ)しいですか。
-Terjemahan: Daging, hasil laut, dan sejenisnya harus disimpan pada suhu rendah. Manakah yang benar?
-A. 冷蔵庫(れいぞうこ)で保管(ほかん)する
-B. 冷凍庫(れいとうこ)で保管(ほかん)する
-C. 10℃で保管(ほかん)する
-D. 正(ただ)しいものはない
-**Jawaban: B** — Sesuai kunci PDF Latihan 4, jawabannya **B (`冷凍庫で保管する`)** sebagai pilihan suhu paling rendah yang tersedia. *(Catatan: pada set soal lain yang merujuk standar dingin khusus `4℃以下`, kuncinya bisa berupa **D `正しいものはない`**).*
+**13. [冷凍原材料の保管]** 冷凍食肉(れいとうしょくにく)や冷凍水産物(れいとうすいさんぶつ)などの冷凍(れいとう)原材料(げんざいりょう)はどのように保管(ほかん)しなければなりませんか。
+Terjemahan: Bagaimana cara penyimpanan bahan baku beku seperti daging beku (`冷凍食肉`) dan hasil laut beku (`冷凍水産物`) menurut OTAFF v5.1?
+A. 室温(しつおん)の棚(たな)で保管(ほかん)する
+B. 冷凍庫(れいとうこ)（冷凍食肉(れいとうしょくにく)-15℃以下(いか)／冷凍水産物(れいとうすいさんぶつ)-18℃以下(いか)）で保管(ほかん)する
+C. 10℃の冷蔵庫(れいぞうこ)で保管(ほかん)する
+D. 20℃の倉庫(そうこ)で保管(ほかん)する
+**Jawaban: B** — Sesuai tabel suhu OTAFF v5.1 P.29–30, standar `冷凍庫` adalah **≤ -15℃** (daging beku **≤ -15℃**, hasil laut beku **≤ -18℃**).
 
 **14. [製造工程の管理]** 製造工程(せいぞうこうてい)の管理(かんり)と注意事項(ちゅういじこう)について間違(まちが)っているものはどれですか。
 Terjemahan: Mengenai pengelolaan dan hal yang harus diperhatikan pada proses produksi, manakah yang SALAH?
 A. 100℃以上(いじょう)でも死滅(しめつ)しない強(つよ)い微生物(びせいぶつ)がある
-B. 食品(しょくひん)を凍結(とうけつ)すると、低温(ていおん)・短時間(たんじかん)で凍結(とうけつ)することが必要(ひつよう)
-C. X線(せん)異物検出器(いぶつけんしゅつき)は金属(きんぞく)の危険異物(きけんいぶつ)を検出(けんしゅつ)することができる
-D. 期限表示管理(きげんひょうじかんり)においてミスが多(おお)いのは日付管理(ひづけかんり)
-**Jawaban: C** — Konsisten dengan materi soal recall ini, **C** disalahkan karena fungsi *X-ray* dibedakan khusus untuk mendeteksi benda asing **selain logam** (meski di praktik lapangan X-ray dapat mendeteksi logam juga).
+B. 食品(しょくひん)を凍結(とうけつ)するときは、低温(ていおん)・短時間(たんじかん)で急速(きゅうそく)に凍結(とうけつ)することが必要(ひつよう)
+C. X線(せん)異物検出機(いぶつけんしゅつき)はプラスチックを簡単(かんたん)に見(み)つけることができる
+D. 期限表示管理(きげんひょうじかんり)においてミスが多(おお)いのは数字(すうじ)などの印字(いんじ)管理(かんり)
+**Jawaban: C** — Sesuai OTAFF v5.1 P.36 (`ひっかけ注意`), **plastik sulit dideteksi dengan sinar-X (`プラスチックはX線では見つけにくい`)** sehingga tidak boleh mengandalkan X-ray untuk plastik.
 
 **15. [包装工程の管理]** 包装工程(ほうそうこうてい)での重要(じゅうよう)な管理事項(かんりじこう)について正(ただ)しいものはどれですか。
-Terjemahan: Mengenai hal pengelolaan penting pada proses pengemasan (`包装工程`), manakah yang benar?
-A. 金属検出器(きんぞくけんしゅつき)管理(かんり)、X線検出器(せんけんしゅつき)管理(かんり)、凍結温度管理(とうけつおんどかんり)
-B. 金属検出器(きんぞくけんしゅつき)管理(かんり)、X線検出器(せんけんしゅつき)管理(かんり)、期限表示管理(きげんひょうじかんり)
-C. 金属検出器(きんぞくけんしゅつき)管理(かんり)、期限表示管理(きげんひょうじかんり)、凍結温度管理(とうけつおんどかんり)
-D. X線検出器(せんけんしゅつき)管理(かんり)、凍結温度管理(とうけつおんどかんり)、期限表示管理(きげんひょうじかんり)
-**Jawaban: B** — Pada tahap pengemasan (`包装工程`), 3 manajemen utamanya adalah **detektor logam (`金属検出器`), detektor X-ray (`X線検出器`), dan pencantuman tanggal kedaluwarsa (`期限表示`)**. (`凍結温度管理` adalah tahap pembekuan).
+Terjemahan: Mengenai hal pengelolaan penting pada proses pengemasan & pemeriksaan (`充填・包装・検査`), manakah yang benar?
+A. 金属探知機(きんぞくたんちき)管理(かんり)、X線異物検出機(せんいぶつけんしゅつき)管理(かんり)、凍結温度管理(とうけつおんどかんり)
+B. 金属探知機(きんぞくたんちき)管理(かんり)、X線異物検出機(せんいぶつけんしゅつき)管理(かんり)、期限表示管理(きげんひょうじかんり)
+C. 金属探知機(きんぞくたんちき)管理(かんり)、期限表示管理(きげんひょうじかんり)、凍結温度管理(とうけつおんどかんり)
+D. X線異物検出機(せんいぶつけんしゅつき)管理(かんり)、凍結温度管理(とうけつおんどかんり)、期限表示管理(きげんひょうじかんり)
+**Jawaban: B** — Pada tahap pengemasan dan pemeriksaan akhir, tiga pengelolaan utamanya adalah **detektor logam (`金属探知機`), detektor X-ray (`X線異物検出機`), dan pencetakan tanggal kedaluwarsa (`期限表示`)** (OTAFF v5.1 P.35–36).
 
-**16. [X線検出器]** X線(せん)検出器(けんしゅつき)とは？
-Terjemahan: Apakah yang dimaksud dengan detektor sinar-X (`X線検出器`)?
-A. 金属(きんぞく)の危険異物(きけんいぶつ)を検出(けんしゅつ)するもの
-B. 危害(きがい)を起(お)こす異物(いぶつ)である金属(きんぞく)を検出(けんしゅつ)するもの
-C. 金属(きんぞく)以外(いがい)の危険異物(きけんいぶつ)を検出(けんしゅつ)するもの
+**16. [X線異物検出機]** X線(せん)異物検出機(いぶつけんしゅつき)とは何(なん)ですか。
+Terjemahan: Apakah fungsi utama detektor benda asing sinar-X (`X線異物検出機`) menurut OTAFF v5.1?
+A. 危害(きがい)を起(お)こすプラスチックだけを簡単(かんたん)に検出(けんしゅつ)するもの
+B. 食品中(しょくひんちゅう)のすべてのウイルスや細菌(さいきん)を検査(けんさ)するもの
+C. 金属探知機(きんぞくたんちき)では見(み)つけられない石(いし)やガラスなどの硬質異物(こうしついぶつ)や、製品(せいひん)の数量不足(すうりょうぶそく)・形状不良(けいじょうふりょう)を検出(けんしゅつ)するもの
 D. 加熱(かねつ)に生(い)き残(のこ)った微生物(びせいぶつ)の増殖(ぞうしょく)を防止(ぼうし)するもの
-**Jawaban: C** — Sesuai pengelompokan pada bank soal ini, `X線検出器` mendeteksi benda asing berbahaya **selain logam** (seperti kaca, batu, tulang keras).
+**Jawaban: C** — Menurut OTAFF v5.1 P.36, `X線異物検出機` mendeteksi **batu, kaca, dll.** yang tak tertangkap detektor logam (serta mengecek kekurangan jumlah/cacat bentuk).
 
-**17. [特定原材料の種類数]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)は何種類(なんしゅるい)ありますか？
-Terjemahan: Ada berapa jenis makanan yang wajib dicantumkan sebagai alergen (`特定原材料`)?
+**17. [特定原材料の種類数]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)は、2026年(ねん)4月(がつ)改訂(かいてい)（OTAFF第(だい)5.1版(はん)）では何種類(なんしゅるい)ありますか？
+Terjemahan: Menurut revisi 1 April 2026 (OTAFF v5.1), ada berapa jenis makanan yang wajib dicantumkan sebagai alergen (`特定原材料`)?
 A. 5種類(しゅるい)
-B. 7種類(しゅるい)
+B. 9種類(しゅるい)
 C. 14種類(しゅるい)
-D. 21種類(しゅるい)
-**Jawaban: B** — Pada soal edisi lama ini kuncinya adalah **7 jenis (`7種類`)**: udang, kepiting, gandum, soba, telur, susu, kacang tanah. *(Catatan update OTAFF Edisi 5.1/2026: menjadi **9 jenis** dengan tambahan `くるみ` & `カシューナッツ`).*
+D. 20種類(しゅるい)
+**Jawaban: B** — Sejak **1 April 2026** (OTAFF v5.1 P.8–9), **`特定原材料` (wajib tampil)** berjumlah **9 jenis (`9品目`)**: `えび・かに・くるみ・小麦・そば・卵・乳・落花生・カシューナッツ`. (`20種類` adalah jumlah item rekomendasi).
 
 **18. [HACCP：検証方法]** HACCP原則(げんそく)の「検証方法(けんしょうほうほう)の設定(せってい)」をするときは、どうするのが正(ただ)しいですか。
 Terjemahan: Ketika menetapkan "metode verifikasi (`検証方法の設定`)" dalam prinsip HACCP, manakah yang benar?
 A. 危害要因(きがいよういん)がどれくらい重要(じゅうよう)か、どのように管理(かんり)して危害(きがい)を防(ふせ)ぐかを決(き)める
 B. 製造工程(せいぞうこうてい)で食品(しょくひん)の安全(あんぜん)を確保(かくほ)する
-C. HACCPの計画(けいかく)が適切(てきせつ)に作成(さくせい)され、実施(じっし)されているかどうかを確認(かくにん)する方法(ほうほう)を決(き)める
+C. HACCPの計画(けいかく)が適切(てきせつ)に作成(さくせい)され、計画通(けいかくどお)り実行(じっこう)されているかどうかを確認(かくにん)する方法(ほうほう)を決(き)める
 D. 適切(てきせつ)に管理(かんり)されているかどうかをモニタリングする方法(ほうほう)を設定(せってい)する
-**Jawaban: C** — Prinsip 6 (`検証`) menetapkan cara memastikan apakah rencana HACCP telah disusun dengan tepat dan dijalankan sesuai rencana (`計画が適切に作成され、実施されているかどうかを確認する方法を決める`).
+**Jawaban: C** — Prinsip 6 (`検証`) menetapkan cara memastikan apakah rencana HACCP efektif menurunkan bahaya dan benar-benar dijalankan sesuai rencana (OTAFF v5.1 P.38).
 
 **19. [HACCPの用語組合せ]** 次(つぎ)を見(み)てみてください！
 1. HAとは危害要因分析(きがいよういんぶんせき)のこと。
@@ -158,12 +158,12 @@ A. 1, 2, 3
 B. 2, 3, 4
 C. 1, 3, 4
 D. 1, 2, 4
-**Jawaban: D** — Pernyataan 1 (HA = analisis bahaya), 2 (CCP = titik kendali kritis yang tidak boleh salah), dan 4 (HACCP = metode manajemen sanitasi untuk menjamin keamanan produk) semuanya **benar**; sedangkan pernyataan 3 salah karena mendefinisikan alur produksi umum sebagai HA.
+**Jawaban: D** — Pernyataan 1, 2, dan 4 benar; pernyataan 3 salah karena mendefinisikan alur produksi umum sebagai HA (*Hazard Analysis*).
 
 **20. [作業場の危険]** 作業場(さぎょうじょう)の危険(きけん)について間違(まちが)っているものはどれですか。
-Terjemahan: Mengenai bahaya di tempat kerja (`作業場の危険`), manakah yang SALAH?
+Terjemahan: Mengenai potensi bahaya di tempat kerja (`作業場の危険`, daftar KYT P.55), manakah yang SALAH?
 A. 感電(かんでん)
 B. 腰(こし)を痛(いた)める
 C. 自分(じぶん)を向(む)き合(あ)う
 D. ガス中毒(ちゅうどく)になる
-**Jawaban: C** — Tersengat listrik (`感電`), sakit pinggang (`腰を痛める`), dan keracunan gas (`ガス中毒`) adalah bahaya kerja nyata, sedangkan `自分を向き合う` (menghadapi diri sendiri) tidak termasuk jenis bahaya kerja.
+**Jawaban: C** — Tersengat listrik (`感電`), sakit pinggang (`腰を痛める`), dan keracunan gas (`ガス中毒`) tercantum dalam daftar bahaya KYT OTAFF v5.1 P.55, sedangkan `自分を向き合う` bukan bahaya kerja.

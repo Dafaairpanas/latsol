@@ -1,145 +1,145 @@
 # SSW Pengolahan Makanan — Latihan 6 (20 Soal)
-> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 6 SSW Pengolahan Makanan (受入検査, 凍結, 期限表示, 保管サンプル, 交差汚染 & 薬剤管理)
+> Kategori: SSW | Durasi: 20 | Lulus: 65 | Subjudul: 20 soal Latihan 6 SSW Pengolahan Makanan (diselaraskan ke OTAFF Edisi 5.1: 受入検査, 凍結, 期限表示, 保管サンプル, 交差汚染, 薬剤管理)
 
 ## 飲食料品製造業 練習問題 Latihan 6（20問）
 
-**1. [安全な食品の全体像]** 安全(あんぜん)な食品(しょくひん)を作(つく)るための全体像(ぜんたいぞう)について、間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Mengenai gambaran keseluruhan untuk membuat makanan yang aman, pilih satu pernyataan yang SALAH.
+**1. [安全な食品の全体像]** 安全(あんぜん)な食品(しょくひん)を作(つく)るための取(と)り組(く)みについて、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai upaya membuat makanan yang aman, pilih satu pernyataan yang SALAH.
 A. 安全(あんぜん)な原材料(げんざいりょう)の受入(うけい)れ
-B. 微生物(びせいぶつ)の増殖(ぞうしょく)を殺(ころ)さない
+B. 微生物(びせいぶつ)の増殖(ぞうしょく)を殺(ころ)さない（増(ふ)やさない・殺(ころ)す対策(たいさく)をしない）
 C. きれいな製造環境(せいぞうかんきょう)
-**Jawaban: B** — Dalam gambaran keseluruhan pembuatan pangan aman (`全体像`), mikroorganisme harus dicegah tumbuh dan dibasmi (`殺す`), bukan "tidak membunuh pertumbuhan mikroorganisme" (`殺さない`).
+**Jawaban: B** — Untuk membuat pangan aman, mikroorganisme harus dicegah tumbuh dan dibasmi (`増やさない・やっつける`), bukan dibiarkan (`殺さない`).
 
 **2. [食中毒の原因]** 食中毒(しょくちゅうどく)の原因(げんいん)のひとつとして、間違(まちが)っているものをえらびなさい。
-Terjemahan: Manakah yang BUKAN merupakan penyebab keracunan makanan? Pilih satu yang salah.
-A. 微生物(びせいぶつ)
-B. 細菌(さいきん)
+Terjemahan: Manakah yang BUKAN merupakan penyebab keracunan makanan (`生物的危害要因`, P.10)? Pilih satu yang salah.
+A. 細菌(さいきん)やウイルスなどの病原性微生物(びょうげんせいびせいぶつ)
+B. 寄生虫(きせいちゅう)（アニサキス等(など)）
 C. 風味(ふうみ)
-**Jawaban: C** — Rasa/aroma (`風味`) bukan penyebab keracunan makanan (`食中毒`).
+**Jawaban: C** — Rasa/aroma (`風味`) bukan penyebab keracunan makanan (`生物的危害要因`: bakteri, virus, parasit, jamur — OTAFF v5.1 P.10).
 
 **3. [ボツリヌス菌の症状]** ボツリヌス菌(きん)の主(おも)な症状(しょうじょう)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa saja gejala utama dari keracunan Clostridium botulinum (ボツリヌス菌)? Pilih satu yang benar.
+Terjemahan: Apa saja gejala utama dari keracunan Clostridium botulinum (`ボツリヌス菌`)? Pilih satu yang benar.
 A. 吐(は)き気(け)、おう吐(と)、呼吸困難(こきゅうこんなん)
 B. 吐(は)き気(け)、おう吐(と)、腹痛(ふくつう)
 C. 吐(は)き気(け)、おう吐(と)
-**Jawaban: A** — Ciri khas keracunan `ボツリヌス菌` yang berbahaya hingga dapat mengancam nyawa adalah **mual (`吐き気`), muntah (`おう吐`), dan sesak/gagal napas (`呼吸困難`)**.
+**Jawaban: A** — Ciri khas keracunan `ボツリヌス菌` adalah **mual (`吐き気`), muntah (`おう吐`), dan sesak/gagal napas (`呼吸困難`)** (OTAFF v5.1 P.11).
 
 **4. [ボツリヌス菌の予防対策]** ボツリヌス菌(きん)の主(おも)な予防対策(よぼうたいさく)はどれですか。正(ただ)しいものをひとつえらびなさい。
-Terjemahan: Apa langkah pencegahan utama terhadap Clostridium botulinum (ボツリヌス菌)? Pilih satu yang benar.
-A. 120℃以上(いじょう)、4分以上(いじょう)加熱(かねつ)します
-B. 120℃以上(いじょう)、4秒以上(いじょう)加熱(かねつ)します
-C. 100℃以上(いじょう)、4分以上(いじょう)加熱(かねつ)します
-D. 80℃以上(いじょう)、4分以上(いじょう)加熱(かねつ)します
-**Jawaban: A** — `ボツリヌス菌` membentuk spora tahan panas (`芽胞`), sehingga sterilisasinya memerlukan **120℃ atau lebih selama 4 menit atau lebih (`120℃以上、4分以上`)**.
+Terjemahan: Apa langkah pencegahan utama terhadap Clostridium botulinum (`ボツリヌス菌`)? Pilih satu yang benar.
+A. 中心温度(ちゅうしんおんど)120℃以上(いじょう)、4分以上(よんぷんいじょう)加熱(かねつ)します
+B. 120℃以上(いじょう)、4秒以上(びょういじょう)加熱(かねつ)します
+C. 100℃以上(いじょう)、4分以上(よんぷんいじょう)加熱(かねつ)します
+D. 80℃以上(いじょう)、4分以上(よんぷんいじょう)加熱(かねつ)します
+**Jawaban: A** — `ボツリヌス菌` membentuk spora tahan panas (`芽胞`), sehingga sterilisasinya memerlukan suhu inti **120℃ selama 4 menit atau lebih** (OTAFF v5.1 P.33).
 
 **5. [作業者の衛生管理]** 働(はたら)く人(ひと)の衛生管理(えいせいかんり)は、自分(じぶん)でしっかり衛生管理(えいせいかんり)をします。間違(まちが)っているものを一(ひと)つえらびなさい。
 Terjemahan: Mengenai manajemen kebersihan diri oleh pekerja, pilih satu pernyataan yang SALAH.
 A. いつも清潔(せいけつ)ではない
 B. 定期的(ていきてき)に頭髪(とうはつ)を洗(あら)います
-C. 爪(つめ)などを伸(の)ばさないようにします
-**Jawaban: A** — Pekerja wajib selalu menjaga kebersihan diri (`いつも清潔にする`), bukan membiarkan diri tidak bersih (`清潔ではない`).
+C. 爪(つめ)などを短(みじか)く切(き)って伸(の)ばさないようにします
+**Jawaban: A** — Pekerja wajib selalu menjaga kebersihan diri (`清潔`) dan memotong kuku pendek tanpa cat kuku/kuku palsu (OTAFF v5.1 P.19).
 
 **6. [体調不良時の対応]** 症状(しょうじょう)があって体調(たいちょう)が悪(わる)いときは、どうすればいいですか。正(ただ)しいものをえらびなさい。
-Terjemahan: Ketika memiliki gejala dan kondisi tubuh tidak sehat, apa yang harus dilakukan? Pilih satu yang benar.
+Terjemahan: Ketika memiliki gejala (demam, diare, mual, luka) dan kondisi tubuh tidak sehat, apa yang harus dilakukan? Pilih satu yang benar.
 A. 必(かなら)ず自分(じぶん)の職場(しょくば)の責任者(せきにんしゃ)に報告(ほうこく)する
 B. 必(かなら)ず自分(じぶん)の職場(しょくば)の警察(けいさつ)に報告(ほうこく)する
 C. アパートに戻(もど)る
-**Jawaban: A** — Saat sakit atau muncul gejala (demam, diare, mual, luka), wajib **segera melapor kepada penanggung jawab tempat kerja (`責任者に報告する`)**.
+**Jawaban: A** — Saat sakit atau muncul gejala, wajib **melapor kepada penanggung jawab (`責任者`)** (OTAFF v5.1 P.18).
 
 **7. [整理と労働安全]** 整理(せいり)による労働安全(ろうどうあんぜん)との関係(かんけい)について、正(ただ)しいものはどれですか。
-Terjemahan: Apa hubungan antara "Seiri" (整理) dan keselamatan kerja (労働安全)? Pilih satu yang benar.
-A. 作業効率(さぎょうこうりつ)があがって、転倒(てんとう)などの危険(きけん)が減(へ)る
+Terjemahan: Apa hubungan antara "Seiri" (`整理`) dan keselamatan kerja (`労働安全`)? Pilih satu yang benar.
+A. 作業効率(さぎょうこうりつ)があがり動(うご)きやすくなって、転倒(てんとう)などの危険(きけん)が減(へ)る
 B. いつでも職場(しょくば)のルールを守(まも)ること
 C. 作業(さぎょう)するとき守(まも)ること
-**Jawaban: A** — Membuang barang yang tidak terpakai (`整理`) membuat jalur kerja bersih, meningkatkan efisiensi kerja, dan **mengurangi risiko terpeleset/tersandung (`転倒`)**.
+**Jawaban: A** — Menyingkirkan barang yang tidak dipakai (`整理`) membuat area kerja lega dan mengurangi risiko terpeleset/tersandung (`転倒`) (OTAFF v5.1 P.46).
 
-**8. [異物混入で多い原因]** 異物混入(いぶつこんにゅう)でとくに多(おお)いのはなんですか。正(ただ)しいものを一(ひと)つえらびなさい。
-Terjemahan: Benda asing apakah yang paling sering terjadi dalam kasus kontaminasi benda asing (異物混入)? Pilih satu yang benar.
+**8. [硬くない異物と苦情]** 硬質異物(こうしついぶつ)（物理的危害要因(ぶつりてききがいよういん)）ではないが、不潔(ふけつ)と思(おも)われて苦情(くじょう)や返品(へんぴん)につながるため入(はい)らないようにするものはどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Meskipun bukan benda asing keras (`物理的危害要因`), benda asing manakah yang menimbulkan keluhan dan pengembalian barang karena terkesan kotor (P.8)? Pilih satu yang benar.
 A. ガラス
 B. 金属(きんぞく)
 C. 毛髪(もうはつ)と虫(むし)
-**Jawaban: C** — Kasus `異物混入` yang paling sering dikeluhkan konsumen adalah **rambut (`毛髪`) dan serangga (`虫`)**.
+**Jawaban: C** — Menurut OTAFF v5.1 P.8, **rambut (`毛髪 / 髪の毛`) dan serangga (`虫`)** termasuk benda asing tidak keras yang memicu keluhan & pengembalian produk sehingga wajib dicegah masuk.
 
-**9. [工場内のCOVID-19予防]** 新型(しんがた)コロナウイルス感染症(かんせんしょう)（COVID-19）の食品工場(しょくひんこうじょう)での予防(よぼう)について、間違(まちが)っているものを一(ひと)つえらびなさい。
-Terjemahan: Mengenai pencegahan COVID-19 di pabrik makanan, pilih satu pernyataan yang SALAH.
-A. ドアノブなど、たくさんの人(ひと)が触(さわ)る場所(ばしょ)を消毒(しょうどく)しません
-B. 食堂(しょくどう)、事務室(じむしつ)は、定期的(ていきてき)に空気(くうき)を入(い)れ換(か)えます
-C. 更衣室(こういしつ)は定期的(ていきてき)に空気(くうき)を入(い)れ換(か)えます
-**Jawaban: A** — Gagang pintu dan permukaan yang disentuh banyak orang wajib didisinfeksi secara rutin, bukan dibiarkan tanpa disinfeksi (`消毒しません`).
+**9. [ノロウイルスの消毒対策]** ノロウイルス対策(たいさく)の施設(しせつ)・器具(きぐ)の消毒(しょうどく)について、間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Mengenai disinfeksi fasilitas dan alat untuk pencegahan Norovirus (OTAFF v5.1 P.13–14), pilih satu pernyataan yang SALAH.
+A. 調理器具(ちょうりきぐ)は消毒用(しょうどくよう)アルコールだけで消毒(しょうどく)すればよい
+B. 洗浄後(せんじょうご)、濃度(のうど)200ppmの次亜塩素酸(じあえんそさん)ナトリウム溶液(ようえき)で消毒(しょうどく)する
+C. トイレの後(あと)の手洗(てあら)いを徹底(てってい)し、おう吐物(とぶつ)は専門用具(せんもんようぐ)で処理(しょり)する
+**Jawaban: A** — Menurut OTAFF v5.1 P.13 (`ひっかけ注意`), **Norovirus tidak mati dengan alkohol disinfektan!** Harus menggunakan **natrium hipoklorit 200ppm** setelah dicuci.
 
 **10. [受入検査の役割]** 原材料(げんざいりょう)の受入(うけい)れの結果(けっか)は、その後(ご)の製造工程(せいぞうこうてい)でどのように対応(たいおう)するかを判断(はんだん)するための重要(じゅうよう)なデータになります。これはなんですか。正(ただ)しいものを一(ひと)つえらびなさい。
 Terjemahan: Hasil penerimaan bahan baku menjadi data penting untuk menentukan penanganan pada proses produksi berikutnya. Kegiatan apakah ini? Pilih satu yang benar.
 A. 原材料(げんざいりょう)の管理(かんり)
 B. 受入検査(うけいれけんさ)
 C. 健康(けんこう)の管理(かんり)
-**Jawaban: B** — Pemeriksaan kualitas, suhu, kemasan, dan kedaluwarsa saat bahan baku tiba disebut **受入検査 (pemeriksaan penerimaan)**.
+**Jawaban: B** — Pengecekan kesesuaian dokumen pesanan, tampilan, bau, suhu, kemasan, dan tanggal bahan saat tiba disebut **受入検査 (pemeriksaan penerimaan)** (OTAFF v5.1 P.27).
 
-**11. [冷蔵庫・冷凍庫の温度基準]** 冷凍庫(れいとうこ)、冷蔵庫(れいぞうこ)の管理(かんり)について、正(ただ)しいものはどれですか。
-Terjemahan: Mengenai pengelolaan suhu freezer dan kulkas, manakah yang benar?
+**11. [冷蔵庫・冷凍庫の温度基準]** 冷凍庫(れいとうこ)、冷蔵庫(れいぞうこ)の管理(かんり)（食品衛生法(しょくひんえいせいほう)の基準(きじゅん)）について、正(ただ)しいものはどれですか。
+Terjemahan: Mengenai pengelolaan suhu *freezer* dan kulkas sesuai UU Sanitasi Pangan, manakah yang benar?
 A. 冷凍庫(れいとうこ) -15℃以下(いか) ／ 冷蔵庫(れいぞうこ) 10℃以下(いか)
 B. 冷凍庫(れいとうこ) 10℃以下(いか) ／ 冷蔵庫(れいぞうこ) 10℃以下(いか)
 C. 冷凍庫(れいとうこ) 15℃以下(いか) ／ 冷蔵庫(れいぞうこ) -10℃以下(いか)
-**Jawaban: A** — Standar hukum sanitasi pangan Jepang: **Freezer ≤ -15℃** dan **Kulkas ≤ 10℃**.
+**Jawaban: A** — Standar UU Sanitasi Pangan (OTAFF v5.1 P.30): ***Freezer* ≤ -15℃** dan **Kulkas ≤ 10℃**.
 
 **12. [凍結工程の品質維持]** 凍結工程(とうけつこうてい)で、食感(しょっかん)や風味(ふうみ)などが変化(へんか)して品質(ひんしつ)が劣化(れっか)するのを防(ふせ)ぐためにはどうしますか。間違(まちが)っているものをえらびなさい。
 Terjemahan: Pada proses pembekuan (`凍結工程`), untuk mencegah penurunan kualitas tekstur dan rasa, pilih satu tindakan yang SALAH.
 A. できるだけ低温(ていおん)で保存(ほぞん)します
 B. 食品(しょくひん)をゆっくり凍結(とうけつ)させます
 C. 短時間(たんじかん)で急速(きゅうそく)に凍結(とうけつ)させます
-**Jawaban: B** — Membekukan makanan secara lambat (`ゆっくり凍結`) menghasilkan kristal es besar yang merusak sel, tekstur, dan rasa; pembekuan harus dilakukan **cepat dalam waktu singkat (`短時間で急速に凍結`)**.
+**Jawaban: B** — Membekukan secara lambat (`ゆっくり凍結`) merusak tekstur dan rasa; harus dibekukan **cepat dalam waktu singkat (`短時間で急速に冷凍`)** (OTAFF v5.1 P.34).
 
-**13. [X線異物検出器]** X線(せん)異物検出器(いぶつけんしゅつき)で検出(けんしゅつ)することができるものについて、間違(まちが)っているものをえらびなさい。
-Terjemahan: Mengenai benda asing yang dibedakan pada materi detektor X-ray (dibanding detektor logam), pilih satu yang SALAH sesuai soal.
+**13. [X線異物検出機]** X線(せん)異物検出機(いぶつけんしゅつき)について、見(み)つけにくい（検出(けんしゅつ)しにくい）ものとして注意(ちゅうい)が必要なものはどれですか。
+Terjemahan: Benda asing manakah yang sulit dideteksi (`見つけにくい`) oleh detektor sinar-X (`X線異物検出機`) menurut OTAFF v5.1 P.36?
 A. 石(いし)
 B. ガラス
-C. 金属(きんぞく)
-**Jawaban: C** — Konsisten dengan set latihan recall ini, batu (`石`) dan kaca (`ガラス`) ditekankan sebagai target `X線異物検出器`, sedangkan logam (`金属`) dipasangkan dengan `金属検出器` (meski secara teknis di lapangan alat X-ray juga mampu mendeteksi logam).
+C. プラスチック
+**Jawaban: C** — Menurut OTAFF v5.1 P.36 (`ひっかけ注意`), X-ray mampu mendeteksi batu, kaca, dan logam padat, tetapi **plastik (`プラスチック`) sulit ditemukan oleh sinar-X** sehingga harus dicegah terlepas dari mesin.
 
 **14. [期限表示のミス防止]** 期限表示(きげんひょうじ)について、ケアレスミスをしないための対策(たいさく)はどれですか。間違(まちが)っているものを一(ひと)つえらんでください。
-Terjemahan: Mengenai pencantuman tanggal kedaluwarsa (`期限表示`), agar tidak terjadi kelalaian manusia (careless mistake), pilih satu pernyataan yang SALAH.
-A. ロットナンバーを包装(ほうそう)ラインに掲示(けいじ)する
-B. 消費期限(しょうひきげん)や賞味期限(しょうみきげん)の期限表示(きげんひょうじ)のミスだけです
-C. その日(ひ)の賞味期限(しょうみきげん)を記録(きろく)として残(のこ)しておく
-**Jawaban: B** — Menempel nomor lot di lini pengemasan (A) dan mencatat tanggal batas edar harian (C) adalah tindakan pencegahan kesalahan cetak; opsi B bukan tindakan pencegahan.
+Terjemahan: Mengenai pencantuman tanggal kedaluwarsa (`期限表示`), agar tidak terjadi salah cetak/kelalaian, pilih satu pernyataan yang SALAH.
+A. 印字(いんじ)機械(きかい)の設定(せってい)や印字内容(いんじないよう)が正(ただ)しいことを別(べつ)の人(ひと)が確認(かくにん)する
+B. 確認(かくにん)せず期限表示(きげんひょうじ)をひとりで適当(てきとう)に設定(せってい)する
+C. その日(ひ)の賞味期限(しょうみきげん)やロット番号(ばんごう)を掲示(けいじ)・記録(きろく)して確認(かくにん)する
+**Jawaban: B** — Karena banyak kesalahan angka cetak tanggal, wajib dilakukan pengecekan ulang pengaturan & hasil cetak oleh **orang berbeda** (OTAFF v5.1 P.35).
 
-**15. [微生物検査の項目]** 微生物検査(びせいぶつけんさ)を自主的(じしゅてき)に行(おこな)う場合(ばあい)の一般的(いっぱんてき)な検査項目(けんさこうもく)は何(なん)ですか。間違(まちが)っているものを一(ひと)つえらびなさい。
-Terjemahan: Ketika melakukan uji mikroorganisme mandiri (`自主的微生物検査`), manakah yang BUKAN item pemeriksaan umum dasar? Pilih satu yang salah.
+**15. [微生物検査の項目]** 微生物検査(びせいぶつけんさ)を自主的(じしゅてき)に行(おこな)う場合(ばあい)の一般的(いっぱんてき)な検査項目(けんさこうもく)ではないものはどれですか。間違(まちが)っているものを一(ひと)つえらびなさい。
+Terjemahan: Ketika melakukan uji mikroorganisme mandiri dasar (`自主的微生物検査`, P.36), manakah yang BUKAN item pemeriksaan umum dasar? Pilih satu yang salah.
 A. 大腸菌(だいちょうきん)
-B. サルモネラ属菌(ぞくきん)
+B. ノロウイルス
 C. 大腸菌群(だいちょうきんぐん)
-**Jawaban: B** — Tiga item uji mikroba mandiri yang paling umum/dasar adalah **`一般生菌数`, `大腸菌`, dan `大腸菌群`**, sedangkan `サルモネラ属菌` hanya diuji bila diperlukan/spesifik.
+**Jawaban: B** — Tiga item uji mikroba mandiri yang paling umum adalah **`一般生菌数`, `大腸菌`, dan `大腸菌群`** (ditambah `黄色ブドウ球菌`, `サルモネラ属菌`, `カンピロバクター属菌` bila diperlukan — bukan Norovirus) (OTAFF v5.1 P.36).
 
 **16. [保管サンプルの管理]** 保管(ほかん)サンプルの管理(かんり)はどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
 Terjemahan: Manakah penjelasan yang benar mengenai pengelolaan sampel simpan (`保管サンプル`)? Pilih satu yang benar.
 A. 定期的(ていきてき)に温度(おんど)を確認(かくにん)します
 B. クレームが発生(はっせい)した場合(ばあい)に備(そな)えて、製造(せいぞう)した製品(せいひん)の中(なか)から、一定(いってい)の割合(わりあい)を保管(ほかん)する
 C. 無機物(むきぶつ)を保管(ほかん)します
-**Jawaban: B** — Sampel produk diambil dan disimpan dalam proporsi tertentu (`一定の割合`) sebagai persiapan penyelidikan apabila terjadi komplain dari konsumen (`クレームが発生した場合に備えて`).
+**Jawaban: B** — Sampel produk diambil dan disimpan dalam proporsi tertentu (`一定の割合`) untuk menyelidiki kesamaan masalah jika kelak muncul komplain konsumen (`クレーム`) (OTAFF v5.1 P.36–37).
 
 **17. [製品の輸送]** 製品(せいひん)を輸送(ゆそう)するとき、間違(まちが)っているものを一(ひと)つ選(えら)んでください。
 Terjemahan: Mengenai pengiriman/transportasi produk (`製品を輸送するとき`), pilih satu pernyataan yang SALAH.
 A. 定期的(ていきてき)に温度(おんど)を確認(かくにん)します
-B. 温度管理(おんどかんり)を徹底(てってい)しなければなりません
+B. 食品(しょくひん)ごとに決(き)められた温度(おんど)での温度管理(おんどかんり)を徹底(てってい)しなければなりません
 C. 製品(せいひん)が残(のこ)りません
-**Jawaban: C** — Selama pengangkutan produk wajib dilakukan pengendalian suhu secara ketat dan pengecekan suhu berkala; pernyataan "produk tidak tersisa" (`製品が残りません`) tidak relevan dan salah.
+**Jawaban: C** — Produk wajib diangkut sesuai **suhu yang ditetapkan** untuk tiap produk agar mutu tidak rusak (OTAFF v5.1 P.37).
 
-**18. [特定原材料]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)はどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
-Terjemahan: Kombinasi bahan makanan manakah yang wajib dicantumkan sebagai alergen (`特定原材料`)? Pilih satu yang benar.
-A. えび、かに、こむぎ、そば、たまご、にゅう、らっかせい
-B. かに、えび、くるみ、ごま、さけ、さば、らっかせい
-C. あわび、いか、いくら、まつたけ、もも、そば、りんご、らっかせい
-**Jawaban: A** — 7 alergen wajib klasik: **えび・かに・小麦・そば・卵・乳・落花生**. (Pada B ada `ごま・さけ・さば`, dan pada C ada `あわび・いか・いくら・まつたけ・もも・りんご` yang merupakan item rekomendasi). *(Catatan OTAFF Edisi 5.1/2026: item wajib bertambah menjadi 9 dengan `くるみ` & `カシューナッツ`).*
+**18. [特定原材料]** 特定原材料(とくていげんざいりょう)として表示(ひょうじ)する義務(ぎむ)がある食品(しょくひん)9品目(ひんもく)（2026年(ねん)4月(がつ)改訂(かいてい)）はどれですか。正(ただ)しいものを一(ひと)つえらびなさい。
+Terjemahan: Manakah daftar 9 bahan makanan yang wajib dicantumkan sebagai alergen (`特定原材料`) sesuai revisi April 2026 (OTAFF v5.1 P.9)? Pilih satu yang benar.
+A. えび、かに、くるみ、小麦(こむぎ)、そば、卵(たまご)、乳(にゅう)、落花生(らっかせい)、カシューナッツ
+B. かに、えび、ごま、さけ、さば、鶏肉(とりにく)、豚肉(ぶたにく)
+C. あわび、いか、いくら、もも、りんご、バナナ、ゼラチン
+**Jawaban: A** — **9 item wajib** sesuai revisi OTAFF v5.1 (1 April 2026) P.9: **えび・かに・くるみ・小麦・そば・卵・乳・落花生・カシューナッツ**. (`ごま・さけ・さば・鶏肉・豚肉・あわび・いか・いくら・もも・りんご・バナナ・ゼラチン` termasuk 20 item rekomendasi).
 
-**19. [交差汚染の防止]** 交差汚染(こうさおせん)を防(ふせ)ぐ方法(ほうほう)はどれですか。間違(まちが)っているものをひとつえらびなさい。
-Terjemahan: Mengenai metode pencegahan kontaminasi silang (交差汚染), pilih satu yang SALAH (bukan dari daftar 3 metode 交差汚染 pada materi soal ini).
-A. 器具(きぐ)の使(つか)い分(わ)け
-B. 原材料(げんざいりょう)の区分(くぶん)と保管(ほかん)
-C. 容器(ようき)の工夫(くふう)
-**Jawaban: C** — `容器の工夫` (membedakan desain/warna wadah agar tidak salah pakai seperti wadah obat kimia vs wadah makanan) adalah salah satu poin **manajemen bahan kimia (`薬剤の管理`)** pada soal nomor 20, bukan poin langsung pemisahan kontaminasi silang di pertanyaan ini.
+**19. [交差汚染の防止]** 交差汚染(こうさおせん)を防(ふせ)ぐ方法(ほうほう)について、間違(まちが)っているものをひとつえらびなさい。
+Terjemahan: Mengenai metode pencegahan kontaminasi silang (`交差汚染`, P.16–17), pilih satu pernyataan yang SALAH.
+A. 器具(きぐ)・まな板(いた)・包丁(ほうちょう)を原材料別(げんざいりょうべつ)に使(つか)い分(わ)ける
+B. 汚染作業区域(おせんさぎょうくいき)の作業者(さぎょうしゃ)が清潔作業区域(せいけつさぎょうくいき)に入(はい)らないようにする
+C. 原材料(げんざいりょう)を入(い)れた段(だん)ボール箱(ばこ)のまま清潔作業区域(せいけつさぎょうくいき)に持(も)ち込(こ)む
+**Jawaban: C** — Kardus (`段ボール箱`) dari luar bisa kotor/membawa serangga & mikroba sehingga **dilarang dibawa masuk** ke area semi-bersih maupun area bersih (OTAFF v5.1 P.17).
 
-**20. [薬剤の管理]** 薬剤(やくざい)の管理(かんり)には3つがあります。なんですか。正(ただ)しいものをえらびなさい。
-Terjemahan: Ada 3 hal penting dalam pengelolaan bahan kimia/disinfektan (`薬剤の管理`). Kombinasi manakah yang benar?
-A. 専用(せんよう)の保管場所(ほかんばしょ)、入出庫台帳(にゅうしゅっこだいちょう)の記録(きろく)、低温(ていおん)での保管(ほかん)
-B. 専用(せんよう)の保管場所(ほかんばしょ)、入出庫台帳(にゅうしゅっこだいちょう)の記録(きろく)、容器(ようき)の工夫(くふう)
-C. 入出庫台帳(にゅうしゅっこだいちょう)の記録(きろく)、容器(ようき)の工夫(くふう)、保管(ほかん)サンプルの管理(かんり)
-**Jawaban: B** — Tiga poin pengelolaan `薬剤` adalah: **① tempat penyimpanan khusus (`専用の保管場所`), ② buku catatan keluar-masuk (`入出庫台帳の記録`), dan ③ pembedaan/rekayasa wadah agar tidak tertukar (`容器の工夫`)**.
+**20. [薬剤の管理]** 薬剤(やくざい)の管理(かんり)（OTAFF第(だい)5.1版(はん) P.18）について、正(ただ)しいものはどれですか。正(ただ)しいものをえらびなさい。
+Terjemahan: Mengenai pengelolaan bahan kimia (`薬剤の管理`) sesuai OTAFF v5.1 P.18, manakah yang benar?
+A. 原材料(げんざいりょう)と同(おな)じ保管庫(ほかんこ)に一緒(いっしょ)に保管(ほかん)し、容器(ようき)に表示(ひょうじ)はしない
+B. 決(き)められた専用(せんよう)の保管場所(ほかんばしょ)に保管(ほかん)し、名称(めいしょう)がわかるよう表示(ひょうじ)し、表示(ひょうじ)のないものを見(み)たらすぐに責任者(せきにんしゃ)へ報告(ほうこく)する
+C. 原材料(げんざいりょう)の上(うえ)の棚(たな)に保管(ほかん)し、表示(ひょうじ)のない容器(ようき)は自分(じぶん)の判断(はんだん)で捨(す)てる
+**Jawaban: B** — Sesuai OTAFF v5.1 P.18: simpan bahan kimia di tempat khusus (**terpisah dari bahan baku**), beri **label nama**, dan bila menemukan yang tanpa label **segera lapor ke penanggung jawab (`責任者`)**.
