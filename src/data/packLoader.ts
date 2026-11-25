@@ -148,6 +148,11 @@ function filenameToId(path: string): string {
   return `builtin-${base.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 }
 
+function extractTrailingNumber(path: string): number {
+  const match = path.match(/(\d+)\.[^.]+$/);
+  return match ? Number(match[1]) : 9999;
+}
+
 export function loadBuiltinPacks(): ExamPack[] {
   const packs: ExamPack[] = [];
   const txtEntries = { ...rootTxtModules, ...packsTxtModules };
@@ -155,7 +160,12 @@ export function loadBuiltinPacks(): ExamPack[] {
   let bomb1Pack: ExamPack | null = null;
   let bomb2Pack: ExamPack | null = null;
 
-  const sortedPaths = Object.keys(txtEntries).sort((a, b) => a.localeCompare(b));
+  const sortedPaths = Object.keys(txtEntries).sort((a, b) => {
+    const na = extractTrailingNumber(a);
+    const nb = extractTrailingNumber(b);
+    if (na !== nb) return na - nb;
+    return a.localeCompare(b);
+  });
   for (const path of sortedPaths) {
     const raw = txtEntries[path];
     if (!raw || !raw.trim()) continue;

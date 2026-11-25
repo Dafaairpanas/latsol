@@ -73,6 +73,37 @@ export interface AttemptRecord {
   completedAt: string;
 }
 
+export interface QuestionStudyState {
+  flaggedIds: string[];
+  masteredIds: string[];
+  completedPack: boolean;
+  updatedAt: string;
+}
+
+export interface DraftSectionLayout {
+  id: string;
+  shortLabel: string;
+  title: string;
+  questions: Array<{
+    id: string;
+    optionOrder?: number[];
+  }>;
+}
+
+export interface SavedExamDraft {
+  packId: string;
+  config: ExamSessionConfig;
+  sectionsLayout: DraftSectionLayout[];
+  sectionIdx: number;
+  questionIdx: number;
+  answers: Record<string, number>;
+  flags: Record<string, boolean>;
+  revealedMap: Record<string, boolean>;
+  remainingSec: number;
+  elapsedSec: number;
+  savedAt: string;
+}
+
 export interface ParseWarning {
   line: number;
   message: string;

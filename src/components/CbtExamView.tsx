@@ -1,6 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ExamSettings } from '../types/exam';
-import { ActiveExamSession } from '../utils/sessionBuilder';
+import {
+  ExamSettings,
+  QuestionStudyState,
+  SavedExamDraft,
+} from '../types/exam';
+import {
+  ActiveExamSession,
+  extractDraftLayout,
+} from '../utils/sessionBuilder';
 import { renderRichJapaneseText } from '../utils/rubyText';
 import { StudyNotesModal } from './StudyNotesModal';
 
@@ -15,7 +22,12 @@ export interface ExamCompletionPayload {
 interface CbtExamViewProps {
   session: ActiveExamSession;
   settings: ExamSettings;
+  studyState: QuestionStudyState;
   onUpdateSettings: (next: ExamSettings) => void;
+  onToggleQuestionFlag: (packId: string, qId: string) => void;
+  onToggleQuestionMastered: (packId: string, qId: string) => void;
+  onSaveDraft: (draft: SavedExamDraft) => void;
+  onDiscardDraftAndExit: (packId: string) => void;
   onComplete: (payload: ExamCompletionPayload) => void;
   onExitToLobby: () => void;
 }
@@ -31,32 +43,95 @@ function formatClock(sec: number): string {
 export const CbtExamView: React.FC<CbtExamViewProps> = ({
   session,
   settings,
+  studyState,
   onUpdateSettings,
+  onToggleQuestionFlag,
+  onToggleQuestionMastered,
+  onSaveDraft,
+  onDiscardDraftAndExit,
   onComplete,
   onExitToLobby,
 }) => {
   const isTimed = session.config.durationSec > 0;
   const isStudyMode = session.config.mode === 'study';
+  const draft = session.initialDraft;
 
-  const [sectionIdx, setSectionIdx] = useState(0);
-  const [questionIdx, setQuestionIdx] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [flags, setFlags] = useState<Record<string, boolean>>({});
-  const [revealedMap, setRevealedMap] = useState<Record<string, boolean>>({});
+  const [sectionIdx, setSectionIdx] = useState(draft?.sectionIdx ?? 0);
+  const [questionIdx, setQuestionIdx] = useState(draft?.questionIdx ?? 0);
+  const [answers, setAnswers] = useState<Record<string, number>>(draft?.answers ?? {});
+  const [flags, setFlags] = useState<Record<string, boolean>>(() => {
+    const initial: Record<string, boolean> = {};
+    studyState.flaggedIds.forEach((id) => {
+      initial[id] = true;
+    });
+    if (draft?.flags) {
+      Object.entries(draft.flags).forEach(([k, v]) => {
+        if (v) initial[k] = true;
+      });
+    }
+    return initial;
+  });
+  const [revealedMap, setRevealedMap] = useState<Record<string, boolean>>(
+    draft?.revealedMap ?? {}
+  );
   const [showLangBox, setShowLangBox] = useState(false);
 
-  const [remainingSec, setRemainingSec] = useState(session.config.durationSec);
-  const [elapsedSec, setElapsedSec] = useState(0);
+  const [remainingSec, setRemainingSec] = useState(
+    draft ? draft.remainingSec : session.config.durationSec
+  );
+  const [elapsedSec, setElapsedSec] = useState(draft?.elapsedSec ?? 0);
 
   const [activeModal, setActiveModal] = useState<
     null | 'settings' | 'grid' | 'help' | 'finish' | 'notes' | 'exit'
   >(null);
-  const [gridFilter, setGridFilter] = useState<'all' | 'unanswered' | 'flagged'>('all');
+  const [gridFilter, setGridFilter] = useState<
+    'all' | 'unanswered' | 'flagged' | 'unmastered' | 'mastered'
+  >('all');
+
+  const masteredSet = useMemo(
+    () => new Set(studyState.masteredIds),
+    [studyState.masteredIds]
+  );
 
   const completedRef = useRef(false);
   const goNextRef = useRef<() => void>(() => {});
-  const latestStateRef = useRef({ answers, flags, elapsedSec });
-  latestStateRef.current = { answers, flags, elapsedSec };
+  const sectionsLayout = useMemo(() => extractDraftLayout(session), [session]);
+  const latestStateRef = useRef({
+    sectionIdx,
+    questionIdx,
+    answers,
+    flags,
+    revealedMap,
+    remainingSec,
+    elapsedSec,
+  });
+  latestStateRef.current = {
+    sectionIdx,
+    questionIdx,
+    answers,
+    flags,
+    revealedMap,
+    remainingSec,
+    elapsedSec,
+  };
+
+  const persistCurrentDraft = () => {
+    if (completedRef.current) return;
+    const snap = latestStateRef.current;
+    onSaveDraft({
+      packId: session.pack.id,
+      config: session.config,
+      sectionsLayout,
+      sectionIdx: snap.sectionIdx,
+      questionIdx: snap.questionIdx,
+      answers: snap.answers,
+      flags: snap.flags,
+      revealedMap: snap.revealedMap,
+      remainingSec: snap.remainingSec,
+      elapsedSec: snap.elapsedSec,
+      savedAt: new Date().toISOString(),
+    });
+  };
 
   const currentSection = session.sections[sectionIdx];
   const currentQuestion = currentSection?.questions[questionIdx];
@@ -78,10 +153,32 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
     return { globalIndex: gIdx, answeredCount: ans, flaggedCount: flg };
   }, [session.sections, sectionIdx, questionIdx, answers, flags]);
 
+  // Auto-save draft whenever progress changes, and before page unload
+  useEffect(() => {
+    persistCurrentDraft();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sectionIdx, questionIdx, answers, flags, revealedMap]);
+
+  useEffect(() => {
+    const onSaveBeforeLeave = () => persistCurrentDraft();
+    window.addEventListener('beforeunload', onSaveBeforeLeave);
+    window.addEventListener('pagehide', onSaveBeforeLeave);
+    return () => {
+      window.removeEventListener('beforeunload', onSaveBeforeLeave);
+      window.removeEventListener('pagehide', onSaveBeforeLeave);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Timer tick
   useEffect(() => {
+    let ticks = 0;
     const id = window.setInterval(() => {
+      ticks++;
       setElapsedSec((prev) => prev + 1);
+      if (ticks % 5 === 0) {
+        persistCurrentDraft();
+      }
       if (isTimed) {
         setRemainingSec((prev) => {
           if (prev <= 1) {
@@ -102,6 +199,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
       }
     }, 1000);
     return () => window.clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isTimed, onComplete]);
 
   // Reset language box when changing question
@@ -158,6 +256,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
     if (!currentQuestion) return;
     const qid = currentQuestion.id;
     setFlags((prev) => ({ ...prev, [qid]: !prev[qid] }));
+    onToggleQuestionFlag(session.pack.id, qid);
   };
 
   const handleFinishConfirmed = () => {
@@ -301,6 +400,9 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
           <span className={`cbt-mode-pill ${isStudyMode ? 'is-study' : 'is-exam'}`}>
             {isStudyMode ? 'Mode Latihan' : 'Simulasi CBT'}
           </span>
+          <span className="cbt-saved-pill" title="Jawaban, tanda soal & checklist tersimpan otomatis di browser">
+            💾 Tersimpan otomatis
+          </span>
         </div>
         <div className="cbt-infobar__right">
           <span>
@@ -436,6 +538,15 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                   📖 Peta Cepat
                 </button>
               )}
+
+              <button
+                type="button"
+                className={`cbt-btn-checklist ${masteredSet.has(qid) ? 'is-checked' : ''}`}
+                onClick={() => onToggleQuestionMastered(session.pack.id, qid)}
+                title="Checklist soal ini jika sudah paham (tersimpan permanen walau halaman di-reload)"
+              >
+                {masteredSet.has(qid) ? '☑ Sudah Paham' : '☐ Tandai Paham'}
+              </button>
             </div>
 
             {/* Your Language Drawer */}
@@ -804,6 +915,8 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                     ['all', 'Semua'],
                     ['unanswered', 'Belum Dijawab'],
                     ['flagged', 'Ditandai ⚑'],
+                    ['unmastered', 'Belum Paham ☐'],
+                    ['mastered', 'Sudah Paham ☑'],
                   ] as const
                 ).map(([key, label]) => (
                   <button
@@ -824,6 +937,8 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                     .filter(({ q }) => {
                       if (gridFilter === 'unanswered') return !(q.id in answers);
                       if (gridFilter === 'flagged') return Boolean(flags[q.id]);
+                      if (gridFilter === 'unmastered') return !masteredSet.has(q.id);
+                      if (gridFilter === 'mastered') return masteredSet.has(q.id);
                       return true;
                     });
                   if (visibleQs.length === 0) return null;
@@ -838,6 +953,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                         {visibleQs.map(({ q, qIdx }) => {
                           const answered = q.id in answers;
                           const flagged = Boolean(flags[q.id]);
+                          const mastered = masteredSet.has(q.id);
                           const curr = sIdx === sectionIdx && qIdx === questionIdx;
                           return (
                             <button
@@ -847,6 +963,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                                 'overview-cell',
                                 answered ? 'is-answered' : 'is-unanswered',
                                 flagged ? 'is-flagged' : '',
+                                mastered ? 'is-mastered' : '',
                                 curr ? 'is-current' : '',
                               ]
                                 .filter(Boolean)
@@ -858,6 +975,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
                             >
                               <span>{qIdx + 1}</span>
                               {flagged && <small>⚑</small>}
+                              {mastered && <em className="overview-cell__check">✓</em>}
                             </button>
                           );
                         })}
@@ -1006,7 +1124,7 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
         >
           <div className="modal-panel" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
-              <h3>Keluar ke Beranda?</h3>
+              <h3>Kembali ke Beranda?</h3>
               <button
                 className="modal-close"
                 onClick={() => setActiveModal(null)}
@@ -1017,8 +1135,9 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
             </div>
             <div className="modal-body">
               <p>
-                Progres jawaban pada sesi ini akan hilang jika kamu keluar sebelum
-                menekan <b>Finish</b>.
+                Progres jawaban, tanda soal (<b>⚑</b>), dan checklist paham (<b>☑</b>)
+                otomatis tersimpan di browsermu. Pilih apakah ingin menyimpan sesi aktif
+                untuk dilanjutkan nanti atau mereset sesi ini:
               </p>
             </div>
             <div className="modal-footer">
@@ -1028,8 +1147,20 @@ export const CbtExamView: React.FC<CbtExamViewProps> = ({
               >
                 Batal
               </button>
-              <button className="studio-btn studio-btn--danger" onClick={onExitToLobby}>
-                Keluar ke Beranda
+              <button
+                className="studio-btn studio-btn--danger"
+                onClick={() => onDiscardDraftAndExit(session.pack.id)}
+              >
+                Reset Sesi &amp; Keluar
+              </button>
+              <button
+                className="studio-btn studio-btn--primary"
+                onClick={() => {
+                  persistCurrentDraft();
+                  onExitToLobby();
+                }}
+              >
+                Simpan Progres &amp; Beranda
               </button>
             </div>
           </div>

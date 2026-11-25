@@ -1,8 +1,10 @@
 import {
+  DraftSectionLayout,
   ExamPack,
   ExamSection,
   ExamSessionConfig,
   QuestionItem,
+  SavedExamDraft,
 } from '../types/exam';
 
 function shuffleArray<T>(items: T[]): T[] {
@@ -14,10 +16,11 @@ function shuffleArray<T>(items: T[]): T[] {
   return arr;
 }
 
-function shuffleQuestionOptions(q: QuestionItem): QuestionItem {
+function shuffleQuestionOptions(q: QuestionItem): QuestionItem & { optionOrder?: number[] } {
   if (q.options.length <= 1) return q;
   const indexed = q.options.map((text, idx) => ({
     text,
+    origIdx: idx,
     isCorrect: idx === q.answer,
   }));
   const shuffled = shuffleArray(indexed);
@@ -26,14 +29,20 @@ function shuffleQuestionOptions(q: QuestionItem): QuestionItem {
     ...q,
     options: shuffled.map((item) => item.text),
     answer: newAnswer >= 0 ? newAnswer : 0,
+    optionOrder: shuffled.map((item) => item.origIdx),
   };
+}
+
+export interface SessionQuestionItem extends QuestionItem {
+  optionOrder?: number[];
 }
 
 export interface ActiveExamSession {
   config: ExamSessionConfig;
   pack: ExamPack;
-  sections: ExamSection[];
+  sections: Array<Omit<ExamSection, 'questions'> & { questions: SessionQuestionItem[] }>;
   totalQuestions: number;
+  initialDraft?: SavedExamDraft;
 }
 
 export function buildActiveSession(
@@ -45,9 +54,9 @@ export function buildActiveSession(
   if (config.customQuestionsOnly && config.customQuestionsOnly.length > 0) {
     targetSections = [
       {
-        id: 'retry-wrong',
+        id: 'custom-drill',
         shortLabel: '復習',
-        title: config.sessionLabel || 'Latihan Soal Salah',
+        title: config.sessionLabel || 'Latihan Pilihan',
         questions: config.customQuestionsOnly,
       },
     ];
@@ -59,8 +68,8 @@ export function buildActiveSession(
     }
   }
 
-  let sections: ExamSection[] = targetSections.map((sec, idx) => {
-    let qs = sec.questions.map((q) =>
+  let sections = targetSections.map((sec, idx) => {
+    let qs: SessionQuestionItem[] = sec.questions.map((q) =>
       config.shuffleOptions ? shuffleQuestionOptions(q) : { ...q }
     );
     if (config.shuffleQuestions) {
@@ -73,9 +82,7 @@ export function buildActiveSession(
     };
   });
 
-  // If shuffling questions across multiple selected chapters in a mixed drill, keep per-section clean
   sections = sections.filter((s) => s.questions.length > 0);
-
   const totalQuestions = sections.reduce((sum, s) => sum + s.questions.length, 0);
 
   return {
@@ -83,5 +90,66 @@ export function buildActiveSession(
     pack,
     sections,
     totalQuestions,
+  };
+}
+
+export function extractDraftLayout(session: ActiveExamSession): DraftSectionLayout[] {
+  return session.sections.map((sec) => ({
+    id: sec.id,
+    shortLabel: sec.shortLabel,
+    title: sec.title,
+    questions: sec.questions.map((q) => ({
+      id: q.id,
+      optionOrder: q.optionOrder,
+    })),
+  }));
+}
+
+export function restoreSessionFromDraft(
+  pack: ExamPack,
+  draft: SavedExamDraft
+): ActiveExamSession | null {
+  const questionById = new Map<string, QuestionItem>();
+  pack.sections.forEach((sec) => {
+    sec.questions.forEach((q) => questionById.set(q.id, q));
+  });
+
+  const sections = draft.sectionsLayout
+    .map((layoutSec) => {
+      const questions: SessionQuestionItem[] = [];
+      for (const qEntry of layoutSec.questions) {
+        const orig = questionById.get(qEntry.id);
+        if (!orig) continue;
+        if (qEntry.optionOrder && qEntry.optionOrder.length === orig.options.length) {
+          const reorderedOptions = qEntry.optionOrder.map((i) => orig.options[i]);
+          const newAns = qEntry.optionOrder.indexOf(orig.answer);
+          questions.push({
+            ...orig,
+            options: reorderedOptions,
+            answer: newAns >= 0 ? newAns : orig.answer,
+            optionOrder: qEntry.optionOrder,
+          });
+        } else {
+          questions.push({ ...orig });
+        }
+      }
+      return {
+        id: layoutSec.id,
+        shortLabel: layoutSec.shortLabel,
+        title: layoutSec.title,
+        questions,
+      };
+    })
+    .filter((s) => s.questions.length > 0);
+
+  const totalQuestions = sections.reduce((sum, s) => sum + s.questions.length, 0);
+  if (totalQuestions === 0) return null;
+
+  return {
+    config: draft.config,
+    pack,
+    sections,
+    totalQuestions,
+    initialDraft: draft,
   };
 }

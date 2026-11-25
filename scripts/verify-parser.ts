@@ -3,7 +3,11 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { parseBombSoalText, exportPackToBombTxt } from '../src/utils/bombParser.ts';
-import { buildActiveSession } from '../src/utils/sessionBuilder.ts';
+import {
+  buildActiveSession,
+  extractDraftLayout,
+  restoreSessionFromDraft,
+} from '../src/utils/sessionBuilder.ts';
 import { renderRichJapaneseText, stripFurigana } from '../src/utils/rubyText.tsx';
 
 const bomb1Raw = fs.readFileSync(path.resolve(process.cwd(), 'bombsoal1.txt'), 'utf8');
@@ -300,5 +304,32 @@ shuffledSession.sections.forEach((sec) => {
     );
   });
 });
+
+// Verify draft snapshot + restore preserves exact shuffled order, answers, flags & timer
+const draftLayout = extractDraftLayout(shuffledSession);
+const firstQ = shuffledSession.sections[0].questions[0];
+const restored = restoreSessionFromDraft(res2.pack, {
+  packId: res2.pack.id,
+  config: shuffledSession.config,
+  sectionsLayout: draftLayout,
+  sectionIdx: 1,
+  questionIdx: 0,
+  answers: { [firstQ.id]: firstQ.answer },
+  flags: { [firstQ.id]: true },
+  revealedMap: { [firstQ.id]: true },
+  remainingSec: 1234,
+  elapsedSec: 566,
+  savedAt: new Date().toISOString(),
+});
+assert.ok(restored, 'Draft restored cleanly');
+assert.equal(restored.totalQuestions, shuffledSession.totalQuestions);
+assert.deepEqual(
+  restored.sections[0].questions[0].options,
+  firstQ.options,
+  'Restored shuffled options match original session'
+);
+assert.equal(restored.sections[0].questions[0].answer, firstQ.answer);
+assert.equal(restored.initialDraft?.flags[firstQ.id], true);
+assert.equal(restored.initialDraft?.remainingSec, 1234);
 
 console.log('ALL PART 1 (85) + PART 2 (60) = 145 QUESTIONS, MATH, RUBY & ROUND-TRIP CHECKS PASSED.');

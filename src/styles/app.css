@@ -2493,3 +2493,305 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   TIER DIVIDERS, PERSISTENT CHECKLIST & AUTO-SAVE UI
+   ========================================================================== */
+.lobby-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-pill--subtle {
+  background: #f8fafc;
+  font-size: 12.5px;
+}
+
+.tier-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.tier-section + .tier-section {
+  margin-top: 6px;
+  padding-top: 20px;
+  border-top: 2px dashed #d5ded5;
+}
+
+.tier-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid var(--ui-border);
+  border-left: 5px solid var(--cbt-green);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.tier-sprint .tier-divider {
+  border-left-color: #2563eb;
+}
+
+.tier-language .tier-divider {
+  border-left-color: #0891b2;
+}
+
+.tier-custom .tier-divider {
+  border-left-color: #d97706;
+}
+
+.tier-divider__left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tier-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eef5e6;
+  color: var(--ui-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tier-sprint .tier-icon {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.tier-language .tier-icon {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.tier-custom .tier-icon {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.tier-divider__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.tier-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.tier-meta-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ui-muted);
+}
+
+.tier-progress-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 99px;
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.tier-progress-pill.is-complete {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tier-divider__title {
+  margin: 0;
+  font-size: 16.5px;
+}
+
+.tier-divider__desc {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--ui-muted);
+}
+
+.pack-card.is-major-pack {
+  border-color: #bfd4a5;
+  box-shadow: 0 2px 8px rgba(78, 119, 23, 0.07);
+}
+
+.pack-card.is-completed {
+  background: #fafdf8;
+  border-color: #86efac;
+}
+
+.size-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.size-badge.is-large {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.size-badge.is-medium {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.size-badge.is-small {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.pack-check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  border-radius: 99px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pack-check-btn:hover {
+  background: #f1f5f9;
+}
+
+.pack-check-btn.is-checked {
+  background: #dcfce7;
+  border-color: #4ade80;
+  color: #166534;
+}
+
+.best-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #b45309;
+}
+
+.pack-study-strip {
+  background: #f8faf8;
+  border: 1px solid #e2e8e2;
+  border-radius: 7px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.pack-study-strip__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+}
+
+.pack-study-bar {
+  height: 6px;
+  border-radius: 99px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.pack-study-bar > div {
+  height: 100%;
+  background: var(--cbt-green-btn);
+  border-radius: 99px;
+}
+
+.pack-draft-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.pack-draft-clear {
+  border: 0;
+  background: transparent;
+  color: #b91c1c;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 0 4px;
+}
+
+/* CBT Saved indicator, Checklist button & Overview Grid Check */
+.cbt-saved-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #f0fdf4;
+}
+
+.cbt-btn-checklist {
+  background: #ffffff;
+  border: 1px solid #9ca3af;
+  color: #374151;
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cbt-btn-checklist.is-checked {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.overview-cell__check {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-style: normal;
+  font-size: 10px;
+  color: #bbf7d0;
+}
+
+.review-item__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mini-action.is-checked-action {
+  background: #dcfce7;
+  border-color: #4ade80;
+  color: #166534;
+}

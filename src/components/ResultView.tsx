@@ -3,14 +3,16 @@ import {
   ArrowLeft,
   BookOpen,
   CheckCircle2,
+  CheckSquare,
   Clock,
   Flag,
   RotateCcw,
   Search,
+  Square,
   Trophy,
   XCircle,
 } from 'lucide-react';
-import { ExamSettings, QuestionItem } from '../types/exam';
+import { ExamSettings, QuestionItem, QuestionStudyState } from '../types/exam';
 import { ActiveExamSession } from '../utils/sessionBuilder';
 import { renderRichJapaneseText, stripFurigana } from '../utils/rubyText';
 import { ExamCompletionPayload } from './CbtExamView';
@@ -22,6 +24,9 @@ interface ResultViewProps {
   session: ActiveExamSession;
   result: ExamCompletionPayload;
   settings: ExamSettings;
+  studyState: QuestionStudyState;
+  onToggleQuestionFlag: (packId: string, qId: string) => void;
+  onToggleQuestionMastered: (packId: string, qId: string) => void;
   onToggleFurigana: () => void;
   onRetryAll: () => void;
   onRetryWrong: (wrongQuestions: QuestionItem[]) => void;
@@ -38,14 +43,28 @@ export const ResultView: React.FC<ResultViewProps> = ({
   session,
   result,
   settings,
+  studyState,
+  onToggleQuestionFlag,
+  onToggleQuestionMastered,
   onToggleFurigana,
   onRetryAll,
   onRetryWrong,
   onBackToLobby,
 }) => {
-  const [filter, setFilter] = useState<'all' | 'wrong' | 'correct' | 'flagged'>('all');
+  const [filter, setFilter] = useState<
+    'all' | 'wrong' | 'correct' | 'flagged' | 'unmastered'
+  >('all');
   const [search, setSearch] = useState('');
   const [showNotes, setShowNotes] = useState(false);
+
+  const persistentFlaggedSet = useMemo(
+    () => new Set(studyState.flaggedIds),
+    [studyState.flaggedIds]
+  );
+  const persistentMasteredSet = useMemo(
+    () => new Set(studyState.masteredIds),
+    [studyState.masteredIds]
+  );
 
   const summary = useMemo(() => {
     let correct = 0;
@@ -102,6 +121,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
       userAns: number | undefined;
       isCorrect: boolean;
       isFlagged: boolean;
+      isMastered: boolean;
     }> = [];
 
     let seq = 0;
@@ -110,11 +130,13 @@ export const ResultView: React.FC<ResultViewProps> = ({
         seq++;
         const userAns = result.answers[q.id];
         const isCorrect = userAns === q.answer;
-        const isFlagged = Boolean(result.flags[q.id]);
+        const isFlagged = persistentFlaggedSet.has(q.id) || Boolean(result.flags[q.id]);
+        const isMastered = persistentMasteredSet.has(q.id);
 
         if (filter === 'wrong' && isCorrect) return;
         if (filter === 'correct' && !isCorrect) return;
         if (filter === 'flagged' && !isFlagged) return;
+        if (filter === 'unmastered' && isMastered) return;
 
         if (query) {
           const hay = [
@@ -137,11 +159,40 @@ export const ResultView: React.FC<ResultViewProps> = ({
           userAns,
           isCorrect,
           isFlagged,
+          isMastered,
         });
       });
     });
     return list;
-  }, [session.sections, result.answers, result.flags, filter, search]);
+  }, [
+    session.sections,
+    result.answers,
+    result.flags,
+    persistentFlaggedSet,
+    persistentMasteredSet,
+    filter,
+    search,
+  ]);
+
+  const flaggedInSessionCount = useMemo(() => {
+    let count = 0;
+    session.sections.forEach((sec) =>
+      sec.questions.forEach((q) => {
+        if (persistentFlaggedSet.has(q.id) || result.flags[q.id]) count++;
+      })
+    );
+    return count;
+  }, [session.sections, persistentFlaggedSet, result.flags]);
+
+  const unmasteredInSessionCount = useMemo(() => {
+    let count = 0;
+    session.sections.forEach((sec) =>
+      sec.questions.forEach((q) => {
+        if (!persistentMasteredSet.has(q.id)) count++;
+      })
+    );
+    return count;
+  }, [session.sections, persistentMasteredSet]);
 
   return (
     <div className="page-shell">
@@ -190,7 +241,9 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <h1 className="result-hero__title">{session.pack.name}</h1>
           <p className="result-hero__subtitle">
             Kandidat: <b>{settings.candidateName}</b> •{' '}
-            {session.config.mode === 'exam' ? 'Simulasi CBT' : 'Mode Latihan'}
+            {session.config.mode === 'exam' ? 'Simulasi CBT' : 'Mode Latihan'} •
+            Tanda soal (<b>⚑</b>) &amp; checklist paham (<b>☑</b>) tersimpan permanen
+            di browser
           </p>
 
           <div className="result-metrics">
@@ -292,10 +345,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     ['all', `Semua (${summary.total})`],
                     ['wrong', `Salah (${summary.wrongQuestions.length})`],
                     ['correct', `Benar (${summary.correct})`],
-                    [
-                      'flagged',
-                      `Ditandai (${Object.values(result.flags).filter(Boolean).length})`,
-                    ],
+                    ['flagged', `Ditandai ⚑ (${flaggedInSessionCount})`],
+                    ['unmastered', `Belum Paham (${unmasteredInSessionCount})`],
                   ] as const
                 ).map(([k, label]) => (
                   <button
@@ -315,92 +366,109 @@ export const ResultView: React.FC<ResultViewProps> = ({
             {filteredItems.length === 0 ? (
               <div className="empty-box">Tidak ada soal yang cocok dengan filter ini.</div>
             ) : (
-              filteredItems.map(({ secTitle, q, seq, userAns, isCorrect, isFlagged }) => (
-                <article
-                  key={q.id}
-                  className={`review-item ${isCorrect ? 'is-correct' : 'is-wrong'}`}
-                >
-                  <div className="review-item__top">
-                    <div className="review-item__meta">
-                      <span
-                        className={`status-pill ${isCorrect ? 'is-correct' : 'is-wrong'}`}
-                      >
-                        {isCorrect ? (
-                          <>
-                            <CheckCircle2 size={14} /> Benar
-                          </>
-                        ) : userAns === undefined ? (
-                          <>
-                            <XCircle size={14} /> Kosong
-                          </>
-                        ) : (
-                          <>
-                            <XCircle size={14} /> Salah
-                          </>
-                        )}
-                      </span>
-                      <span className="review-qnum">
-                        #{q.number ?? seq} {q.tag ? `[${q.tag}]` : ''}
-                      </span>
-                      <span className="review-sec">{secTitle}</span>
-                    </div>
-                    {isFlagged && (
-                      <span className="flag-pill">
-                        <Flag size={13} /> Ditandai
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="review-item__question">
-                    {renderRichJapaneseText(q.text, settings.showFurigana)}
-                  </div>
-
-                  {q.translation && (
-                    <div className="review-item__translation">
-                      <b>Terjemahan:</b>{' '}
-                      {renderRichJapaneseText(q.translation, settings.showFurigana)}
-                    </div>
-                  )}
-
-                  <div className="review-options">
-                    {q.options.map((opt, oIdx) => {
-                      const isKey = oIdx === q.answer;
-                      const isUser = oIdx === userAns;
-                      return (
-                        <div
-                          key={oIdx}
-                          className={[
-                            'review-opt',
-                            isKey ? 'is-key' : '',
-                            isUser && !isKey ? 'is-user-wrong' : '',
-                          ]
-                            .filter(Boolean)
-                            .join(' ')}
+              filteredItems.map(
+                ({ secTitle, q, seq, userAns, isCorrect, isFlagged, isMastered }) => (
+                  <article
+                    key={q.id}
+                    className={`review-item ${isCorrect ? 'is-correct' : 'is-wrong'}`}
+                  >
+                    <div className="review-item__top">
+                      <div className="review-item__meta">
+                        <span
+                          className={`status-pill ${isCorrect ? 'is-correct' : 'is-wrong'}`}
                         >
-                          <span className="review-opt__letter">{LETTERS[oIdx]}</span>
-                          <span className="review-opt__text">
-                            {renderRichJapaneseText(opt, settings.showFurigana)}
-                          </span>
-                          {isKey && <span className="opt-tag is-key">Kunci</span>}
-                          {isUser && !isKey && (
-                            <span className="opt-tag is-user-wrong">Jawabanmu</span>
+                          {isCorrect ? (
+                            <>
+                              <CheckCircle2 size={14} /> Benar
+                            </>
+                          ) : userAns === undefined ? (
+                            <>
+                              <XCircle size={14} /> Kosong
+                            </>
+                          ) : (
+                            <>
+                              <XCircle size={14} /> Salah
+                            </>
                           )}
-                          {isUser && isKey && (
-                            <span className="opt-tag is-key">Jawabanmu ✓</span>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
+                        </span>
+                        <span className="review-qnum">
+                          #{q.number ?? seq} {q.tag ? `[${q.tag}]` : ''}
+                        </span>
+                        <span className="review-sec">{secTitle}</span>
+                      </div>
 
-                  {q.explanation && (
-                    <div className="review-explanation">
-                      <strong>Pembahasan:</strong>{' '}
-                      {renderRichJapaneseText(q.explanation, settings.showFurigana)}
+                      <div className="review-item__actions">
+                        <button
+                          type="button"
+                          className={`mini-action ${isFlagged ? 'is-warn' : ''}`}
+                          onClick={() => onToggleQuestionFlag(session.pack.id, q.id)}
+                          title="Tandai soal ini untuk diulang nanti (tersimpan permanen)"
+                        >
+                          <Flag size={13} /> {isFlagged ? 'Ditandai ⚑' : 'Tandai Soal'}
+                        </button>
+                        <button
+                          type="button"
+                          className={`mini-action ${isMastered ? 'is-checked-action' : ''}`}
+                          onClick={() => onToggleQuestionMastered(session.pack.id, q.id)}
+                          title="Checklist soal ini bila sudah paham (tersimpan permanen)"
+                        >
+                          {isMastered ? <CheckSquare size={13} /> : <Square size={13} />}
+                          {isMastered ? 'Sudah Paham' : 'Checklist Paham'}
+                        </button>
+                      </div>
                     </div>
-                  )}
-                </article>
-              ))
+
+                    <div className="review-item__question">
+                      {renderRichJapaneseText(q.text, settings.showFurigana)}
+                    </div>
+
+                    {q.translation && (
+                      <div className="review-item__translation">
+                        <b>Terjemahan:</b>{' '}
+                        {renderRichJapaneseText(q.translation, settings.showFurigana)}
+                      </div>
+                    )}
+
+                    <div className="review-options">
+                      {q.options.map((opt, oIdx) => {
+                        const isKey = oIdx === q.answer;
+                        const isUser = oIdx === userAns;
+                        return (
+                          <div
+                            key={oIdx}
+                            className={[
+                              'review-opt',
+                              isKey ? 'is-key' : '',
+                              isUser && !isKey ? 'is-user-wrong' : '',
+                            ]
+                              .filter(Boolean)
+                              .join(' ')}
+                          >
+                            <span className="review-opt__letter">{LETTERS[oIdx]}</span>
+                            <span className="review-opt__text">
+                              {renderRichJapaneseText(opt, settings.showFurigana)}
+                            </span>
+                            {isKey && <span className="opt-tag is-key">Kunci</span>}
+                            {isUser && !isKey && (
+                              <span className="opt-tag is-user-wrong">Jawabanmu</span>
+                            )}
+                            {isUser && isKey && (
+                              <span className="opt-tag is-key">Jawabanmu ✓</span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {q.explanation && (
+                      <div className="review-explanation">
+                        <strong>Pembahasan:</strong>{' '}
+                        {renderRichJapaneseText(q.explanation, settings.showFurigana)}
+                      </div>
+                    )}
+                  </article>
+                )
+              )
             )}
           </div>
         </section>
